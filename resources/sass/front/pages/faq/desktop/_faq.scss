@@ -1,0 +1,51 @@
+.main-title {
+    display: flex;
+    justify-content: center;
+    margin-top: 1rem;
+    margin-bottom: 2rem;
+}
+
+.faqs-container {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+
+.faq-main {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+}
+
+.faq-arrow {
+    display: flex;
+    align-items: center;
+    margin-left: 0.4rem;
+    transform: rotateZ(180deg);
+    transition: transform 0.8s;
+    cursor: pointer;
+}
+
+.faq-arrow.active {
+    transform: rotateZ(0deg);
+    transition: transform 0.8s;
+}
+
+.faq-submain {
+    position: relative;
+    transform: rotateX(90deg);
+    transition: height 1.4s,transform 1s, margin-top 1s;    
+    width: 17rem;
+    height: 0;
+}
+
+.faq-submain.active {
+    transform: rotateX(0deg);
+    transition: height 0.6s,transform 1s, margin-top 1s;    
+    height: 6rem;
+    margin-top: 0.4rem;
+}
+
+.faq-element {
+    margin-bottom: 0.4rem;
+}

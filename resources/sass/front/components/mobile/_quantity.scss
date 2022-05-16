@@ -1,0 +1,25 @@
+.quantity-number {
+    padding: 0.4rem 0.8rem 0.5rem 0.8rem;
+    background-color: white;
+    font-weight: bolder;
+}
+
+.quantity-minus {
+    padding: 0.4rem 0.8rem 0.4rem 0.8rem;
+    font-size: 1rem;
+    border: 0;
+    cursor: pointer;
+    background-image: linear-gradient(to right, #c86040, #ff8f6c);
+    font-weight: bolder;
+    border-radius: 5px 0 0 5px;
+}
+
+.quantity-plus {
+    padding: 0.4rem 0.8rem 0.4rem 0.8rem;
+    font-size: 1rem;
+    border: 0;
+    cursor: pointer;
+    background-image: linear-gradient(to right, #c86040, #ff8f6c);
+    font-weight: bolder;
+    border-radius: 0 5px 5px 0;
+}

@@ -1,0 +1,50 @@
+.checkout-form-element {
+    display: flex;
+    flex-direction: column;
+}
+
+.checkout-form-element input {
+    border: 0;
+    padding: 0.2rem;
+}
+
+.checkout-form {}
+
+.checkout-title {
+    text-align: center;
+    margin-bottom: 1rem;
+}
+
+.buy-finishing {
+    border: 0.2rem solid white;
+    text-align: center;
+}
+
+.buy-finishing .desktop-two-columns {
+    padding: 0.4rem;
+}
+
+.buy-finishing-title {
+    background-color: white;
+}
+
+.pay-continue {
+    padding: 0.5rem;
+    background-image: linear-gradient(to right, #c86040, #ff8f6c);
+    border: 0.2rem solid white;
+    cursor: pointer;
+    border-radius: 0.4rem;
+
+}
+
+.pay-options {
+    margin: 1rem 0 0 0;
+}
+
+.checkout {
+    margin: 2rem;
+}
+
+.checkout-form-element input {
+    margin-bottom: 1rem;
+}

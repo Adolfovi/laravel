@@ -1,0 +1,1059 @@
+/*! normalize.css v8.0.1 | MIT License | github.com/necolas/normalize.css */
+/* Document
+   ========================================================================== */
+/**
+ * 1. Correct the line height in all browsers.
+ * 2. Prevent adjustments of font size after orientation changes in iOS.
+ */
+html {
+  line-height: 1.15;
+  /* 1 */
+  -webkit-text-size-adjust: 100%;
+  /* 2 */
+}
+
+/* Sections
+   ========================================================================== */
+/**
+ * Remove the margin in all browsers.
+ */
+body {
+  margin: 0;
+}
+
+/**
+ * Render the `main` element consistently in IE.
+ */
+main {
+  display: block;
+}
+
+/**
+ * Correct the font size and margin on `h1` elements within `section` and
+ * `article` contexts in Chrome, Firefox, and Safari.
+ */
+h1, h2, h3, h4, h5, h6, p, a {
+  margin: 0;
+}
+
+/* Grouping content
+   ========================================================================== */
+/**
+ * 1. Add the correct box sizing in Firefox.
+ * 2. Show the overflow in Edge and IE.
+ */
+hr {
+  box-sizing: content-box;
+  /* 1 */
+  height: 0;
+  /* 1 */
+  overflow: visible;
+  /* 2 */
+}
+
+/**
+ * 1. Correct the inheritance and scaling of font size in all browsers.
+ * 2. Correct the odd `em` font sizing in all browsers.
+ */
+pre {
+  font-family: monospace, monospace;
+  /* 1 */
+  font-size: 1em;
+  /* 2 */
+}
+
+/* Text-level semantics
+   ========================================================================== */
+/**
+ * Remove the gray background on active links in IE 10.
+ */
+a {
+  background-color: transparent;
+}
+
+/**
+ * 1. Remove the bottom border in Chrome 57-
+ * 2. Add the correct text decoration in Chrome, Edge, IE, Opera, and Safari.
+ */
+abbr[title] {
+  border-bottom: none;
+  /* 1 */
+  text-decoration: underline;
+  /* 2 */
+  -webkit-text-decoration: underline dotted;
+          text-decoration: underline dotted;
+  /* 2 */
+}
+
+/**
+ * Add the correct font weight in Chrome, Edge, and Safari.
+ */
+b,
+strong {
+  font-weight: bolder;
+}
+
+/**
+ * 1. Correct the inheritance and scaling of font size in all browsers.
+ * 2. Correct the odd `em` font sizing in all browsers.
+ */
+code,
+kbd,
+samp {
+  font-family: monospace, monospace;
+  /* 1 */
+  font-size: 1em;
+  /* 2 */
+}
+
+/**
+ * Add the correct font size in all browsers.
+ */
+small {
+  font-size: 80%;
+}
+
+/**
+ * Prevent `sub` and `sup` elements from affecting the line height in
+ * all browsers.
+ */
+sub,
+sup {
+  font-size: 75%;
+  line-height: 0;
+  position: relative;
+  vertical-align: baseline;
+}
+
+sub {
+  bottom: -0.25em;
+}
+
+sup {
+  top: -0.5em;
+}
+
+/* Embedded content
+   ========================================================================== */
+/**
+ * Remove the border on images inside links in IE 10.
+ */
+img {
+  border-style: none;
+}
+
+/* Forms
+   ========================================================================== */
+/**
+ * 1. Change the font styles in all browsers.
+ * 2. Remove the margin in Firefox and Safari.
+ */
+form {
+  margin: 0;
+}
+
+button,
+input,
+optgroup,
+select,
+textarea {
+  font-family: inherit;
+  /* 1 */
+  font-size: 100%;
+  /* 1 */
+  line-height: 1.15;
+  /* 1 */
+  margin: 0;
+  /* 2 */
+}
+
+/**
+ * Show the overflow in IE.
+ * 1. Show the overflow in Edge.
+ */
+button,
+input {
+  /* 1 */
+  overflow: visible;
+  padding: 0;
+}
+
+/**
+ * Remove the inheritance of text transform in Edge, Firefox, and IE.
+ * 1. Remove the inheritance of text transform in Firefox.
+ */
+button,
+select {
+  /* 1 */
+  text-transform: none;
+}
+
+/**
+ * Correct the inability to style clickable types in iOS and Safari.
+ */
+button,
+[type=button],
+[type=reset],
+[type=submit] {
+  -webkit-appearance: button;
+}
+
+/**
+ * Remove the inner border and padding in Firefox.
+ */
+button::-moz-focus-inner,
+[type=button]::-moz-focus-inner,
+[type=reset]::-moz-focus-inner,
+[type=submit]::-moz-focus-inner {
+  border-style: none;
+  padding: 0;
+}
+
+/**
+ * Restore the focus styles unset by the previous rule.
+ */
+button:-moz-focusring,
+[type=button]:-moz-focusring,
+[type=reset]:-moz-focusring,
+[type=submit]:-moz-focusring {
+  outline: 1px dotted ButtonText;
+}
+
+/**
+ * Correct the padding in Firefox.
+ */
+fieldset {
+  padding: 0.35em 0.75em 0.625em;
+}
+
+/**
+ * 1. Correct the text wrapping in Edge and IE.
+ * 2. Correct the color inheritance from `fieldset` elements in IE.
+ * 3. Remove the padding so developers are not caught out when they zero out
+ *    `fieldset` elements in all browsers.
+ */
+legend {
+  box-sizing: border-box;
+  /* 1 */
+  color: inherit;
+  /* 2 */
+  display: table;
+  /* 1 */
+  max-width: 100%;
+  /* 1 */
+  padding: 0;
+  /* 3 */
+  white-space: normal;
+  /* 1 */
+}
+
+/**
+ * Add the correct vertical alignment in Chrome, Firefox, and Opera.
+ */
+progress {
+  vertical-align: baseline;
+}
+
+/**
+ * Remove the default vertical scrollbar in IE 10+.
+ */
+textarea {
+  overflow: auto;
+}
+
+/**
+ * 1. Add the correct box sizing in IE 10.
+ * 2. Remove the padding in IE 10.
+ */
+[type=checkbox],
+[type=radio] {
+  box-sizing: border-box;
+  /* 1 */
+  padding: 0;
+  /* 2 */
+}
+
+/**
+ * Correct the cursor style of increment and decrement buttons in Chrome.
+ */
+[type=number]::-webkit-inner-spin-button,
+[type=number]::-webkit-outer-spin-button {
+  height: auto;
+}
+
+/**
+ * 1. Correct the odd appearance in Chrome and Safari.
+ * 2. Correct the outline style in Safari.
+ */
+[type=search] {
+  -webkit-appearance: textfield;
+  /* 1 */
+  outline-offset: -2px;
+  /* 2 */
+}
+
+/**
+ * Remove the inner padding in Chrome and Safari on macOS.
+ */
+[type=search]::-webkit-search-decoration {
+  -webkit-appearance: none;
+}
+
+/**
+ * 1. Correct the inability to style clickable types in iOS and Safari.
+ * 2. Change font properties to `inherit` in Safari.
+ */
+::-webkit-file-upload-button {
+  -webkit-appearance: button;
+  /* 1 */
+  font: inherit;
+  /* 2 */
+}
+
+/* Interactive
+   ========================================================================== */
+/*
+ * Add the correct display in Edge, IE 10+, and Firefox.
+ */
+details {
+  display: block;
+}
+
+/*
+ * Add the correct display in all browsers.
+ */
+summary {
+  display: list-item;
+}
+
+/* Misc
+   ========================================================================== */
+/**
+ * Add the correct display in IE 10+.
+ */
+template {
+  display: none;
+}
+
+/**
+ * Add the correct display in IE 10.
+ */
+[hidden] {
+  display: none;
+}
+
+/* Tables
+   ========================================================================== */
+/**
+ * Remove most spacing between table cells.
+ */
+table {
+  border-collapse: collapse;
+  border-spacing: 0;
+}
+
+td,
+th {
+  padding: 0;
+}
+
+/* List
+==============================================================================*/
+ol, ul {
+  list-style: none;
+  padding-left: 0;
+}
+
+input::-webkit-outer-spin-button,
+input::-webkit-inner-spin-button {
+  -webkit-appearance: none;
+  margin: 0;
+}
+
+img {
+  max-width: 100%;
+}
+
+video {
+  max-width: 100%;
+}
+
+.bolder {
+  font-weight: bolder;
+}
+
+.row {
+  display: flex;
+  flex-direction: row;
+}
+
+h1, h2, h3, h4, h5, h6, a, p {
+  color: black;
+}
+
+h1, h2, h3, h4 {
+  font-family: "Ubuntu", sans-serif;
+}
+
+h5, h6 {
+  font-family: "Ubuntu Condensed", sans-serif;
+}
+
+a, td, th, p, button, span, label, select, input, textarea, li {
+  font-family: "Ubuntu", sans-serif;
+}
+
+h1 {
+  font-size: 2.5rem;
+  font-weight: 600;
+  text-decoration: none;
+}
+
+h2 {
+  font-size: 2rem;
+  font-weight: 600;
+  text-decoration: none;
+}
+
+h4 {
+  font-weight: 600;
+  text-decoration: none;
+}
+
+a {
+  -webkit-transition: 300ms;
+  -moz-transition: 300ms;
+  -o-transition: 300ms;
+  font-weight: 600;
+  text-decoration: none;
+  transition: 300ms;
+}
+a:hover, a:focus {
+  outline: none;
+  text-decoration: none;
+  outline-offset: 0;
+}
+
+body {
+  background-color: #ffc09b;
+}
+
+main {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+
+::-moz-selection {
+  background-color: #c86040;
+  color: #ffffff;
+}
+
+::selection {
+  background-color: #c86040;
+  color: #ffffff;
+}
+
+.mobile-only {
+  display: none;
+}
+
+header {
+  background-color: #ff8f6c;
+  padding: 0.5rem;
+}
+header .middle-header {
+  display: flex;
+  justify-content: space-between;
+  padding: 0.5rem;
+  margin-bottom: 1rem;
+  background-color: #ff8f6c;
+}
+header .middle-header-left-side {
+  display: flex;
+}
+header .middle-header-left-side-image img {
+  width: 2rem;
+}
+header .middle-header-left-side-title h2 {
+  margin-left: 0.2rem;
+}
+header .nav-menu ul {
+  display: flex;
+  justify-content: flex-end;
+}
+header .nav-menu li {
+  margin-left: 0.8rem;
+  font-weight: bolder;
+}
+
+.desktop-five-columns {
+  display: flex;
+  justify-content: space-between;
+  width: 100%;
+}
+.desktop-five-columns > .column {
+  width: 18%;
+}
+
+.desktop-four-columns {
+  display: flex;
+  justify-content: space-between;
+  width: 100%;
+}
+.desktop-four-columns > .column {
+  width: 22%;
+}
+
+.desktop-three-columns {
+  display: flex;
+  justify-content: space-between;
+  width: 100%;
+}
+.desktop-three-columns > .column {
+  width: 30%;
+}
+
+.desktop-two-columns {
+  display: flex;
+  justify-content: space-between;
+  width: 100%;
+}
+.desktop-two-columns > .column {
+  width: 48%;
+}
+
+.desktop-two-columns-aside {
+  display: flex;
+  justify-content: space-between;
+  width: 100%;
+}
+.desktop-two-columns-aside > .column-aside {
+  width: 20%;
+}
+.desktop-two-columns-aside > .column-main {
+  width: 75%;
+}
+
+.desktop-one-column {
+  width: 100%;
+}
+.desktop-one-column > .column {
+  display: flex;
+  flex-direction: column;
+  width: 100%;
+}
+
+.notification {
+  color: white;
+  font-family: Roboto, Arial;
+  position: fixed;
+  top: 1rem;
+  right: -20rem;
+  transition: right 1s;
+  padding: 0.4rem;
+  display: block;
+  z-index: 1004;
+  border-radius: 0.4rem;
+}
+.notification.active {
+  top: 1rem;
+  right: 1rem;
+}
+.notification.error {
+  background-color: #970000;
+}
+.notification.success {
+  background-color: #1e8100;
+}
+
+.banner {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+.banner-image {
+  z-index: 1000;
+  position: relative;
+}
+
+.banner-title {
+  color: white;
+  position: absolute;
+  z-index: 1001;
+  top: 8rem;
+  left: 2rem;
+  font-size: 2rem;
+}
+
+.banner-title span {
+  background-color: #ff6670;
+  padding: 0.5rem;
+  border-radius: 0.5rem;
+}
+
+.banner-button {
+  color: white;
+  position: absolute;
+  top: 12rem;
+  z-index: 1001;
+  left: 2rem;
+  font-size: 2rem;
+  cursor: pointer;
+}
+
+.banner-button span:hover {
+  background-color: #c73145;
+}
+
+.banner-button span {
+  background-color: #ff6670;
+  padding: 0.5rem;
+  border-radius: 0.5rem;
+}
+
+.center {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  margin-top: 1rem;
+  margin-bottom: 1rem;
+  text-align: center;
+}
+
+.info-bottom p {
+  line-height: 2rem;
+  color: black;
+  font-weight: bolder;
+  font-size: 1.5rem;
+}
+
+#hamburger-menu-button {
+  display: none;
+}
+
+.info-bottom {
+  margin-top: 20rem;
+}
+
+.contact {
+  padding: 0 15%;
+  width: 70%;
+}
+.contact .contact-title {
+  text-align: center;
+  margin: 2rem 0 4rem 0;
+}
+.contact .contact-info {
+  display: flex;
+  flex-direction: column;
+  flex-wrap: wrap;
+}
+.contact .contact-info .contact-info-option {
+  display: flex;
+  align-items: center;
+  margin-bottom: 2.2rem;
+}
+.contact .contact-info .contact-info-option .contact-info-option-icon {
+  margin-right: 0.5rem;
+}
+.contact .contact-info .contact-info-option .contact-info-option-text span {
+  font-weight: 600;
+}
+.contact .contact-form .form-element {
+  margin-bottom: 0.5rem;
+}
+.contact .contact-form .form-element .form-element-label {
+  font-weight: 600;
+  margin-bottom: 0.5rem;
+}
+.contact .contact-form .form-element .form-element-input input {
+  border: 0;
+  border-radius: 0.2rem;
+  padding: 0.3rem 5%;
+  width: 90%;
+}
+.contact .contact-form .form-element .form-element-input input:focus {
+  background-color: #ffc9b4;
+}
+.contact .contact-form .form-element .form-element-input textarea {
+  border: 0;
+  border-radius: 0.2rem;
+  height: 20vh;
+  padding: 0.3rem 2%;
+  width: 96%;
+}
+.contact .contact-form .form-send-button {
+  margin-top: 2rem;
+  display: flex;
+  flex-direction: row-reverse;
+}
+.contact .contact-form .form-send-button button {
+  border: 0.2rem solid white;
+  padding: 0.5rem 2rem 0.5rem 2rem;
+  border-radius: 0.8rem;
+  background-color: #c86040;
+  background-image: linear-gradient(to right, #c86040, #ff8f6c);
+  cursor: pointer;
+}
+
+#type-products {
+  border: 0;
+  padding: 0.5rem;
+  width: 15rem;
+}
+
+.merchandising {
+  padding: 3rem;
+}
+
+.merchan-element {
+  display: flex;
+  flex-direction: column;
+  margin-left: 1rem;
+  margin-right: 1rem;
+}
+
+.merchan-element-image img {
+  width: 200rem;
+}
+
+.merchan-element-title h2 {
+  font-weight: bolder;
+  font-size: 1.5rem;
+}
+
+.merchan-element-title {
+  margin: 1rem 0 0.5rem 0;
+}
+
+.merchan-element-category {
+  margin: 0 0 0.5rem 0;
+}
+
+.merchan-element-category span {
+  font-weight: bolder;
+  color: #c86040;
+  font-size: 1.5rem;
+}
+
+.merchan-element-description p {
+  font-size: 1.5rem;
+}
+
+.category-merchans-products {
+  line-height: 2rem;
+}
+
+.results-products-container {
+  border-left: 0.4rem solid #c86040;
+}
+
+.results-products-total {
+  margin-left: 1rem;
+}
+
+.results-products-total span {
+  font-weight: bolder;
+}
+
+.results-products-info {
+  display: flex;
+  justify-content: space-between;
+}
+
+.results-products-elements {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: center;
+}
+
+.element {
+  width: 15rem;
+  margin: 1rem;
+  position: relative;
+  border: 0.5rem solid white;
+  border-radius: 0.5rem;
+  background-color: white;
+}
+
+.element-name {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  padding: 0.5rem;
+  background-color: #ffc09b;
+}
+
+.element-price {
+  position: absolute;
+  right: 0;
+  top: 0;
+  background-color: #c86040;
+  padding: 0.5rem;
+}
+
+.element-see {
+  display: flex;
+  flex-direction: column;
+  margin: 0.2rem;
+}
+
+.element-see button {
+  padding: 0.5rem;
+  background-image: linear-gradient(to right, #c86040, #ff8f6c);
+  border: 0;
+  cursor: pointer;
+}
+
+.images-merchan-product {
+  display: flex;
+  justify-content: space-between;
+  margin: 0 1rem 0 1rem;
+}
+
+.image-merchan-product-image img {
+  width: 100%;
+}
+
+.images-merchan-product-image img {
+  width: 6rem;
+}
+
+.info-merchan-product-price span {
+  font-size: 1.5rem;
+}
+
+.info-merchan-product-price {
+  margin: 1rem 0 1rem 0;
+}
+
+.info-merchan-product-description {
+  font-size: 1.5rem;
+  line-height: 4rem;
+}
+.info-merchan-product-description p {
+  line-height: 2rem;
+}
+
+.info-merchan-product-buy button {
+  padding: 0.5rem;
+  background-image: linear-gradient(to right, #c86040, #ff8f6c);
+  border: 0;
+  cursor: pointer;
+  border: 0.2rem solid white;
+  padding: 0.4rem 0.6rem 0.4rem 0.6rem;
+  border-radius: 0.5rem;
+  font-weight: bolder;
+}
+
+.info-merchan-product-quantity {
+  margin-bottom: 1rem;
+  margin-top: 1rem;
+  display: flex;
+}
+
+.info-merchan-product form div input {
+  width: 2rem;
+  height: 1.9rem;
+  border: 0;
+  text-align: center;
+}
+
+.merchan-product {
+  margin: 1rem;
+  width: 90%;
+}
+
+.types {
+  margin-bottom: 1rem;
+}
+
+.types select {
+  background-color: #ff8f6c;
+  border: 2px solid black;
+  border-radius: 0.2rem;
+}
+
+.type-related {
+  display: none;
+  width: 16rem;
+}
+
+.type-related.active {
+  display: block;
+}
+
+.cart {
+  margin: 2rem;
+}
+
+.cart-image {
+  width: 5rem;
+  display: none;
+}
+
+.cart-finishing-container {
+  display: flex;
+  justify-content: center;
+}
+
+.cart-title {
+  text-align: center;
+}
+
+.cart-quantity {
+  display: flex;
+  justify-content: center;
+}
+
+.cart-elements {
+  border-bottom: 0.2rem solid #c86040;
+  font-weight: bolder;
+}
+
+.cart-products {
+  height: 8rem;
+}
+
+.cart-finishing {
+  text-align: center;
+  border: 0.2rem solid white;
+  border-top: 0;
+  width: 14rem;
+  margin-bottom: 1rem;
+}
+
+.cart-finishing-title {
+  background-color: white;
+  padding: 0.2rem;
+}
+
+.cart-finishing .desktop-two-columns {
+  padding: 0.4rem;
+}
+
+.cart-buy {
+  display: flex;
+  justify-content: center;
+}
+
+.cart-buy button {
+  padding: 0.4rem 0.8rem 0.4rem 0.8rem;
+  font-size: 1rem;
+  border: 0.2rem solid white;
+  cursor: pointer;
+  background-image: linear-gradient(to right, #c86040, #ff8f6c);
+  font-weight: bolder;
+  border-radius: 0.5rem;
+}
+
+.cart-buttons {
+  margin-top: 0.5rem;
+}
+
+.info-merchan-product-quantity form div input {
+  width: 2rem;
+  height: 1.9rem;
+  border: 0;
+  text-align: center;
+}
+
+.return {
+  display: flex;
+  justify-content: center;
+}
+
+.return button {
+  padding: 0.4rem 0.8rem 0.4rem 0.8rem;
+  font-size: 1rem;
+  border: 0.2rem solid white;
+  cursor: pointer;
+  background-image: linear-gradient(to right, #c86040, #ff8f6c);
+  font-weight: bolder;
+  border-radius: 0.5rem;
+}
+
+.cart table tr td {
+  text-align: center;
+  width: 10rem;
+}
+
+.cart table {
+  margin-top: 2rem;
+}
+
+.checkout-form-element {
+  display: flex;
+  flex-direction: column;
+}
+
+.checkout-form-element input {
+  border: 0;
+  padding: 0.2rem;
+}
+
+.checkout-title {
+  text-align: center;
+  margin-bottom: 1rem;
+}
+
+.buy-finishing {
+  border: 0.2rem solid white;
+  text-align: center;
+}
+
+.buy-finishing .desktop-two-columns {
+  padding: 0.4rem;
+}
+
+.buy-finishing-title {
+  background-color: white;
+}
+
+.pay-continue {
+  padding: 0.5rem;
+  background-image: linear-gradient(to right, #c86040, #ff8f6c);
+  border: 0.2rem solid white;
+  cursor: pointer;
+  border-radius: 0.4rem;
+}
+
+.pay-options {
+  margin: 1rem 0 0 0;
+}
+
+.checkout {
+  margin: 2rem;
+}
+
+.checkout-form-element input {
+  margin-bottom: 1rem;
+}
+
+.quantity-number {
+  padding: 0.4rem 0.8rem 0.5rem 0.8rem;
+  background-color: white;
+  font-weight: bolder;
+}
+
+.quantity-minus {
+  padding: 0.4rem 0.8rem 0.4rem 0.8rem;
+  font-size: 1rem;
+  border: 0;
+  cursor: pointer;
+  background-image: linear-gradient(to right, #c86040, #ff8f6c);
+  font-weight: bolder;
+  border-radius: 5px 0 0 5px;
+}
+
+.quantity-plus {
+  padding: 0.4rem 0.8rem 0.4rem 0.8rem;
+  font-size: 1rem;
+  border: 0;
+  cursor: pointer;
+  background-image: linear-gradient(to right, #c86040, #ff8f6c);
+  font-weight: bolder;
+  border-radius: 0 5px 5px 0;
+}
