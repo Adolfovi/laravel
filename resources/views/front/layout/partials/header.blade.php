@@ -1,16 +1,4 @@
 <header>
-
-        
-    @if($agent->isDesktop())
-        <h2>Hola</h2>
-    @endif
-            
-    @if($agent->isMobile())
-        <h2>Adios</h2>
-    @endif
-    
-
-
     <div id="nav-menu-mobile" class="mobile-only">
         <ul>
             <li><a href="index.html">INICIO</a></li>
@@ -23,7 +11,7 @@
         <div class="column">
             <div class="middle-header-left-side">
                 <div class="middle-header-left-side-image">
-                    <img src="img/espartacoin.png">
+                    <img src="https://raw.githubusercontent.com/Adolfovi/espartacoin/main/img/espartacoin.png">
                 </div>
 
                 <div class="middle-header-left-side-title">
