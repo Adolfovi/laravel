@@ -370,9 +370,9 @@ __webpack_require__.r(__webpack_exports__);
 /******/ 		// undefined = chunk not loaded, null = chunk preloaded/prefetched
 /******/ 		// [resolve, reject, Promise] = chunk loading, 0 = chunk loaded
 /******/ 		var installedChunks = {
-/******/ 			"/admin/js/front/desktop/app": 0,
-/******/ 			"admin/css/front/mobile/app-mobile": 0,
-/******/ 			"admin/css/front/desktop/app": 0
+/******/ 			"/front/js/desktop/app": 0,
+/******/ 			"front/css/mobile/app-mobile": 0,
+/******/ 			"front/css/desktop/app": 0
 /******/ 		};
 /******/ 		
 /******/ 		// no chunk on demand loading
@@ -422,9 +422,9 @@ __webpack_require__.r(__webpack_exports__);
 /******/ 	// startup
 /******/ 	// Load entry module and return exports
 /******/ 	// This entry module depends on other loaded chunks and execution need to be delayed
-/******/ 	__webpack_require__.O(undefined, ["admin/css/front/mobile/app-mobile","admin/css/front/desktop/app"], () => (__webpack_require__("./resources/js/front/desktop/app.js")))
-/******/ 	__webpack_require__.O(undefined, ["admin/css/front/mobile/app-mobile","admin/css/front/desktop/app"], () => (__webpack_require__("./resources/sass/front/app.scss")))
-/******/ 	var __webpack_exports__ = __webpack_require__.O(undefined, ["admin/css/front/mobile/app-mobile","admin/css/front/desktop/app"], () => (__webpack_require__("./resources/sass/front/app-mobile.scss")))
+/******/ 	__webpack_require__.O(undefined, ["front/css/mobile/app-mobile","front/css/desktop/app"], () => (__webpack_require__("./resources/js/front/desktop/app.js")))
+/******/ 	__webpack_require__.O(undefined, ["front/css/mobile/app-mobile","front/css/desktop/app"], () => (__webpack_require__("./resources/sass/front/app.scss")))
+/******/ 	var __webpack_exports__ = __webpack_require__.O(undefined, ["front/css/mobile/app-mobile","front/css/desktop/app"], () => (__webpack_require__("./resources/sass/front/app-mobile.scss")))
 /******/ 	__webpack_exports__ = __webpack_require__.O(__webpack_exports__);
 /******/ 	
 /******/ })()
