@@ -1,5 +1,6 @@
 @extends('front.layout.master')
-
+@section('title')Checking @endsection
+@section('description')Compra Espartacoin, la mejor criptomoneda que puede existir @endsection
 @section('content')
 
     @if($agent->isDesktop())
