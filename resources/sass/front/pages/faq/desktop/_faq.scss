@@ -5,6 +5,10 @@
     margin-bottom: 2rem;
 }
 
+.main-title h2 {
+    font-size: 1.6rem;
+}
+
 .faqs-container {
     display: flex;
     flex-direction: column;
@@ -23,7 +27,6 @@
     margin-left: 0.4rem;
     transform: rotateZ(180deg);
     transition: transform 0.8s;
-    cursor: pointer;
 }
 
 .faq-arrow.active {
@@ -31,19 +34,19 @@
     transition: transform 0.8s;
 }
 
+
 .faq-submain {
     position: relative;
     transform: rotateX(90deg);
-    transition: height 1.4s,transform 1s, margin-top 1s;    
+    transition: height 1.2s,transform 1s;
     width: 17rem;
     height: 0;
 }
 
 .faq-submain.active {
     transform: rotateX(0deg);
-    transition: height 0.6s,transform 1s, margin-top 1s;    
-    height: 6rem;
-    margin-top: 0.4rem;
+    transition: height 0.4s,transform 1s;    
+    height: 4rem;
 }
 
 .faq-element {

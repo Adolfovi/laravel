@@ -1,10 +1,10 @@
 <header>
     <div id="nav-menu-mobile" class="mobile-only">
         <ul>
-            <li><a href="index.html">INICIO</a></li>
-            <li><a href="merchandising.html">MERCHANDISING</a></li>
-            <li><a href="faq.html">FAQ</a></li>
-            <li><a href="contacto.html">CONTACTO</a></li>
+            <li><a href="/">INICIO</a></li>
+            <li><a href="merchandising">MERCHANDISING</a></li>
+            <li><a href="faqs">FAQ</a></li>
+            <li><a href="contacto">CONTACTO</a></li>
         </ul>
     </div>
     <div class="mobile-two-columns" style="flex-direction: row;">
@@ -15,7 +15,7 @@
                 </div>
 
                 <div class="middle-header-left-side-title">
-                    <h2><a href="index.html">ESPARTACOIN</a></h2>
+                    <h2><a href="/">ESPARTACOIN</a></h2>
                 </div>
             </div>
         </div>
@@ -40,10 +40,10 @@
             </div>
             <div class="nav-menu desktop-only">
                 <ul>
-                    <li><a href="index.html">INICIO</a></li>
-                    <li><a href="merchandising.html">MERCHANDISING</a></li>
-                    <li><a href="faq.html">FAQ</a></li>
-                    <li><a href="contacto.html">CONTACTO</a></li>
+                    <li><a href="/">INICIO</a></li>
+                    <li><a href="merchandising">MERCHANDISING</a></li>
+                    <li><a href="faqs">FAQ</a></li>
+                    <li><a href="contacto">CONTACTO</a></li>
                 </ul>
             </div>
         </div>
