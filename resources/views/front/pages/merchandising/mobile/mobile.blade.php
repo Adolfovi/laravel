@@ -3,7 +3,7 @@
         <div class="column-aside">
             <div class="category-merchans-container">
                 <div class="category-merchans-title">
-                    <h2>Categorias</h2>
+                    <h2>@yield('page-title')</h2>
                 </div>
                 <form action="/merchan.php">
                     <select name="type-products" id="type-products">

@@ -1,5 +1,5 @@
 <div class="main-title">
-    <h2>Preguntas y respuestas</h2>
+    <h2>@yield('page-title')</h2>
 </div>
 <div class="faqs-container">
     <div class="faqs">

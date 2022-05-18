@@ -2,7 +2,7 @@
     <div class="mobile-one-column desktop-one-column">
         <div class="column">
             <div class="contact-title">
-                <h2>Contacte con nosotros</h2>
+                <h2>@yield('page-title')</h2>
             </div>
         </div>
     </div>

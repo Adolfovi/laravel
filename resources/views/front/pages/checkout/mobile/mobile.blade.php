@@ -2,7 +2,7 @@
     <div class="mobile-one-column desktop-one-column">
         <div class="column">
             <div class="checkout-title">
-                <h2>Finalizar compra</h2>
+                <h2>@yield('page-title')</h2>
             </div>
         </div>
     </div>
