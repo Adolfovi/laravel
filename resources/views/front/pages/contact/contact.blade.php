@@ -9,6 +9,7 @@
     <meta name="description" content="descripción de la web, se recomienda 90 caracteres">
     <meta name="keywords" content="palabras clave, separadas, por comas">
     <link class="responsive" href="style/app.css" rel="stylesheet">
+    @include('front.layout.partials.style')
 </head>
 
 
@@ -162,7 +163,7 @@
             </div>
         </div>
     </main>
-    @include('front.layouts.partials.js')
+    @include('front.layout.partials.js')
 </body>
 
 </html>

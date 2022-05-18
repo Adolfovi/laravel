@@ -6,6 +6,7 @@ import { renderNotification } from './notification.js';
 import { renderformcheckout } from './form-checkout.js';
 import { renderbuttonfaq } from './button-faq.js';
 import { renderresponsive } from './responsive.js';
+
 renderTabs();
 renderPlusMinusButton();
 renderMenuButton();
