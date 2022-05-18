@@ -34,9 +34,9 @@ Route::get('/faqs', function () {
 });
 
 Route::get('/merchan', function () {
-    return view('front.pages.merchan.merchan');
+    return view('front.pages.merchan.merchan-product');
 });
 
 Route::get('/merchandising', function () {
-    return view('front.pages.merchan.merchan-product');
+    return view('front.pages.merchandising.merchandising');
 });

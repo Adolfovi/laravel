@@ -49,15 +49,7 @@
                     </td>
                     <td class="cart-products">
                         <div class="cart-quantity">
-                            <div class="info-merchan-product-quantity plus-minus-button">
-                                <button class="quantity-minus">-</button>
-                                <form>
-                                    <div>
-                                        <input value="1" class="input-quantity">
-                                    </div>
-                                </form>
-                                <button class="quantity-plus">+</button>
-                            </div>
+                            @include('front.components.button')
                         </div>
                     </td>
                 </tr>
@@ -79,15 +71,7 @@
                     </td>
                     <td class="cart-products">
                         <div class="cart-quantity">
-                            <div class="info-merchan-product-quantity plus-minus-button">
-                                <button class="quantity-minus">-</button>
-                                <form>
-                                    <div>
-                                        <input value="1" class="input-quantity">
-                                    </div>
-                                </form>
-                                <button class="quantity-plus">+</button>
-                            </div>
+                            @include('front.components.button')
                         </div>
                     </td>
                 </tr>
