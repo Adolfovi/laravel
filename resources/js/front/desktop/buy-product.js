@@ -1,6 +1,5 @@
 export let buyproduct = () => {
     let buyproduct = document.querySelector('.buy-product');
-
     if (buyproduct) {
 
         buyproduct.addEventListener('click', (event) => {

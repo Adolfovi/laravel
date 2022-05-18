@@ -1,5 +1,4 @@
 export let renderNotification = () => {
-
     document.addEventListener('message', (event) => {
 
         let notification = document.querySelector('.notification');
