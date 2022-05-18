@@ -1,31 +1,13 @@
-<!DOCTYPE html>
-<html lang="en">
+@extends('front.layout.master')
 
-<head>
-    <meta charset="utf-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1">
-    <link rel="shortcut icon" href="./img/espartacoin.png">
-    <title>Espartacoin</title>
-    <meta name="description" content="descripción de la web, se recomienda 90 caracteres">
-    <meta name="keywords" content="palabras clave, separadas, por comas">
-    <link class="responsive" href="style/app.css" rel="stylesheet">
-    @include('front.layout.partials.style')
-</head>
+@section('content')
 
+    @if($agent->isDesktop())
+        @include('front.pages.checkout.desktop.desktop')
+    @endif
+    
+    @if($agent->isMobile())
+        @include('front.pages.checkout.mobile.mobile')
+    @endif
 
-<body>
-    @include('front.layout.partials.header')
-    <main>
-{{--  --}}
-@if($agent->isDesktop())
-@include('front.pages.checkout.desktop.desktop')
-@endif
-
-@if($agent->isMobile())
-@include('front.pages.checkout.mobile.mobile')
-@endif
-    </main>
-    @include('front.layout.partials.js')
-</body>
-
-</html>
+@endsection
