@@ -1,5 +1,4 @@
 <div class="checkout">
-
     <div class="mobile-one-column desktop-one-column">
         <div class="column">
             <div class="checkout-title">
@@ -7,7 +6,6 @@
             </div>
         </div>
     </div>
-
     <div class="mobile-two-columns desktop-two-columns">
         <div class="column">
             <div class="checkout-form">
@@ -41,11 +39,8 @@
                                 <label for="postalcode">Código Postal</label>
                                 <input class="input-form" type="text" name="postalcode">
                             </div>
-
                         </div>
-
                     </div>
-
                     <div class="mobile-one-column desktop-one-column">
                         <div class="column">
                             <div class="checkout-form-element">
@@ -57,7 +52,6 @@
                             </div>
                         </div>
                     </div>
-
             </div>
         </div>
         <div class="column">
@@ -78,7 +72,6 @@
                         </div>
                     </div>
                 </div>
-
                 <div class="mobile-two-columns desktop-two-columns">
                     <div class="column">
                         <div class="buy-finishing-price-text">
@@ -91,7 +84,6 @@
                         </div>
                     </div>
                 </div>
-
                 <div class="mobile-two-columns desktop-two-columns">
                     <div class="column">
                         <div class="buy-finishing-total-text">
@@ -115,8 +107,6 @@
                 <button class="pay-continue" type="submit">Pagar</button>
             </div>
             </form>
-
         </div>
     </div>
-
 </div>

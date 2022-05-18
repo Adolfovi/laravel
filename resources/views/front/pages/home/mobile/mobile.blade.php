@@ -9,7 +9,6 @@
         <span>Compra Espartacoin</span>
     </div>
 </div>
-
 <div class="mobile-one-column">
     <div class="column center">
         <h3 class="featured-text">Compra productos de nuestro merchandising!!</h3>

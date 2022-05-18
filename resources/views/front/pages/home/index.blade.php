@@ -1,6 +1,5 @@
 <!doctype html>
 <html lang="es">
-
     <head>
         <meta charset="utf-8">
         <meta name="viewport" content="width=device-width, initial-scale=1">
@@ -11,9 +10,7 @@
         @include('front.layout.partials.style')
     </head>
     <body>
-
         @include('front.layout.partials.header')
-        
         <main>
         @if($agent->isDesktop())
             @include('front.pages.home.desktop.desktop')

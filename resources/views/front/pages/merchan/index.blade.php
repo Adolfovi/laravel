@@ -22,9 +22,7 @@
         @if($agent->isMobile())
         @include('front.pages.merchan.mobile.mobile')
         @endif
-
     </main>
     @include('front.layout.partials.js')
 </body>
-
 </html>

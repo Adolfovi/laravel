@@ -1,5 +1,4 @@
 <div class="checkout">
-
     <div class="mobile-one-column desktop-one-column">
         <div class="column">
             <div class="checkout-title">
@@ -7,7 +6,6 @@
             </div>
         </div>
     </div>
-
     <div class="mobile-two-columns desktop-two-columns">
         <div class="column">
             <div class="checkout-form">
@@ -115,8 +113,6 @@
                 <button class="pay-continue" type="submit">Pagar</button>
             </div>
             </form>
-
         </div>
     </div>
-
 </div>
