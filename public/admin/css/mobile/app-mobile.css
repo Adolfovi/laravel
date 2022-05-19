@@ -479,12 +479,16 @@ a:hover, a:focus {
   width: 100%;
 }
 
+body {
+  background-color: #ffc09b;
+}
+
 .administration-editor {
   margin: 1rem;
 }
 
 .administration-editor-menu-nav {
-  background-color: #8d8d8d;
+  background-color: #ffc09b;
 }
 
 .elements-configuration {
@@ -493,7 +497,7 @@ a:hover, a:focus {
 }
 
 .elements-configuration-element {
-  background-color: #dddddd;
+  background-color: #ff6670;
   padding: 0.2rem;
   width: 14rem;
   margin-bottom: 1rem;
@@ -511,7 +515,7 @@ a:hover, a:focus {
 .filter-main {
   display: flex;
   justify-content: center;
-  background-color: #afafaf;
+  background-color: #924a34;
   padding: 0.8rem;
 }
 
@@ -543,7 +547,7 @@ a:hover, a:focus {
   display: flex;
   justify-content: flex-start;
   padding: 0.4rem 0rem 0.4rem 0rem;
-  background-color: gray;
+  background-color: #ffc09b;
   margin: 1rem;
 }
 
@@ -552,7 +556,7 @@ a:hover, a:focus {
 }
 
 .form-language-element :hover {
-  background-color: #000000;
+  background-color: #ff8f6c;
   color: white;
 }
 
@@ -591,7 +595,7 @@ a:hover, a:focus {
 }
 
 .form-sections-element :hover {
-  background-color: #000000;
+  background-color: #ffc09b;
   color: white;
 }
 
@@ -606,11 +610,11 @@ a:hover, a:focus {
 }
 
 .header-main-title h2 {
-  color: white;
+  color: black;
 }
 
 .header-main-title {
-  background-color: black;
+  background-color: #ff8f6c;
   padding: 1rem;
 }
 
@@ -683,11 +687,11 @@ a:hover, a:focus {
 }
 
 ::-moz-selection {
-  background-color: black;
+  background-color: #ffc09b;
   color: white;
 }
 
 ::selection {
-  background-color: black;
+  background-color: #ffc09b;
   color: white;
 }

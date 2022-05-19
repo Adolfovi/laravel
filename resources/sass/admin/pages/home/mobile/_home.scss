@@ -1,9 +1,13 @@
+body{
+    background-color: $primary-color-light;
+}
+
 .administration-editor {
     margin: 1rem;
 }
 
 .administration-editor-menu-nav {
-    background-color: #8d8d8d;
+    background-color: $primary-color-light;
 }
 
 .elements-configuration {
@@ -12,7 +16,7 @@
 }
 
 .elements-configuration-element {
-    background-color: #dddddd;
+    background-color: $secondary-color;
     padding: 0.2rem;
     width: 14rem;
     margin-bottom: 1rem;
@@ -30,7 +34,7 @@
 .filter-main {
     display: flex;
     justify-content: center;
-    background-color: #afafaf;
+    background-color: $primary-color-dark;
     padding: 0.8rem;
 }
 
@@ -62,7 +66,7 @@
     display: flex;
     justify-content: flex-start;
     padding: 0.4rem 0rem 0.4rem 0rem;
-    background-color: gray;
+    background-color: $primary-color-light;
     margin: 1rem;
 }
 
@@ -71,7 +75,7 @@
 }
 
 .form-language-element :hover {
-    background-color: #000000;
+    background-color: $primary-color;
     color: white;
 }
 
@@ -111,7 +115,7 @@
 }
 
 .form-sections-element :hover {
-    background-color: #000000;
+    background-color: $primary-color-light;
     color: white;
 }
 
@@ -126,11 +130,11 @@
 }
 
 .header-main-title h2 {
-    color: white;
+    color: black;
 }
 
 .header-main-title {
-    background-color: black;
+    background-color: $primary-color;
     padding: 1rem;
 }
 
@@ -225,7 +229,7 @@
 .pencil {}
 
 ::selection {
-    background-color: black;
+    background-color: $primary-color-light;
     color: white;
 }
 
