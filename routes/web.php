@@ -33,7 +33,7 @@ Route::get('/faqs', function () {
     return view('front.pages.faq.index');
 });
 
-Route::get('/merchan', function () {
+Route::get('/merchan-product', function () {
     return view('front.pages.merchan.index');
 });
 
@@ -42,5 +42,9 @@ Route::get('/merchandising', function () {
 });
 
 Route::get('/admin-panel', function () {
+    return view('admin.pages.admin-panel-home.index');
+});
+
+Route::get('/admin-panel-home', function () {
     return view('admin.pages.admin-panel-home.index');
 });

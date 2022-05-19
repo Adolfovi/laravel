@@ -31,6 +31,26 @@
                         <span></span>
                     </div>
                 </div>
+                <div class="admin-panel-nav-menu">
+                <a href="admin-panel-home">    
+                    Inicio
+                </a> 
+                <a href="admin-panel-merchandising">
+                Merchandising 
+                </a>
+                <a href="admin-panel-faq">
+                    FAQ 
+                </a>
+                <a href="admin-panel-contacto">    
+                Contacto 
+                </a>
+                <a href="admin-panel-merchan-product">
+                    Merchan-product 
+                </a>
+                <a href="admin-panel-checking">
+                    Checking
+                </a>
+                </div>
             </div>
         </div>
     </header>
@@ -197,8 +217,6 @@
                 </div>
             </div>
         </div>
-
-
     </main>
     @if($agent->isDesktop())
     <script src="{{ mix('admin/js/desktop/app.js') }}"></script>

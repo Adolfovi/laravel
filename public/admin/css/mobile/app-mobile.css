@@ -694,3 +694,7 @@ body {
   background-color: #ffc09b;
   color: white;
 }
+
+.admin-panel-nav-menu {
+  display: none;
+}

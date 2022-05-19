@@ -139,7 +139,7 @@ body{
 
 
 .header-main-title-hamburger {
-    display: flex;
+    display: none;
     justify-content: flex-end;
     position: absolute;
     top: 0.5rem;
@@ -233,3 +233,14 @@ body{
 }
 
 .thrash {}
+
+
+.admin-panel-nav-menu {
+    position: absolute;
+    top: 0.4rem;
+    right: 0.4rem;
+}
+
+.admin-panel-nav-menu a {
+    margin-left: 0.4rem;
+}
