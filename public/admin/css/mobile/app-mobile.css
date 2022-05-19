@@ -557,7 +557,6 @@ body {
 
 .form-language-element :hover {
   background-color: #ff8f6c;
-  color: white;
 }
 
 .form-content-data-name-title h3 {
@@ -596,16 +595,16 @@ body {
 
 .form-sections-element :hover {
   background-color: #ffc09b;
-  color: white;
+  background-color: #ff8f6c;
 }
 
 .form-content-data-description-result textarea:focus {
-  background-color: #b3b3b3;
+  background-color: #ff8f6c;
   color: black;
 }
 
 .form-content-data-name-result input:focus {
-  background-color: #b3b3b3;
+  background-color: #ff8f6c;
   color: black;
 }
 

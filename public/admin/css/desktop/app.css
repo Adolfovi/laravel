@@ -425,7 +425,7 @@ a:hover, a:focus {
 }
 
 header {
-  background-color: #000000;
+  background-color: #ff8f6c;
   padding: 1rem;
 }
 
@@ -486,12 +486,16 @@ header {
   width: 100%;
 }
 
+body {
+  background-color: #ffc09b;
+}
+
 .administration-editor {
   margin: 1rem;
 }
 
 .administration-editor-menu-nav {
-  background-color: #8d8d8d;
+  background-color: #ffc09b;
 }
 
 .elements-configuration {
@@ -500,9 +504,9 @@ header {
 }
 
 .elements-configuration-element {
-  background-color: #dddddd;
+  background-color: #ff6670;
   padding: 0.2rem;
-  width: 70%;
+  width: 14rem;
   margin-bottom: 1rem;
 }
 
@@ -518,7 +522,7 @@ header {
 .filter-main {
   display: flex;
   justify-content: center;
-  background-color: #afafaf;
+  background-color: #924a34;
   padding: 0.8rem;
 }
 
@@ -550,7 +554,7 @@ header {
   display: flex;
   justify-content: flex-start;
   padding: 0.4rem 0rem 0.4rem 0rem;
-  background-color: gray;
+  background-color: #ffc09b;
   margin: 1rem;
 }
 
@@ -559,8 +563,7 @@ header {
 }
 
 .form-language-element :hover {
-  background-color: #000000;
-  color: white;
+  background-color: #ff8f6c;
 }
 
 .form-content-data-name-title h3 {
@@ -598,27 +601,35 @@ header {
 }
 
 .form-sections-element :hover {
-  background-color: #000000;
-  color: white;
+  background-color: #ffc09b;
+  background-color: #ff8f6c;
 }
 
 .form-content-data-description-result textarea:focus {
-  background-color: #b3b3b3;
+  background-color: #ff8f6c;
   color: black;
 }
 
 .form-content-data-name-result input:focus {
-  background-color: #b3b3b3;
+  background-color: #ff8f6c;
   color: black;
 }
 
 .header-main-title h2 {
-  color: white;
+  color: black;
+}
+
+.header-main-title {
+  background-color: #ff8f6c;
+  padding: 1rem;
 }
 
 .header-main-title-hamburger {
   display: flex;
   justify-content: flex-end;
+  position: absolute;
+  top: 0.5rem;
+  right: 0.5rem;
 }
 
 * {
@@ -682,11 +693,11 @@ header {
 }
 
 ::-moz-selection {
-  background-color: black;
+  background-color: #ffc09b;
   color: white;
 }
 
 ::selection {
-  background-color: black;
+  background-color: #ffc09b;
   color: white;
 }

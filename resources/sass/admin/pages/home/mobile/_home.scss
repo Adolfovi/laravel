@@ -76,7 +76,6 @@ body{
 
 .form-language-element :hover {
     background-color: $primary-color;
-    color: white;
 }
 
 .form-content-data-name-title h3 {
@@ -116,16 +115,16 @@ body{
 
 .form-sections-element :hover {
     background-color: $primary-color-light;
-    color: white;
+    background-color: $primary-color;
 }
 
 .form-content-data-description-result textarea:focus {
-    background-color: #b3b3b3;
+    background-color: $primary-color;
     color: black;
 }
 
 .form-content-data-name-result input:focus {
-    background-color: #b3b3b3;
+    background-color: $primary-color;
     color: black;
 }
 
