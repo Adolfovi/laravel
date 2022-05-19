@@ -697,5 +697,25 @@ body {
 }
 
 .admin-panel-nav-menu {
-  display: none;
+  position: absolute;
+  display: flex;
+  flex-direction: column;
+  top: 10rem;
+  right: -20rem;
+  align-items: flex-start;
+  background-color: #ff8f6c;
+  padding: 1rem;
+  transition: 1s right;
+}
+
+.admin-panel-nav-menu.active {
+  position: absolute;
+  display: flex;
+  flex-direction: column;
+  top: 10rem;
+  right: 0rem;
+  align-items: flex-start;
+  background-color: #ff8f6c;
+  padding: 1rem;
+  transition: 1s right;
 }

@@ -41,31 +41,6 @@ Route::get('/merchandising', function () {
     return view('front.pages.merchandising.index');
 });
 
-Route::get('/admin-panel', function () {
-    return view('admin.pages.admin-panel-home.index');
-});
-
-Route::get('/admin-panel-home', function () {
-    return view('admin.pages.admin-panel-home.index');
-});
-
-
-Route::get('/admin-panel-merchandising', function () {
-    return view('admin.pages.admin-panel-merchandising.index');
-});
-
-Route::get('/admin-panel-faq', function () {
-    return view('admin.pages.admin-panel-faq.index');
-});
-
-Route::get('/admin-panel-contacto', function () {
-    return view('admin.pages.admin-panel-contacto.index');
-});
-
-Route::get('/admin-panel-merchan-product', function () {
-    return view('admin.pages.admin-panel-merchan-product.index');
-});
-
-Route::get('/admin-panel-checking', function () {
-    return view('admin.pages.admin-panel-checking.index');
+Route::get('/administrator', function () {
+    return view('admin.pages.home.index');
 });
