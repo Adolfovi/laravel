@@ -40,3 +40,7 @@ Route::get('/merchan', function () {
 Route::get('/merchandising', function () {
     return view('front.pages.merchandising.index');
 });
+
+Route::get('/admin-panel', function () {
+    return view('admin.pages.admin-panel-home.index');
+});

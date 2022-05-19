@@ -15,3 +15,8 @@ mix.js('resources/js/front/desktop/app.js', 'public/front/js/desktop').version()
 .js('resources/js/front/mobile/app-mobile.js', 'public/front/js/mobile').version()
 .sass('resources/sass/front/app.scss', 'public/front/css/desktop').version()
 .sass('resources/sass/front/app-mobile.scss', 'public/front/css/mobile').version()
+
+.js('resources/js/admin/desktop/app.js', 'public/admin/js/desktop').version()
+.js('resources/js/admin/mobile/app-mobile.js', 'public/admin/js/mobile').version()
+.sass('resources/sass/admin/app.scss', 'public/admin/css/desktop').version()
+.sass('resources/sass/admin/app-mobile.scss', 'public/admin/css/mobile').version()

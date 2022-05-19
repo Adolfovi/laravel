@@ -1,0 +1,63 @@
+.desktop-five-columns{
+    display: flex;
+    justify-content: space-between;
+    width: 100%;
+
+    & > .column{
+        width: 20%;
+    }    
+}
+
+.desktop-four-columns{
+    display: flex;
+    justify-content: space-between;
+    width: 100%;
+
+    & > .column{
+        width: 25%;
+    }
+}
+
+.desktop-three-columns{
+    display: flex;
+    justify-content: space-between;
+    width: 100%;
+
+    & > .column{
+        width: 30%;
+    }
+}
+
+.desktop-two-columns{
+    display: flex;
+    justify-content: space-between;
+    width: 100%;
+
+    & > .column{
+        width: 50%;
+    }
+}
+
+.desktop-two-columns-aside{
+    display: flex;
+    justify-content: space-between;
+    width: 100%;
+
+    & > .column-aside{
+        width: 40%;
+    }
+
+    & > .column-main{
+        width: 60%;
+    }
+}
+
+.desktop-one-column{
+    width: 100%;
+
+    & > .column{
+        display: flex;
+        flex-direction: column;
+        width: 100%;
+    }
+}

@@ -1,0 +1,60 @@
+.mobile-five-columns{
+    display: flex;
+    justify-content: center;
+    align-content: center;
+    flex-direction: column;
+    width: 100%;
+
+    & > .column{
+        width: 100%;
+    }
+}
+
+.mobile-four-columns{
+    display: flex;
+    justify-content: center;
+    align-content: center;
+    flex-direction: column;
+    width: 100%;
+
+    & > .column{
+        width: 100%;
+    }
+}
+
+.mobile-three-columns{
+    display: flex;
+    justify-content: center;
+    align-content: center;
+    flex-direction: column;
+    width: 100%;
+
+    & > .column{
+        width: 100%;
+    }
+}
+
+.mobile-two-columns{
+    display: flex;
+    justify-content: center;
+    align-content: center;
+    flex-direction: column;
+    width: 100%;
+
+    & > .column{
+        width: 100%;
+    }
+}
+
+.mobile-one-column{
+    display: flex;
+    justify-content: center;
+    align-content: center;
+    flex-direction: column;
+    width: 100%;
+
+    & > .column{
+        width: 100%;
+    }
+}
+
