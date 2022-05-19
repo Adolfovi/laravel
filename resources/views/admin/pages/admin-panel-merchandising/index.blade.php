@@ -32,10 +32,10 @@
                     </div>
                 </div>
                 <div class="admin-panel-nav-menu">
-                <a class="active" href="admin-panel-home">    
-                Inicio
+                <a href="admin-panel-home">    
+                    Inicio
                 </a> 
-                <a href="admin-panel-merchandising">
+                <a class="active" href="admin-panel-merchandising">
                 Merchandising 
                 </a>
                 <a href="admin-panel-faq">

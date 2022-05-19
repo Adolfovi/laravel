@@ -711,3 +711,7 @@ body {
 .admin-panel-nav-menu a {
   margin-left: 0.4rem;
 }
+
+.admin-panel-nav-menu a.active {
+  color: #ff6670;
+}

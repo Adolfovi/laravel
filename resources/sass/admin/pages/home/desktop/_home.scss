@@ -234,7 +234,6 @@ body{
 
 .thrash {}
 
-
 .admin-panel-nav-menu {
     position: absolute;
     top: 0.4rem;
@@ -243,4 +242,8 @@ body{
 
 .admin-panel-nav-menu a {
     margin-left: 0.4rem;
+}
+
+.admin-panel-nav-menu a.active {
+color: $secondary-color;
 }

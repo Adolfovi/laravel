@@ -32,8 +32,8 @@
                     </div>
                 </div>
                 <div class="admin-panel-nav-menu">
-                <a class="active" href="admin-panel-home">    
-                Inicio
+                <a href="admin-panel-home">    
+                    Inicio
                 </a> 
                 <a href="admin-panel-merchandising">
                 Merchandising 
@@ -41,7 +41,7 @@
                 <a href="admin-panel-faq">
                     FAQ 
                 </a>
-                <a href="admin-panel-contacto">    
+                <a class="active" href="admin-panel-contacto">    
                 Contacto 
                 </a>
                 <a href="admin-panel-merchan-product">
