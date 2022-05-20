@@ -622,7 +622,7 @@ body {
   display: flex;
   justify-content: flex-end;
   position: absolute;
-  top: 0.5rem;
+  top: 0.8rem;
   right: 0.5rem;
 }
 
@@ -632,7 +632,7 @@ body {
 }
 
 #nav-icon3 {
-  width: 50px;
+  width: 40px;
   height: 0px;
   position: relative;
   transform: rotate(0deg);
@@ -645,7 +645,7 @@ body {
   position: absolute;
   height: 4px;
   width: 100%;
-  background: white;
+  background: black;
   border-radius: 9px;
   opacity: 1;
   left: 0;
@@ -659,15 +659,15 @@ body {
 
 #nav-icon3 span:nth-child(2),
 #nav-icon3 span:nth-child(3) {
-  top: 14px;
+  top: 10px;
 }
 
 #nav-icon3 span:nth-child(4) {
-  top: 28px;
+  top: 20px;
 }
 
 #nav-icon3.open span:nth-child(1) {
-  top: 18px;
+  top: 20px;
   width: 0%;
   left: 50%;
 }
@@ -697,7 +697,7 @@ body {
 }
 
 .admin-panel-nav-menu {
-  position: absolute;
+  position: fixed;
   display: flex;
   flex-direction: column;
   top: 10rem;
@@ -705,7 +705,8 @@ body {
   align-items: flex-start;
   background-color: #ff8f6c;
   padding: 1rem;
-  transition: 1s right;
+  transition: 1s right cubic-bezier(0.87, -0.43, 0.76, 0.79);
+  border-radius: 1rem 0rem 0rem 1rem;
 }
 
 .admin-panel-nav-menu.active {

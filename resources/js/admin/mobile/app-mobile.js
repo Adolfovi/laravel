@@ -8,6 +8,8 @@ ClassicEditor
 		console.error( 'There was a problem initializing the editor.', error );
 	} );
 
+
 document.getElementById("nav-icon3").addEventListener("click", function () {
-    document.getElementById("nav-icon3").classList.toggle("open");
+	document.querySelector('#nav-icon3').classList.toggle('open');
+	document.querySelector('.admin-panel-nav-menu').classList.toggle('active');
 });
