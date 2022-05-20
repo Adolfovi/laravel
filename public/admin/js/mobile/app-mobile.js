@@ -87,6 +87,9 @@ document.getElementById("nav-icon3").addEventListener("click", function () {
   document.querySelector('#nav-icon3').classList.toggle('open');
   document.querySelector('.admin-panel-nav-menu').classList.toggle('active');
 });
+document.querySelector('.icons-header-form-icon-onoff').addEventListener('click', function () {
+  document.querySelector('.icons-header-form-icon-onoff').classList.toggle('active');
+});
 })();
 
 /******/ })()
