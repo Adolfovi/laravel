@@ -622,8 +622,8 @@ body {
   display: flex;
   justify-content: flex-end;
   position: absolute;
-  top: 0.8rem;
-  right: 0.5rem;
+  top: 1.4rem;
+  right: 1rem;
 }
 
 * {
