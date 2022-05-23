@@ -21,6 +21,7 @@ body{
     border-radius: 0.4rem;
     width: 18rem;
     margin-bottom: 1rem;
+    box-shadow: inset -1px -1px 4px;
 }
 
 .elements-configuration-element-subelement {
@@ -301,6 +302,7 @@ body{
     background-color: $primary-color;
     padding: 0.4rem;
     border-radius: 0.4rem;
+    box-shadow: inset -1px -1px 4px;
 }
 
 .icons-header-form-container {
@@ -329,7 +331,7 @@ body{
     padding: 0.8rem;
     border-radius: 1rem;
     transition: 0.5s background-color;
-
+    box-shadow: inset -1px -1px 4px;
 }
 
 .icons-header-form-icon-onoff.active div{
