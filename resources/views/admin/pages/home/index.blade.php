@@ -78,7 +78,7 @@
                             <h3>Categoría</h3>
                         </div>
                         <div class="form-category-result">
-                            <select name="category" style="border: 0;border-bottom: 1px solid black;margin-top: 1rem;">
+                            <select name="category" style="">
                                 <option value="tipo0"></option>
                                 <option value="tipo1">Ejemplo1</option>
                                 <option value="tipo2">Ejemplo2</option>
@@ -93,12 +93,7 @@
                             <h3>Nombre</h3>
                         </div>
                         <div class="form-name-result">
-                            <select name="name" style="border: 0;border-bottom: 1px solid black;margin-top: 1rem;">
-                                <option value="tipo0"></option>
-                                <option value="tipo1">Ejemplo1</option>
-                                <option value="tipo2">Ejemplo2</option>
-                                <option value="tipo3">Ejemplo3</option>
-                            </select>
+                            <input name="name">
                         </div>
                     </div>
                 </div>
@@ -115,7 +110,7 @@
                                 <h3>Título</h3>
                             </div>
                             <div class="form-content-data-name-result">
-                                <input type="text" name="title" style="border: 0;border-bottom: 1px solid black;margin-top: 1rem;">
+                                <input type="text" name="title" style="">
                             </div>
                         </div>
                     </div>
@@ -125,7 +120,7 @@
                         <h3>Descripción</h3>
                     </div>
                     <div class="form-content-data-description-result">
-                        <textarea class="ckeditor" name="description" style="width: 100%;height: 10rem;margin-top: 1rem;"></textarea>
+                        <textarea class="ckeditor" name="description"></textarea>
                     </div>
                 </div>
             </div>

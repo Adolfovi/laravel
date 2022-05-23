@@ -545,9 +545,13 @@ body {
 
 .form-category-result select {
   width: 100%;
+  border: 0;
+  border-bottom: 1px solid black;
+  margin-top: 1rem;
+  padding: 0.4rem;
 }
 
-.form-name-result select {
+.form-name-result input {
   width: 100%;
 }
 
@@ -609,6 +613,37 @@ body {
 .form-content-data-description-result textarea:focus {
   background-color: #ff8f6c;
   color: black;
+}
+
+.form-content-data-description-result textarea {
+  width: 98%;
+  height: 10rem;
+  margin-top: 1rem;
+  border: 0;
+  border-bottom: 1px solid black;
+  padding: 0.4rem;
+}
+
+.form-name-result input {
+  border: 0;
+  border-bottom: 1px solid black;
+  margin-top: 1rem;
+  width: 100%;
+  padding: 0.4rem;
+  width: 98%;
+}
+
+.form-name-result input:focus {
+  background-color: #ff8f6c;
+  color: black;
+}
+
+.form-content-data-name-result input {
+  border: 0;
+  border-bottom: 1px solid black;
+  margin-top: 1rem;
+  padding: 0.4rem;
+  width: 98%;
 }
 
 .form-content-data-name-result input:focus {
