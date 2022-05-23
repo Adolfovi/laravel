@@ -280,6 +280,7 @@ body{
     padding: 1rem;
     transition: 1s right cubic-bezier(0.87, -0.43, 0.76, 0.79);
     border-radius: 1rem 0rem 0rem 1rem;
+    box-shadow: inset 1px -1px 4px;
 }
 
 .admin-panel-nav-menu.active {
