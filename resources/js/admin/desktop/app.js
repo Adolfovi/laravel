@@ -1,19 +1,9 @@
-const ClassicEditor = require( '@ckeditor/ckeditor5-build-classic' );
-ClassicEditor
-	.create( document.querySelector( '.editor' ) )
-	.then( editor => {
-		window.editor = editor;
-	} )
-	.catch( error => {
-		console.error( 'There was a problem initializing the editor.', error );
-	} );
+import {renderMenu} from './menu.js';
+import {renderSwitch} from './switch.js';
+import {renderCkeditor} from './ckeditor.js';
+import {renderForm} from './form.js';
 
-
-document.getElementById("nav-icon3").addEventListener("click", function () {
-	document.querySelector('#nav-icon3').classList.toggle('open');
-	document.querySelector('.admin-panel-nav-menu').classList.toggle('active');
-});
-
-document.querySelector('.icons-header-form-icon-onoff').addEventListener('click', function () {
-	document.querySelector('.icons-header-form-icon-onoff').classList.toggle('active');
-});
+renderMenu();
+renderSwitch();
+renderCkeditor();
+renderForm();
