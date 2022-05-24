@@ -1,37 +1,41 @@
 @extends('admin.layout.table_form')
 
 @section('table')
-    <div class="elements-configuration-element">
-        <div class="desktop-two-columns mobile-two-columns">
-            <div class="column">
-                <div class="elements-configuration-element-subelement">
-                    <h4>Nombre: </h4><span class="title">faq 1</span>
-                </div>
-                <div class="elements-configuration-element-subelement">
-                    <h4>Categoría: </h4><span class="title">general</span>
-                </div>
-                <div class="elements-configuration-element-subelement">
-                    <h4>Fecha: </h4><span class="title">20-04-2022</span>
+    @if(isset($faqs))
+        @foreach($faqs as $faq_element)
+            <div class="elements-configuration-element">
+                <div class="desktop-two-columns mobile-two-columns">
+                    <div class="column">
+                        <div class="elements-configuration-element-subelement">
+                            <h4>Id: </h4><span class="title">{{$faq_element->id}}</span>
+                        </div>
+                        <div class="elements-configuration-element-subelement">
+                            <h4>Nombre: </h4><span class="title">{{$faq_element->name}}</span>
+                        </div>
+                        <div class="elements-configuration-element-subelement">
+                            <h4>Fecha: </h4><span class="title">{{$faq_element->created_at}}</span>
+                        </div>
+                    </div>
+                    <div class="column" style="display: flex;align-items: center;justify-content: flex-end;">
+                        <div class="pencil">
+                            <svg style="width:24px;height:24px" viewBox="0 0 24 24">
+                                <path fill="currentColor"
+                                    d="M20.71,7.04C21.1,6.65 21.1,6 20.71,5.63L18.37,3.29C18,2.9 17.35,2.9 16.96,3.29L15.12,5.12L18.87,8.87M3,17.25V21H6.75L17.81,9.93L14.06,6.18L3,17.25Z" />
+                            </svg>
+                        </div>
+
+                        <div class="thrash">
+                            <svg style="width:24px;height:24px" viewBox="0 0 24 24">
+                                <path fill="currentColor"
+                                    d="M19,4H15.5L14.5,3H9.5L8.5,4H5V6H19M6,19A2,2 0 0,0 8,21H16A2,2 0 0,0 18,19V7H6V19Z" />
+                            </svg>
+                        </div>
+                    </div>
+
                 </div>
             </div>
-            <div class="column" style="display: flex;align-items: center;justify-content: flex-end;">
-                <div class="pencil">
-                    <svg style="width:24px;height:24px" viewBox="0 0 24 24">
-                        <path fill="currentColor"
-                            d="M20.71,7.04C21.1,6.65 21.1,6 20.71,5.63L18.37,3.29C18,2.9 17.35,2.9 16.96,3.29L15.12,5.12L18.87,8.87M3,17.25V21H6.75L17.81,9.93L14.06,6.18L3,17.25Z" />
-                    </svg>
-                </div>
-
-                <div class="thrash">
-                    <svg style="width:24px;height:24px" viewBox="0 0 24 24">
-                        <path fill="currentColor"
-                            d="M19,4H15.5L14.5,3H9.5L8.5,4H5V6H19M6,19A2,2 0 0,0 8,21H16A2,2 0 0,0 18,19V7H6V19Z" />
-                    </svg>
-                </div>
-            </div>
-
-        </div>
-    </div>
+        @endforeach
+    @endif
 @endsection
 
 @section('form')
@@ -97,10 +101,6 @@
                         </div>
                     </div>
                 </div>
-            </div>
-            <div class="form-language">
-                <div class="form-language-element"><span>Español</span></div>
-                <div class="form-language-element"><span>Inglés</span></div>
             </div>
             <div class="form-content-data">
                 <div class="desktop-one-column mobile-one-column">

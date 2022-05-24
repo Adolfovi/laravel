@@ -8,7 +8,7 @@ use Illuminate\Support\Facades\View;
 use App\Http\Controllers\Controller;
 use App\Models\Faq;
 use App\Http\Requests\Admin\FaqRequest;
-
+use Debugbar;
 // Podemos identificar que estamos ante un objeto por la palabra "class"
 // el nombre objeto es "FaqController", el nombre del objeto tiene que
 // coincidir con el nombre del archivo.
@@ -64,6 +64,7 @@ class FaqController extends Controller
     public function __construct(Faq $faq)
     {
         $this->faq = $faq;
+        
     }
     
     public function index()
@@ -77,7 +78,8 @@ class FaqController extends Controller
 
         $view = View::make('admin.pages.faqs.index')
                 ->with('faq', $this->faq)
-                ->with('faqs', $this->faq->get());
+                ->with('faqs', $this->faq->where('active', 1)->get());
+                Debugbar::info($view);
 
         if(request()->ajax()) {
             
