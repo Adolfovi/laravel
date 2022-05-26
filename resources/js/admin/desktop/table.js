@@ -5,8 +5,8 @@ export let renderTable = () => {
     let deleteButtons = document.querySelectorAll(".thrash");
     
     document.addEventListener("loadTable",( event =>{
-                tableContainer.innerHTML = event.detail.table;
-    }));
+        tableContainer.innerHTML = event.detail.table;
+    }), {once: true});
 
     document.addEventListener("renderTableModules",( event =>{
         renderTable();

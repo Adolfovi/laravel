@@ -148,14 +148,15 @@ class FaqController extends Controller
 
     public function edit(Faq $faq)
     {
-        Debugbar::info($faq);
         $view = View::make('admin.pages.faqs.index')
         ->with('faq', $faq)
-        ->with('faqs', $this->faq->where('active', 1)->get());   
+        ->with('faqs', $this->faq->where('active', 1)->get());  
         
         if(request()->ajax()) {
 
             $sections = $view->renderSections(); 
+
+            Debugbar::info($sections['form']);
     
             return response()->json([
                 'form' => $sections['form'],

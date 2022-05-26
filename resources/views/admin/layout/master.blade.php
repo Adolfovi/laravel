@@ -94,5 +94,6 @@
                 });        
             </script>
         @endif
+        @include('admin.layout.delete_notification')
     </body>
 </html>

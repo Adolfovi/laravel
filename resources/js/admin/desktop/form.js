@@ -1,10 +1,13 @@
-
 export let renderForm = () => {
 
     let formContainer = document.querySelector(".administration-editor");
     let storeButton = document.querySelector('.icons-header-form-icon-save');
     let createButton = document.querySelector('.icons-header-form-icon-delete');
     let forms = document.querySelectorAll('.admin-form');
+
+    document.addEventListener("loadForm",( event =>{
+        formContainer.innerHTML = event.detail.form;
+    }), {once: true});
 
     document.addEventListener("renderFormModules",( event =>{
         renderForm();

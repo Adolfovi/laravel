@@ -336,3 +336,50 @@ body{
     transition: 0.5s background-color;
 
 }
+
+.deletenotificationcontainer-higher {
+    width: 100%;
+    display: flex;
+    justify-content: center;
+    }
+    
+
+.deletenotificationcontainer {
+    position: fixed;
+    top: 25%;
+    background-color: $primary-color;
+    border-radius: 1rem;
+    border: 2px solid black;
+}
+
+.deletenotificationcontainer 
+.deletenotification {
+    margin: 1rem;
+}
+
+.deletenotificationcontainer 
+.deletenotification 
+.deletenotification-buttons {
+    display: flex;
+    justify-content: space-evenly;
+}
+
+.deletenotificationcontainer 
+.deletenotification 
+.deletenotification-buttons 
+.deletenotification-button {
+    margin: 1rem;
+}
+
+.deletenotificationcontainer 
+.deletenotification 
+.deletenotification-buttons 
+.deletenotification-button 
+button {
+    padding: 0.4rem;  
+    background-color: $primary-color-light;  
+    cursor: pointer;
+    border-radius: 0.2rem;
+    width: 3rem;
+    }
+    
