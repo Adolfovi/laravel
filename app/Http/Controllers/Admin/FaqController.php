@@ -79,7 +79,6 @@ class FaqController extends Controller
         $view = View::make('admin.pages.faqs.index')
                 ->with('faq', $this->faq)
                 ->with('faqs', $this->faq->where('active', 1)->get());
-                Debugbar::info($view);
 
         if(request()->ajax()) {
             
@@ -109,6 +108,8 @@ class FaqController extends Controller
         ->with('faq', $this->faq)
         ->renderSections();
 
+        Debugbar::info( $view['form']);
+
         /*
             En la siguiente línea estamos devolviendo una respuesta a la petición AJAX, una petición AJAX hará que una parte de la página
             se actualice sin necesidad de recargar toda la página. En este caso, la parte que se actualizará es la parte del formulario. Para
@@ -124,7 +125,7 @@ class FaqController extends Controller
     {            
         
 
-        $user = $this->user->updateOrCreate([
+        $faq = $this->faq->updateOrCreate([
                 'id' => request('id')],[
                 'name' => request('name'),
                 'title' => request('title'),
@@ -133,10 +134,10 @@ class FaqController extends Controller
                 'active' => 1,
         ]);
             
-        $view = View::make('admin.faqs.index')
+        $view = View::make('admin.pages.faqs.index')
         ->with('faqs', $this->faq->where('active', 1)->get())
         ->with('faq', $faq)
-        ->renderSections();        
+        ->renderSections();    
 
         return response()->json([
             'table' => $view['table'],
@@ -147,6 +148,7 @@ class FaqController extends Controller
 
     public function edit(Faq $faq)
     {
+        Debugbar::info($faq);
         $view = View::make('admin.pages.faqs.index')
         ->with('faq', $faq)
         ->with('faqs', $this->faq->where('active', 1)->get());   

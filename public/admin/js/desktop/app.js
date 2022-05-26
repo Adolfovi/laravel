@@ -40,13 +40,24 @@ __webpack_require__.r(__webpack_exports__);
 /* harmony export */ __webpack_require__.d(__webpack_exports__, {
 /* harmony export */   "renderCkeditor": () => (/* binding */ renderCkeditor)
 /* harmony export */ });
-var ClassicEditor = __webpack_require__(/*! @ckeditor/ckeditor5-build-classic */ "./node_modules/@ckeditor/ckeditor5-build-classic/build/ckeditor.js");
+/* harmony import */ var _ckeditor_ckeditor5_build_classic__WEBPACK_IMPORTED_MODULE_0__ = __webpack_require__(/*! @ckeditor/ckeditor5-build-classic */ "./node_modules/@ckeditor/ckeditor5-build-classic/build/ckeditor.js");
+/* harmony import */ var _ckeditor_ckeditor5_build_classic__WEBPACK_IMPORTED_MODULE_0___default = /*#__PURE__*/__webpack_require__.n(_ckeditor_ckeditor5_build_classic__WEBPACK_IMPORTED_MODULE_0__);
 
 var renderCkeditor = function renderCkeditor() {
-  ClassicEditor.create(document.querySelector('.editor')).then(function (editor) {
-    window.editor = editor;
-  })["catch"](function (error) {
-    console.error('There was a problem initializing the editor.', error);
+  document.addEventListener("renderFormModules", function (event) {
+    renderCkeditor();
+  });
+  window.ckeditors = [];
+  document.querySelectorAll('.ckeditors').forEach(function (ckeditor) {
+    _ckeditor_ckeditor5_build_classic__WEBPACK_IMPORTED_MODULE_0___default().create(ckeditor, {
+      toolbar: {
+        items: ['bold', 'italic', 'link', 'bulletedList', 'numberedList', '|', 'outdent', 'indent', '|', 'blockQuote', 'undo', 'redo']
+      }
+    }).then(function (classicEditor) {
+      ckeditors[ckeditor.name] = classicEditor;
+    })["catch"](function (error) {
+      console.error(error);
+    });
   });
 };
 
@@ -65,6 +76,8 @@ __webpack_require__.r(__webpack_exports__);
 /* harmony export */ });
 /* harmony import */ var _babel_runtime_regenerator__WEBPACK_IMPORTED_MODULE_0__ = __webpack_require__(/*! @babel/runtime/regenerator */ "./node_modules/@babel/runtime/regenerator/index.js");
 /* harmony import */ var _babel_runtime_regenerator__WEBPACK_IMPORTED_MODULE_0___default = /*#__PURE__*/__webpack_require__.n(_babel_runtime_regenerator__WEBPACK_IMPORTED_MODULE_0__);
+function _createForOfIteratorHelper(o, allowArrayLike) { var it = typeof Symbol !== "undefined" && o[Symbol.iterator] || o["@@iterator"]; if (!it) { if (Array.isArray(o) || (it = _unsupportedIterableToArray(o)) || allowArrayLike && o && typeof o.length === "number") { if (it) o = it; var i = 0; var F = function F() {}; return { s: F, n: function n() { if (i >= o.length) return { done: true }; return { done: false, value: o[i++] }; }, e: function e(_e2) { throw _e2; }, f: F }; } throw new TypeError("Invalid attempt to iterate non-iterable instance.\nIn order to be iterable, non-array objects must have a [Symbol.iterator]() method."); } var normalCompletion = true, didErr = false, err; return { s: function s() { it = it.call(o); }, n: function n() { var step = it.next(); normalCompletion = step.done; return step; }, e: function e(_e3) { didErr = true; err = _e3; }, f: function f() { try { if (!normalCompletion && it["return"] != null) it["return"](); } finally { if (didErr) throw err; } } }; }
+
 function _slicedToArray(arr, i) { return _arrayWithHoles(arr) || _iterableToArrayLimit(arr, i) || _unsupportedIterableToArray(arr, i) || _nonIterableRest(); }
 
 function _nonIterableRest() { throw new TypeError("Invalid attempt to destructure non-iterable instance.\nIn order to be iterable, non-array objects must have a [Symbol.iterator]() method."); }
@@ -84,9 +97,9 @@ function asyncGeneratorStep(gen, resolve, reject, _next, _throw, key, arg) { try
 function _asyncToGenerator(fn) { return function () { var self = this, args = arguments; return new Promise(function (resolve, reject) { var gen = fn.apply(self, args); function _next(value) { asyncGeneratorStep(gen, resolve, reject, _next, _throw, "next", value); } function _throw(err) { asyncGeneratorStep(gen, resolve, reject, _next, _throw, "throw", err); } _next(undefined); }); }; }
 
 var renderForm = function renderForm() {
-  var formContainer = document.querySelector(".form-container");
-  var storeButton = document.querySelector('.store-button');
-  var createButton = document.querySelector('.create-button');
+  var formContainer = document.querySelector(".administration-editor");
+  var storeButton = document.querySelector('.icons-header-form-icon-save');
+  var createButton = document.querySelector('.icons-header-form-icon-delete');
   var forms = document.querySelectorAll('.admin-form');
   document.addEventListener("renderFormModules", function (event) {
     renderForm();
@@ -189,12 +202,26 @@ var renderForm = function renderForm() {
             data.append(key, value.getData());
           });
         }
-        /*
-            A continuación vamos a hacer una llamada de tipo POST mediante fetch, esta vez vamos a 
-            añadir en los headers el token que nos ha dado Laravel el cual va a prevenir que se puedan 
-            hacer ataques de tipos cross-site scripting.
-        */
 
+        var _iterator = _createForOfIteratorHelper(data.entries()),
+            _step;
+
+        try {
+          for (_iterator.s(); !(_step = _iterator.n()).done;) {
+            var pair = _step.value;
+            console.log(pair[0] + ', ' + pair[1]);
+          }
+          /*
+              A continuación vamos a hacer una llamada de tipo POST mediante fetch, esta vez vamos a 
+              añadir en los headers el token que nos ha dado Laravel el cual va a prevenir que se puedan 
+              hacer ataques de tipos cross-site scripting.
+          */
+
+        } catch (err) {
+          _iterator.e(err);
+        } finally {
+          _iterator.f();
+        }
 
         var sendPostRequest = /*#__PURE__*/function () {
           var _ref4 = _asyncToGenerator( /*#__PURE__*/_babel_runtime_regenerator__WEBPACK_IMPORTED_MODULE_0___default().mark(function _callee2() {
@@ -308,11 +335,110 @@ __webpack_require__.r(__webpack_exports__);
 /* harmony export */   "renderSwitch": () => (/* binding */ renderSwitch)
 /* harmony export */ });
 var renderSwitch = function renderSwitch() {
-  switchButton = document.querySelector('.icons-header-form-icon-onoff');
+  var switchButton = document.querySelector('.icons-header-form-icon-onoff');
 
   if (switchButton) {
     switchButton.addEventListener('click', function () {
       document.querySelector('.icons-header-form-icon-onoff').classList.toggle('active');
+    });
+  }
+};
+
+/***/ }),
+
+/***/ "./resources/js/admin/desktop/table.js":
+/*!*********************************************!*\
+  !*** ./resources/js/admin/desktop/table.js ***!
+  \*********************************************/
+/***/ ((__unused_webpack_module, __webpack_exports__, __webpack_require__) => {
+
+"use strict";
+__webpack_require__.r(__webpack_exports__);
+/* harmony export */ __webpack_require__.d(__webpack_exports__, {
+/* harmony export */   "renderTable": () => (/* binding */ renderTable)
+/* harmony export */ });
+/* harmony import */ var _babel_runtime_regenerator__WEBPACK_IMPORTED_MODULE_0__ = __webpack_require__(/*! @babel/runtime/regenerator */ "./node_modules/@babel/runtime/regenerator/index.js");
+/* harmony import */ var _babel_runtime_regenerator__WEBPACK_IMPORTED_MODULE_0___default = /*#__PURE__*/__webpack_require__.n(_babel_runtime_regenerator__WEBPACK_IMPORTED_MODULE_0__);
+
+
+function asyncGeneratorStep(gen, resolve, reject, _next, _throw, key, arg) { try { var info = gen[key](arg); var value = info.value; } catch (error) { reject(error); return; } if (info.done) { resolve(value); } else { Promise.resolve(value).then(_next, _throw); } }
+
+function _asyncToGenerator(fn) { return function () { var self = this, args = arguments; return new Promise(function (resolve, reject) { var gen = fn.apply(self, args); function _next(value) { asyncGeneratorStep(gen, resolve, reject, _next, _throw, "next", value); } function _throw(err) { asyncGeneratorStep(gen, resolve, reject, _next, _throw, "throw", err); } _next(undefined); }); }; }
+
+var renderTable = function renderTable() {
+  var tableContainer = document.querySelector(".elements-configuration");
+  var editButtons = document.querySelectorAll(".pencil");
+  var deleteButtons = document.querySelectorAll(".thrash");
+  document.addEventListener("loadTable", function (event) {
+    tableContainer.innerHTML = event.detail.table;
+  });
+  document.addEventListener("renderTableModules", function (event) {
+    renderTable();
+  }, {
+    once: true
+  });
+
+  if (editButtons) {
+    editButtons.forEach(function (editButton) {
+      editButton.addEventListener("click", function () {
+        var url = editButton.dataset.url;
+
+        var sendEditRequest = /*#__PURE__*/function () {
+          var _ref = _asyncToGenerator( /*#__PURE__*/_babel_runtime_regenerator__WEBPACK_IMPORTED_MODULE_0___default().mark(function _callee() {
+            var response;
+            return _babel_runtime_regenerator__WEBPACK_IMPORTED_MODULE_0___default().wrap(function _callee$(_context) {
+              while (1) {
+                switch (_context.prev = _context.next) {
+                  case 0:
+                    document.dispatchEvent(new CustomEvent('startWait'));
+                    _context.next = 3;
+                    return fetch(url, {
+                      headers: {
+                        'X-Requested-With': 'XMLHttpRequest'
+                      },
+                      method: 'GET'
+                    }).then(function (response) {
+                      if (!response.ok) throw response;
+                      return response.json();
+                    }).then(function (json) {
+                      document.dispatchEvent(new CustomEvent('loadForm', {
+                        detail: {
+                          form: json.form
+                        }
+                      }));
+                      document.dispatchEvent(new CustomEvent('renderFormModules'));
+                    })["catch"](function (error) {
+                      if (error.status == '500') {
+                        console.log(error);
+                      }
+
+                      ;
+                    });
+
+                  case 3:
+                    response = _context.sent;
+
+                  case 4:
+                  case "end":
+                    return _context.stop();
+                }
+              }
+            }, _callee);
+          }));
+
+          return function sendEditRequest() {
+            return _ref.apply(this, arguments);
+          };
+        }();
+
+        sendEditRequest();
+      });
+    });
+  }
+
+  if (deleteButtons) {
+    deleteButtons.forEach(function (deleteButton) {
+      deleteButton.addEventListener("click", function () {});
     });
   }
 };
@@ -1187,6 +1313,8 @@ __webpack_require__.r(__webpack_exports__);
 /* harmony import */ var _switch_js__WEBPACK_IMPORTED_MODULE_1__ = __webpack_require__(/*! ./switch.js */ "./resources/js/admin/desktop/switch.js");
 /* harmony import */ var _ckeditor_js__WEBPACK_IMPORTED_MODULE_2__ = __webpack_require__(/*! ./ckeditor.js */ "./resources/js/admin/desktop/ckeditor.js");
 /* harmony import */ var _form_js__WEBPACK_IMPORTED_MODULE_3__ = __webpack_require__(/*! ./form.js */ "./resources/js/admin/desktop/form.js");
+/* harmony import */ var _table_js__WEBPACK_IMPORTED_MODULE_4__ = __webpack_require__(/*! ./table.js */ "./resources/js/admin/desktop/table.js");
+
 
 
 
@@ -1195,6 +1323,7 @@ __webpack_require__.r(__webpack_exports__);
 (0,_switch_js__WEBPACK_IMPORTED_MODULE_1__.renderSwitch)();
 (0,_ckeditor_js__WEBPACK_IMPORTED_MODULE_2__.renderCkeditor)();
 (0,_form_js__WEBPACK_IMPORTED_MODULE_3__.renderForm)();
+(0,_table_js__WEBPACK_IMPORTED_MODULE_4__.renderTable)();
 })();
 
 /******/ })()

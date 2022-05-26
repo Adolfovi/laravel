@@ -11,7 +11,9 @@
 
         <div class="column-main">
             <div class="administration-editor">
+                
                 @yield('form')
+            
             </div>
         </div>
     </div>

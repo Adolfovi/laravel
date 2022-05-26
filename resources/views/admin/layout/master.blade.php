@@ -12,6 +12,7 @@
         @if($agent->isMobile())
             <link rel="stylesheet" href="{{ mix('admin/css/mobile/app-mobile.css') }}">
         @endif
+        <meta name="csrf-token" content="{{ csrf_token() }}">
     </head>
 
     <body>
@@ -71,7 +72,7 @@
         </main>
 
         @if($agent->isDesktop())
-            <script src="{{ mix('admin/js/desktop/app.js') }}"></script>
+            <script type="module" src="{{ mix('admin/js/desktop/app.js') }}"></script>
             <script src="https://ajax.googleapis.com/ajax/libs/webfont/1.6.26/webfont.js"></script>
             <script>
                 WebFont.load({
@@ -83,7 +84,7 @@
         @endif
 
         @if($agent->isMobile())
-            <script src="{{ mix('admin/js/desktop/app.js') }}"></script>
+            <script type="module" src="{{ mix('admin/js/desktop/app.js') }}"></script>
             <script src="https://ajax.googleapis.com/ajax/libs/webfont/1.6.26/webfont.js"></script>
             <script>
                 WebFont.load({

@@ -1,9 +1,9 @@
 
 export let renderForm = () => {
 
-    let formContainer = document.querySelector(".form-container");
-    let storeButton = document.querySelector('.store-button');
-    let createButton = document.querySelector('.create-button');
+    let formContainer = document.querySelector(".administration-editor");
+    let storeButton = document.querySelector('.icons-header-form-icon-save');
+    let createButton = document.querySelector('.icons-header-form-icon-delete');
     let forms = document.querySelectorAll('.admin-form');
 
     document.addEventListener("renderFormModules",( event =>{
@@ -71,8 +71,7 @@ export let renderForm = () => {
                     };
                 });
             };
-    
-            sendCreateRequest();
+            sendCreateRequest();  
         });
     }
 
@@ -100,6 +99,10 @@ export let renderForm = () => {
                     Object.entries(ckeditors).forEach(([key, value]) => {
                         data.append(key, value.getData());
                     });
+                }
+
+                for (var pair of data.entries()) {
+                    console.log(pair[0]+ ', ' + pair[1]); 
                 }
 
                 /*
