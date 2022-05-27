@@ -17,7 +17,7 @@ return new class extends Migration
             $table->id();
             $table->string('name');
             $table->string('title');
-            $table->string('price');
+            $table->float('price');
             $table->text('description');
             $table->text('features');
             $table->boolean('active');
