@@ -36,10 +36,10 @@
                     <a href="/administrator">
                         Inicio
                     </a>
-                    <a href="administrator/merchandising">
+                    <a href="products">
                     Merchandising 
                     </a>
-                    <a href="administrator/faq">
+                    <a href="faqs">
                         FAQ 
                     </a>
                     <a href="administrator/contacto">    

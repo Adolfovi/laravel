@@ -347,6 +347,12 @@ var renderNotification = function renderNotification() {
       document.querySelector('.deletenotificationcontainer').classList.add('active');
     });
   });
+  document.querySelector('.yes').addEventListener('click', function () {
+    document.querySelector('.deletenotificationcontainer').classList.remove('active');
+  });
+  document.querySelector('.no').addEventListener('click', function () {
+    document.querySelector('.deletenotificationcontainer').classList.remove('active');
+  });
 };
 
 /***/ }),

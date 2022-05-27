@@ -6,10 +6,10 @@
                 </div>
                 <div class="deletenotification-buttons">
                     <div class="deletenotification-button">
-                        <button>Sí</button>
+                        <button class="yes">Sí</button>
                     </div>
                     <div class="deletenotification-button">
-                        <button>No</button>
+                        <button class="no">No</button>
                     </div>
                 </div>
             </div>
