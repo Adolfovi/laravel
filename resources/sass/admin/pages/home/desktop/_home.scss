@@ -24,8 +24,17 @@ body{
     box-shadow: inset -1px -1px 4px;
 }
 
+.elements-configuration-element .desktop-two-columns {
+    flex-direction: column;
+}
+
+.elements-configuration-element .desktop-two-columns .column {
+    width: 100%;
+}
+
 .elements-configuration-element-subelement {
     display: flex;
+    flex-direction: column;
 }
 
 .elements-configuration-element-subelement h4 {
