@@ -531,7 +531,7 @@ body {
   background-color: #ff6670;
   padding: 0.4rem;
   border-radius: 0.4rem;
-  width: 8rem;
+  width: 17rem;
   margin-bottom: 1rem;
 }
 
@@ -601,6 +601,18 @@ body {
 
 .form-content-data {
   margin: 1rem;
+}
+
+.form-content-data-price {
+  margin-top: 1rem;
+}
+
+.form-content-data-price input {
+  width: 98%;
+  border: 0;
+  border-bottom: 1px solid black;
+  margin-top: 1rem;
+  padding: 0.4rem;
 }
 
 .form-content-data-description {
@@ -803,10 +815,20 @@ body {
 
 .deletenotificationcontainer {
   position: fixed;
+  top: -50%;
+  background-color: #ff8f6c;
+  border-radius: 1rem;
+  border: 2px solid black;
+  transition: 1s top;
+}
+
+.deletenotificationcontainer.active {
+  position: fixed;
   top: 25%;
   background-color: #ff8f6c;
   border-radius: 1rem;
   border: 2px solid black;
+  transition: 1s top;
 }
 
 .deletenotificationcontainer .deletenotification {

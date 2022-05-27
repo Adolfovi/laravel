@@ -54,6 +54,20 @@ Route::group(['prefix' => 'administrator'], function () {
             'show' => 'faqs_show',
         ]
     ]);
+
+    Route::resource('products', 'App\Http\Controllers\Admin\ProductController', [
+        'parameters' => [
+            'products' => 'product', 
+        ],
+        'names' => [
+            'index' => 'products',
+            'create' => 'products_create',
+            'edit' => 'products_edit',
+            'store' => 'products_store',
+            'destroy' => 'products_destroy',
+            'show' => 'products_show',
+        ]
+    ]);
 });
 
 Route::get('/', function () {

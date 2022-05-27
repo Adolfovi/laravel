@@ -330,6 +330,27 @@ var renderMenu = function renderMenu() {
 
 /***/ }),
 
+/***/ "./resources/js/admin/desktop/notification.js":
+/*!****************************************************!*\
+  !*** ./resources/js/admin/desktop/notification.js ***!
+  \****************************************************/
+/***/ ((__unused_webpack_module, __webpack_exports__, __webpack_require__) => {
+
+"use strict";
+__webpack_require__.r(__webpack_exports__);
+/* harmony export */ __webpack_require__.d(__webpack_exports__, {
+/* harmony export */   "renderNotification": () => (/* binding */ renderNotification)
+/* harmony export */ });
+var renderNotification = function renderNotification() {
+  document.querySelectorAll('.thrash').forEach(function (thrash) {
+    thrash.addEventListener('click', function () {
+      document.querySelector('.deletenotificationcontainer').classList.add('active');
+    });
+  });
+};
+
+/***/ }),
+
 /***/ "./resources/js/admin/desktop/switch.js":
 /*!**********************************************!*\
   !*** ./resources/js/admin/desktop/switch.js ***!
@@ -1323,6 +1344,8 @@ __webpack_require__.r(__webpack_exports__);
 /* harmony import */ var _ckeditor_js__WEBPACK_IMPORTED_MODULE_2__ = __webpack_require__(/*! ./ckeditor.js */ "./resources/js/admin/desktop/ckeditor.js");
 /* harmony import */ var _form_js__WEBPACK_IMPORTED_MODULE_3__ = __webpack_require__(/*! ./form.js */ "./resources/js/admin/desktop/form.js");
 /* harmony import */ var _table_js__WEBPACK_IMPORTED_MODULE_4__ = __webpack_require__(/*! ./table.js */ "./resources/js/admin/desktop/table.js");
+/* harmony import */ var _notification_js__WEBPACK_IMPORTED_MODULE_5__ = __webpack_require__(/*! ./notification.js */ "./resources/js/admin/desktop/notification.js");
+
 
 
 
@@ -1333,6 +1356,7 @@ __webpack_require__.r(__webpack_exports__);
 (0,_ckeditor_js__WEBPACK_IMPORTED_MODULE_2__.renderCkeditor)();
 (0,_form_js__WEBPACK_IMPORTED_MODULE_3__.renderForm)();
 (0,_table_js__WEBPACK_IMPORTED_MODULE_4__.renderTable)();
+(0,_notification_js__WEBPACK_IMPORTED_MODULE_5__.renderNotification)();
 })();
 
 /******/ })()

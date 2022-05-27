@@ -92,6 +92,18 @@ body{
     margin: 1rem;
 }
 
+.form-content-data-price {
+    margin-top: 1rem;
+}
+
+.form-content-data-price input {
+    width: 98%;
+    border: 0;
+    border-bottom: 1px solid black;
+    margin-top: 1rem;
+    padding: 0.4rem;
+}
+
 .form-content-data-description {
     margin-top: 1rem;
 }
@@ -352,10 +364,20 @@ body{
 
 .deletenotificationcontainer {
     position: fixed;
+    top: -50%;
+    background-color: $primary-color;
+    border-radius: 1rem;
+    border: 2px solid black;
+    transition: 1s top;
+}
+
+.deletenotificationcontainer.active {
+    position: fixed;
     top: 25%;
     background-color: $primary-color;
     border-radius: 1rem;
     border: 2px solid black;
+    transition: 1s top;
 }
 
 .deletenotificationcontainer 
