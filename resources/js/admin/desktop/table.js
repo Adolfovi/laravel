@@ -9,6 +9,7 @@ export let renderTable = () => {
     }), {once: true});
 
     document.addEventListener("renderTableModules",( event =>{
+        console.log("hola");
         renderTable();
     }), {once: true});
 
@@ -65,7 +66,11 @@ export let renderTable = () => {
 
             deleteButton.addEventListener("click", () => {
 
-                
+                document.dispatchEvent(new CustomEvent('openModalDelete', {
+                    detail: {
+                        url: deleteButton.dataset.url,
+                    }
+                }));
             });
         });
     }

@@ -57,6 +57,9 @@
         </header>
 
         <main>
+
+            @include('admin.components.delete_notification')
+
             <div class="desktop-one-column">
                 <div class="column">
                     <div class="filter-main">
@@ -94,6 +97,5 @@
                 });        
             </script>
         @endif
-        @include('admin.layout.delete_notification')
     </body>
 </html>

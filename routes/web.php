@@ -68,7 +68,24 @@ Route::group(['prefix' => 'administrator'], function () {
             'show' => 'products_show',
         ]
     ]);
+
+    Route::resource('categories', 'App\Http\Controllers\Admin\CategoryController', [
+        'parameters' => [
+            'categories' => 'category', 
+        ],
+        'names' => [
+            'index' => 'categories',
+            'create' => 'categories_create',
+            'edit' => 'categories_edit',
+            'store' => 'categories_store',
+            'destroy' => 'categories_destroy',
+            'show' => 'categories_show',
+        ]
+    ]);
+
 });
+
+
 
 Route::get('/', function () {
     return view('front.pages.home.index');
