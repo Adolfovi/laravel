@@ -42,7 +42,7 @@
 @section('form')
     @if($faq)
         <form action="{{route("faqs_store")}}" method="post" class="admin-form">
-            <input type="hidden" name="id">
+            <input type="hidden" name="id" value="{{isset($faq->id) ? $faq->id : ''}}" >
             <div class="administration-editor-menu-nav">
                 <div class="desktop-two-columns mobile-two-columns">
                     <div class="column">

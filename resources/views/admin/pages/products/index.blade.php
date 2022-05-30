@@ -54,7 +54,7 @@
 @section('form')
     @if($product)
         <form action="{{route("products_store")}}" method="post" class="admin-form">
-            <input type="hidden" name="id">
+            <input type="hidden" name="id" value="{{isset($product->id) ? $product->id : ''}}" >
             <div class="administration-editor-menu-nav">
                 <div class="desktop-two-columns mobile-two-columns">
                     <div class="column">
