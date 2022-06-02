@@ -16,6 +16,9 @@
                             <h4>Título: </h4><span class="title">{{$product_element->title}}</span>
                         </div>
                         <div class="elements-configuration-element-subelement">
+                            <h4>Categoría: </h4><span class="title">{{$product_element->category_id}}</span>
+                        </div>
+                        <div class="elements-configuration-element-subelement">
                             <h4>Precio: </h4><span class="title">{{$product_element->price}}</span>
                         </div>
                         <div class="elements-configuration-element-subelement">
@@ -120,6 +123,14 @@
                         </div>
                         <div class="form-content-data-price-result">
                             <input type="text" name="price" value="{{isset($product->price) ? $product->price : ''}}">
+                        </div>
+                    </div>
+                    <div class="form-content-data-price">
+                        <div class="form-content-data-price-title">
+                            <h3>Categoria</h3>
+                        </div>
+                        <div class="form-content-data-price-result">
+                            <input type="number" name="category_id" value="{{isset($product->category_id) ? $product->category_id : ''}}">
                         </div>
                     </div>
                     <div class="form-content-data-description">

@@ -132,6 +132,7 @@ class ProductController extends Controller
                 'price' => request('price'),
                 'description' => request('description'),
                 'features' => request('features'),
+                'category_id' => request('category_id'),
                 'visible' => 1,
                 'active' => 1,
         ]);
