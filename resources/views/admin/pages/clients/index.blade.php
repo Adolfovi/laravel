@@ -21,6 +21,9 @@
                         <div class="elements-configuration-element-subelement">
                             <h4>Fecha de Nacimiento: </h4><span class="title">{{$client_element->birthday}}</span>
                         </div>
+                        <div class="elements-configuration-element-subelement">
+                            <h4>Fecha: </h4><span class="title">{{$client_element->created_at}}</span>
+                        </div>
                     </div>
                     <div class="column" style="display: flex;align-items: center;justify-content: flex-end;">
                         <div class="pencil" data-url="{{route('clients_edit', ['client' => $client_element->id])}}">
