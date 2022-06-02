@@ -97,6 +97,20 @@ Route::group(['prefix' => 'administrator'], function () {
         ]
     ]);
 
+    Route::resource('clientes', 'App\Http\Controllers\Admin\ClientController', [
+        'parameters' => [
+            'clientes' => 'client', 
+        ],
+        'names' => [
+            'index' => 'clients',
+            'create' => 'clients_create',
+            'edit' => 'clients_edit',
+            'store' => 'clients_store',
+            'destroy' => 'clients_destroy',
+            'show' => 'clients_show',
+        ]
+    ]);
+
 });
 
 
