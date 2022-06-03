@@ -69,7 +69,7 @@
             </div>
             <div class="column">
                 <div class="contact-form">
-                    <form action="/spartacoin_result.php">
+                    <form class="admin-form" action="{{ route('front_contact_form') }}">
                         <div class="mobile-two-columns desktop-two-columns">
                             <div class="column">
                                 <div class="form-element">
@@ -133,7 +133,7 @@
 
                         <div class="mobile-one-column desktop-one-column">
                             <div class="column">
-                                <div class="form-send-button">
+                                <div class="form-send-button icons-header-form-icon-save">
                                     <button>Enviar</button>
                                 </div>
                             </div>

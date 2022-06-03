@@ -113,15 +113,13 @@ Route::group(['prefix' => 'administrator'], function () {
 
 });
 
-
-
 Route::get('/', function () {
     return view('front.pages.home.index');
 });
 
-Route::get('/contacto', function () {
-    return view('front.pages.contact.index');
-});
+Route::get('/contacto', 'App\Http\Controllers\Front\ContactController@index')->name('front_contact');
+Route::post('/contacto', 'App\Http\Controllers\Front\ContactController@store')->name('front_contact_form');
+
 
 Route::get('/carro', function () {
     return view('front.pages.cart.index');

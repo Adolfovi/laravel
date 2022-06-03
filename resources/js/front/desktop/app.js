@@ -6,6 +6,10 @@ import { renderNotification } from './notification.js';
 import { renderformcheckout } from './form-checkout.js';
 import { renderbuttonfaq } from './button-faq.js';
 import { renderresponsive } from './responsive.js';
+import { renderForm} from './form.js';
+import {renderCkeditor} from './ckeditor.js';
+
+renderCkeditor();
 renderTabs();
 renderPlusMinusButton();
 renderMenuButton();
@@ -14,3 +18,4 @@ renderNotification();
 renderformcheckout();
 renderbuttonfaq();
 renderresponsive();
+renderForm();
