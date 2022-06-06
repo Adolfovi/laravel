@@ -113,31 +113,19 @@ Route::group(['prefix' => 'administrator'], function () {
 
 });
 
-Route::get('/', function () {
-    return view('front.pages.home.index');
-});
+Route::get('/', 'App\Http\Controllers\Front\HomeController@index');
 
 Route::get('/contacto', 'App\Http\Controllers\Front\ContactController@index')->name('front_contact');
 Route::post('/contacto', 'App\Http\Controllers\Front\ContactController@store')->name('front_contact_form');
 
+Route::get('/carro', 'App\Http\Controllers\Front\CartController@index');
 
-Route::get('/carro', function () {
-    return view('front.pages.cart.index');
-});
+Route::get('/checking', 'App\Http\Controllers\Front\CheckingController@index');
 
-Route::get('/checking', function () {
-    return view('front.pages.checkout.index');
-});
-
-Route::get('/faqs', function () {
-    return view('front.pages.faq.index');
-});
+Route::get('/faqs', 'App\Http\Controllers\Front\FaqController@index');
 
 Route::get('/merchan-product', function () {
     return view('front.pages.merchan.index');
 });
 
-Route::get('/merchandising', function () {
-    return view('front.pages.merchandising.index');
-});
-
+Route::get('/merchandising', 'App\Http\Controllers\Front\MerchandisingController@index');
