@@ -69,9 +69,9 @@ Route::group(['prefix' => 'administrator'], function () {
         ]
     ]);
 
-    Route::resource('productos', 'App\Http\Controllers\Admin\ProductController', [
+    Route::resource('merchandising', 'App\Http\Controllers\Admin\ProductController', [
         'parameters' => [
-            'productos' => 'product', 
+            'merchandising' => 'product', 
         ],
         'names' => [
             'index' => 'products',

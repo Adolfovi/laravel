@@ -26,57 +26,26 @@
                     </div>
                 </div>
                 <div class="results-products-elements">
+                    @if(isset($products))
+                        @foreach($products as $product)
                     <div class="element">
                         <div class="element-image">
                             <img src="img/reloj.png">
                         </div>
                         <div class="element-price">
-                            <span>14.99€</span>
+                            <span>{{$product->price}}€</span>
                         </div>
                         <div class="element-name">
-                            <span>Reloj Espartacoin</span>
+                            <span>{{$product->name}}</span>
                         </div>
                         <div class="element-see">
                             <button>
                                 <a href="merchan-product.html">Ver producto</a>
                             </button>
                         </div>
-                    </div>
-                    <div class="element">
-                        <div class="element-image"><img src="img/reloj.png"></div>
-                        <div class="element-price"><span>14.99€</span></div>
-                        <div class="element-name"><span>Reloj Espartacoin</span></div>
-                        <div class="element-see"><button><a href="merchan-product.html">Ver
-                                    producto</a></button></div>
-                    </div>
-                    <div class="element">
-                        <div class="element-image"><img src="img/reloj.png"></div>
-                        <div class="element-price"><span>14.99€</span></div>
-                        <div class="element-name"><span>Reloj Espartacoin</span></div>
-                        <div class="element-see"><button><a href="merchan-product.html">Ver
-                                    producto</a></button></div>
-                    </div>
-                    <div class="element">
-                        <div class="element-image"><img src="img/reloj.png"></div>
-                        <div class="element-price"><span>14.99€</span></div>
-                        <div class="element-name"><span>Reloj Espartacoin</span></div>
-                        <div class="element-see"><button><a href="merchan-product.html">Ver
-                                    producto</a></button></div>
-                    </div>
-                    <div class="element">
-                        <div class="element-image"><img src="img/reloj.png"></div>
-                        <div class="element-price"><span>14.99€</span></div>
-                        <div class="element-name"><span>Reloj Espartacoin</span></div>
-                        <div class="element-see"><button><a href="merchan-product.html">Ver
-                                    producto</a></button></div>
-                    </div>
-                    <div class="element">
-                        <div class="element-image"><img src="img/reloj.png"></div>
-                        <div class="element-price"><span>14.99€</span></div>
-                        <div class="element-name"><span>Reloj Espartacoin</span></div>
-                        <div class="element-see"><button><a href="merchan-product.html">Ver
-                                    producto</a></button></div>
-                    </div>
+                    </div>               
+                        @endforeach
+                    @endif                    
                 </div>
             </div>
         </div>
