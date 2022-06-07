@@ -21,15 +21,22 @@ class ProductController extends Controller
         ->with('products', $this->product->where('active', 1)->get());
 
         return $view;
-
     }
 
     public function show(Product $product)
     {
-        Debugbar::info($product);
 
         $view = View::make('front.pages.merchan.index')
         ->with('product', $product);
+
+        if(request()->ajax()) {
+
+            $sections = $view->renderSections(); 
+    
+            return response()->json([
+                'content' => $sections['content'],
+            ]); 
+        }
 
         return $view;
     }

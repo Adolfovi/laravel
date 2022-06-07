@@ -28,22 +28,22 @@
                 <div class="results-products-elements">
                     @if(isset($products))
                         @foreach($products as $product)
-                    <div class="element">
-                        <div class="element-image">
-                            <img src="img/reloj.png">
-                        </div>
-                        <div class="element-price">
-                            <span>{{$product->price}}€</span>
-                        </div>
-                        <div class="element-name">
-                            <span>{{$product->name}}</span>
-                        </div>
-                        <div class="element-see">
-                            <button>
-                                <a href="merchan-product.html">Ver producto</a>
-                            </button>
-                        </div>
-                    </div>               
+                            <div class="element">
+                                <div class="element-image">
+                                    <img src="img/reloj.png">
+                                </div>
+                                <div class="element-price">
+                                    <span>{{$product->price}}€</span>
+                                </div>
+                                <div class="element-name">
+                                    <span>{{$product->name}}</span>
+                                </div>
+                                <div class="element-see">
+                                    <button class="view-product" data-url="{{route('front_product', ['product' => $product->id])}}">
+                                        Ver producto
+                                    </button>
+                                </div>
+                            </div>  
                         @endforeach
                     @endif                    
                 </div>

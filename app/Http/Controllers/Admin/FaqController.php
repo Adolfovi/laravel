@@ -155,8 +155,6 @@ class FaqController extends Controller
         if(request()->ajax()) {
 
             $sections = $view->renderSections(); 
-
-            Debugbar::info($sections['form']);
     
             return response()->json([
                 'form' => $sections['form'],

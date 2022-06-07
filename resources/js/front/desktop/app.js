@@ -8,6 +8,7 @@ import { renderbuttonfaq } from './button-faq.js';
 import { renderresponsive } from './responsive.js';
 import { renderForm} from './form.js';
 import {renderCkeditor} from './ckeditor.js';
+import {renderProducts} from './product.js';
 
 renderCkeditor();
 renderTabs();
@@ -19,3 +20,4 @@ renderformcheckout();
 renderbuttonfaq();
 renderresponsive();
 renderForm();
+renderProducts();
