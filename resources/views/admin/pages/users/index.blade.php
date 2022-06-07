@@ -103,14 +103,23 @@
                         <div class="column">
                             <div class="form-content-data-name">
                                 <div class="form-content-data-name-title">
-                                    <h3>Título</h3>
+                                    <h3>Email</h3>
                                 </div>
                                 <div class="form-content-data-name-result">
-                                    <input type="text" name="title" value="{{isset($user->title) ? $user->title : ''}}">
+                                    <input type="text" name="email" value="{{isset($user->email) ? $user->email : ''}}">
                                 </div>
                             </div>
                         </div>
                     </div>
+                    <div class="form-content-data-description">
+                        <div class="form-name-title">
+                            <h3>Contraseña</h3>
+                        </div>
+                        <div class="form-name-result">
+                            <input type="text" name="password" value="{{isset($user->password) ? $user->password : ''}}">
+                        </div>
+                    </div>
+
                 </div>
             </div>
         </form>
