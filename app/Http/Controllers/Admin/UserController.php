@@ -128,10 +128,12 @@ class UserController extends Controller
         $user = $this->user->updateOrCreate([
                 'id' => request('id')],[
                 'name' => request('name'),
-                'title' => request('title'),
-                'description' => request('description'),
-                'visible' => 1,
+                'email' => request('email'),
+                'email_verified_at' => request('email_verified_at'),
+                'password' => request('password'),
                 'active' => 1,
+                'remember_token' => request('remember_token'),
+                'visible' => 1
         ]);
             
         $view = View::make('admin.pages.users.index')
