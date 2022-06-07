@@ -124,8 +124,7 @@ Route::get('/checking', 'App\Http\Controllers\Front\CheckingController@index');
 
 Route::get('/faqs', 'App\Http\Controllers\Front\FaqController@index');
 
-Route::get('/merchan-product', function () {
-    return view('front.pages.merchan.index');
-});
+Route::get('/merchandising', 'App\Http\Controllers\Front\ProductController@index');
+Route::get('/merchandising/{product}', 'App\Http\Controllers\Front\ProductController@show');
 
-Route::get('/merchandising', 'App\Http\Controllers\Front\MerchandisingController@index');
+

@@ -31,7 +31,7 @@
         <div class="column">
             <div class="info-merchan-product">
                 <div class="info-merchan-product-title">
-                    <h2>Reloj Espartacoin</h2>
+                    <h2>{{$product->title}}</h2>
                 </div>
                 <div class="info-merchan-product-price">
                     <span>14.99€</span>
