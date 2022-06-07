@@ -8,17 +8,15 @@
     </div>
     <div class="types-related">
         <div class="type-related active" data-elementtype="description">
-            <p>Reloj Espartacoin de marca Gucci modelo Big-Bang con incrustación de la imagen de la
-                criptomoneda de fondo, realzando la imagen de la misma. Tamaño normal. Unisex.</p>
+                {!!$product->description!!}
         </div>
         <div class="type-related" data-elementtype="feature">
             <p>
-                Marca: Sin marca, color: gris, tamaño: normal, unisex.
+                {!!$product->features!!}
             </p>
         </div>
         <div class="type-related" data-elementtype="opinion">
-            <p>Raul: Gran producto, 5 estrellas.</p>
-            <p>Marco Polo: Me gusta, 3 estrellas.</p>
+            {!!$product->comments!!}
         </div>
     </div>
 </div>
