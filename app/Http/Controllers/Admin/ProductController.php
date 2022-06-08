@@ -7,7 +7,6 @@ namespace App\Http\Controllers\Admin;
 use Illuminate\Support\Facades\View;
 use App\Http\Controllers\Controller;
 use App\Models\Product;
-use App\Models\ProductCategory;
 use App\Http\Requests\Admin\ProductRequest;
 use Debugbar;
 
@@ -15,12 +14,10 @@ class ProductController extends Controller
 {
 
     protected $product;
-    protected $product_category;
 
-    public function __construct(Product $product, ProductCategory $product_category)
+    public function __construct(Product $product)
     {
         $this->product = $product;
-        $this->product_category = $product_category;
     }
     
     public function index()
@@ -34,8 +31,7 @@ class ProductController extends Controller
 
         $view = View::make('admin.pages.products.index')
                 ->with('product', $this->product)
-                ->with('products', $this->product->where('active', 1)->get())
-                ->with('product_categories', $this->product_category->where('active', 1)->get());
+                ->with('products', $this->product->where('active', 1)->get());
 
         if(request()->ajax()) {
             
@@ -111,8 +107,7 @@ class ProductController extends Controller
     {
         $view = View::make('admin.pages.products.index')
         ->with('product', $product)
-        ->with('products', $this->product->where('active', 1)->get())  
-        ->with('product_categories', $this->product_category->where('active', 1)->get());       
+        ->with('products', $this->product->where('active', 1)->get());
         if(request()->ajax()) {
 
             $sections = $view->renderSections(); 
