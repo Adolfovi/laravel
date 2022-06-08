@@ -16,7 +16,7 @@
                             <h4>Título: </h4><span class="title">{{$product_element->title}}</span>
                         </div>
                         <div class="elements-configuration-element-subelement">
-                            <h4>Categoría: </h4><span class="title">{{$product_element->category_id}}</span>
+                            <h4>Categoría: </h4><span class="title">{{$product_element->category_name}}</span>
                         </div>
                         <div class="elements-configuration-element-subelement">
                             <h4>Opiniones: </h4><span class="title">{!!$product_element->comments!!}</span>
@@ -133,8 +133,15 @@
                             <h3>Categoria</h3>
                         </div>
                         <div class="form-content-data-price-result">
-                            <input type="number" name="category_id" value="{{isset($product->category_id) ? $product->category_id : ''}}">
-                        </div>
+                            <select type="text" name="category_name">
+                                <option></option>
+                                    @if(isset($product_categories))
+                                    @foreach($product_categories as $product_category)
+                                        <option value="{{$product_category->name}}">{{$product_category->name}}</option>
+                                    @endforeach
+                                @endif
+                            </select>
+                            </div>
                     </div>
                     <div class="form-content-data-description">
                         <div class="form-content-data-description-title">

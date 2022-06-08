@@ -20,7 +20,7 @@ return new class extends Migration
             $table->float('price');
             $table->text('description');
             $table->text('features');
-            $table->string('category_id');
+            $table->string('category_name');
             $table->boolean('active');
             $table->boolean('visible');
             $table->timestamps();
