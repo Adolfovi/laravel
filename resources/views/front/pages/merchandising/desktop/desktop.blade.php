@@ -8,10 +8,13 @@
                 <form action="/merchan.php">
                     <select name="type-products" id="type-products">
                         <option value="todos"><span>Todos</span></option>
-                        <option value="camisetas"><span>Camisetas</span></option>
-                        <option value="gorras"><span>Gorras</span></option>
-                        <option value="fundas-movil"><span>Fundas de móvil</span></option>
-                        <option value="relojes"><span>Relojes</span></option>
+                        @if(isset($products))
+                        @foreach($products as $product)
+                        <option value="{{$product->category_name}}">
+                            <span>{{$product->category_name}}</span>
+                        </option>
+                        @endforeach
+                        @endif
                     </select>
                 </form>
             </div>
@@ -20,7 +23,7 @@
             <div class="results-products-container">
                 <div class="results-products-info">
                     <div class="results-products-total">
-                        <span>Se están enseñando 20 de 100 productos</span>
+                        <span>Se están enseñando {{$product->count()}} de {{$product->count()}} productos</span>
                     </div>
                     <div class="results-products-selector">
                     </div>
@@ -37,6 +40,9 @@
                                 </div>
                                 <div class="element-name">
                                     <span>{{$product->name}}</span>
+                                </div>
+                                <div class="element-categoryname">
+                                    <span>{{$product->category_name}}</span>
                                 </div>
                                 <div class="element-see">
                                     <button class="view-product" data-url="{{route('front_product', ['product' => $product->id])}}">
