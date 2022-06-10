@@ -5,18 +5,16 @@
                 <div class="category-merchans-title">
                     <h2>@yield('page-title')</h2>
                 </div>
-                <form action="/merchan.php">
-                    <select name="type-products" id="type-products" data-url="front-categoryproduct">
-                        <option value="todos"><span>Todos</span></option>
-                        @if(isset($productswithoutfilters))
-                        @foreach($productswithoutfilters as $product)
-                        <option value="{{$product->category_name}}">
-                            <span>{{$product->category_name}}</span>
-                        </option>
-                        @endforeach
+               
+                <div class="category-merchans-content">
+                    <ul>
+                        @if(isset($product_categories))
+                            @foreach($product_categories as $category_element)
+                                <li class="category-button" data-url="{{route('front_category_product', ['category' => $category_element->id])}}">{{$category_element->title}}</li>
+                            @endforeach
                         @endif
-                    </select>
-                </form>
+                    </ul>
+                </div>        
             </div>
         </div>
         <div class="column-main">

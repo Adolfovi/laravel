@@ -33,6 +33,9 @@
                 <div class="info-merchan-product-title">
                     <h2>{{$product->title}}</h2>
                 </div>
+                <div class="info-merchan-product-category">
+                    <h2>{{$product->category->title}}</h2>
+                </div>
                 <div class="info-merchan-product-price">
                     <span>{{$product->price}}€</span>
                 </div>

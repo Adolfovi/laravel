@@ -48,8 +48,6 @@ __webpack_require__.r(__webpack_exports__);
 /* harmony import */ var _form_js__WEBPACK_IMPORTED_MODULE_8__ = __webpack_require__(/*! ./form.js */ "./resources/js/front/desktop/form.js");
 /* harmony import */ var _ckeditor_js__WEBPACK_IMPORTED_MODULE_9__ = __webpack_require__(/*! ./ckeditor.js */ "./resources/js/front/desktop/ckeditor.js");
 /* harmony import */ var _product_js__WEBPACK_IMPORTED_MODULE_10__ = __webpack_require__(/*! ./product.js */ "./resources/js/front/desktop/product.js");
-/* harmony import */ var _select_category_js__WEBPACK_IMPORTED_MODULE_11__ = __webpack_require__(/*! ./select-category.js */ "./resources/js/front/desktop/select-category.js");
-
 
 
 
@@ -72,7 +70,6 @@ __webpack_require__.r(__webpack_exports__);
 (0,_responsive_js__WEBPACK_IMPORTED_MODULE_7__.renderresponsive)();
 (0,_form_js__WEBPACK_IMPORTED_MODULE_8__.renderForm)();
 (0,_product_js__WEBPACK_IMPORTED_MODULE_10__.renderProducts)();
-(0,_select_category_js__WEBPACK_IMPORTED_MODULE_11__.renderSelectCategory)();
 
 /***/ }),
 
@@ -420,6 +417,11 @@ __webpack_require__.r(__webpack_exports__);
 var renderPlusMinusButton = function renderPlusMinusButton() {
   var minuses = document.querySelectorAll('.quantity-minus');
   var pluses = document.querySelectorAll('.quantity-plus');
+  document.addEventListener("renderProductModules", function (event) {
+    renderProduct();
+  }, {
+    once: true
+  });
   pluses.forEach(function (plus) {
     plus.addEventListener('click', function () {
       var plusMinusInput = plus.parentNode.querySelector('.input-quantity');
@@ -462,6 +464,12 @@ function _asyncToGenerator(fn) { return function () { var self = this, args = ar
 var renderProducts = function renderProducts() {
   var mainContainer = document.querySelector("main");
   var viewButtons = document.querySelectorAll('.view-product');
+  var categoryButtons = document.querySelectorAll('.category-button');
+  document.addEventListener("renderProductModules", function (event) {
+    renderProducts();
+  }, {
+    once: true
+  });
   viewButtons.forEach(function (viewButton) {
     viewButton.addEventListener('click', function () {
       var url = viewButton.dataset.url;
@@ -512,6 +520,56 @@ var renderProducts = function renderProducts() {
       sendShowRequest();
     });
   });
+  categoryButtons.forEach(function (categoryButton) {
+    categoryButton.addEventListener('click', function () {
+      var url = categoryButton.dataset.url;
+
+      var sendShowRequest = /*#__PURE__*/function () {
+        var _ref2 = _asyncToGenerator( /*#__PURE__*/_babel_runtime_regenerator__WEBPACK_IMPORTED_MODULE_0___default().mark(function _callee2() {
+          var response;
+          return _babel_runtime_regenerator__WEBPACK_IMPORTED_MODULE_0___default().wrap(function _callee2$(_context2) {
+            while (1) {
+              switch (_context2.prev = _context2.next) {
+                case 0:
+                  _context2.next = 2;
+                  return fetch(url, {
+                    headers: {
+                      'X-Requested-With': 'XMLHttpRequest'
+                    },
+                    method: 'GET'
+                  }).then(function (response) {
+                    if (!response.ok) throw response;
+                    return response.json();
+                  }).then(function (json) {
+                    mainContainer.innerHTML = json.content;
+                    document.dispatchEvent(new CustomEvent('renderProductModules'));
+                  })["catch"](function (error) {
+                    if (error.status == '500') {
+                      console.log(error);
+                    }
+
+                    ;
+                  });
+
+                case 2:
+                  response = _context2.sent;
+
+                case 3:
+                case "end":
+                  return _context2.stop();
+              }
+            }
+          }, _callee2);
+        }));
+
+        return function sendShowRequest() {
+          return _ref2.apply(this, arguments);
+        };
+      }();
+
+      sendShowRequest();
+    });
+  });
 };
 
 /***/ }),
@@ -537,48 +595,6 @@ var renderresponsive = function renderresponsive() {
 
 /***/ }),
 
-/***/ "./resources/js/front/desktop/select-category.js":
-/*!*******************************************************!*\
-  !*** ./resources/js/front/desktop/select-category.js ***!
-  \*******************************************************/
-/***/ ((__unused_webpack_module, __webpack_exports__, __webpack_require__) => {
-
-"use strict";
-__webpack_require__.r(__webpack_exports__);
-/* harmony export */ __webpack_require__.d(__webpack_exports__, {
-/* harmony export */   "renderSelectCategory": () => (/* binding */ renderSelectCategory)
-/* harmony export */ });
-var renderSelectCategory = function renderSelectCategory() {
-  var selecttypes = document.querySelector('#type-products');
-  selecttypes.addEventListener('change', function () {
-    // let url = selecttypes.dataset.url;
-    location.href = "http://dev-espartacoin.com/merchandisingcategory/" + selecttypes.value; // let sendEditRequest = async () => {
-    //     document.dispatchEvent(new CustomEvent('startWait'));
-    //     let response = await fetch(url, {
-    //         headers: {
-    //             'X-Requested-With': 'XMLHttpRequest',
-    //         },
-    //         method: 'GET',
-    //     })
-    //         .then(response => {
-    //             if (!response.ok) throw response;
-    //             return response.json();
-    //         })
-    //         .then(json => {
-    //             document.dispatchEvent(new CustomEvent('loadForm', {
-    //                 detail: {
-    //                     form: json.form,
-    //                 }
-    //             }));
-    //             document.dispatchEvent(new CustomEvent('renderFormModules'));
-    //         })
-    // };
-    // sendEditRequest();
-  });
-};
-
-/***/ }),
-
 /***/ "./resources/js/front/desktop/tabs.js":
 /*!********************************************!*\
   !*** ./resources/js/front/desktop/tabs.js ***!
@@ -593,6 +609,11 @@ __webpack_require__.r(__webpack_exports__);
 var renderTabs = function renderTabs() {
   var select = document.querySelector('.select-type');
   var relateds = document.querySelectorAll('.type-related');
+  document.addEventListener("renderProductModules", function (event) {
+    renderProduct();
+  }, {
+    once: true
+  });
 
   if (select) {
     select.addEventListener('change', function () {

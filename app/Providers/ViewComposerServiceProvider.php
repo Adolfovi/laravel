@@ -27,5 +27,9 @@ class ViewComposerServiceProvider extends ServiceProvider
             'admin.pages.products.index',
         ],  'App\Http\ViewComposers\Admin\ProductCategories');
         
+        view()->composer([
+            'front.pages.merchandising.index',
+        ],  'App\Http\ViewComposers\Front\ProductCategories');
+        
     }
 }

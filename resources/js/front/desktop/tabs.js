@@ -2,6 +2,10 @@ export let renderTabs = () => {
     let select = document.querySelector('.select-type');
     let relateds = document.querySelectorAll('.type-related');
 
+    document.addEventListener("renderProductModules",( event =>{
+        renderProduct();
+    }), {once: true});
+
     if (select) {
         select.addEventListener('change', () => {
             relateds.forEach(related => {
