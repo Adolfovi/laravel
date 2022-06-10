@@ -41,9 +41,9 @@
             <div class="nav-menu desktop-only">
                 <ul>
                     <li><a href="/">INICIO</a></li>
-                    <li><a href="merchandising">MERCHANDISING</a></li>
-                    <li><a href="faqs">FAQ</a></li>
-                    <li><a href="contacto">CONTACTO</a></li>
+                    <li><a href="/merchandising">MERCHANDISING</a></li>
+                    <li><a href="/faqs">FAQ</a></li>
+                    <li><a href="/contacto">CONTACTO</a></li>
                 </ul>
             </div>
         </div>
