@@ -6,7 +6,7 @@
                     <h2>@yield('page-title')</h2>
                 </div>
                 <form action="/merchan.php">
-                    <select name="type-products" id="type-products">
+                    <select name="type-products" id="type-products" data-url="front-categoryproduct">
                         <option value="todos"><span>Todos</span></option>
                         @if(isset($products))
                         @foreach($products as $product)

@@ -9,6 +9,7 @@ import { renderresponsive } from './responsive.js';
 import { renderForm} from './form.js';
 import {renderCkeditor} from './ckeditor.js';
 import {renderProducts} from './product.js';
+import {renderSelectCategory} from './select-category.js';
 
 renderCkeditor();
 renderTabs();
@@ -21,3 +22,4 @@ renderbuttonfaq();
 renderresponsive();
 renderForm();
 renderProducts();
+renderSelectCategory();
