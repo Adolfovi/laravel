@@ -9,16 +9,19 @@ use Debugbar;
 class ProductController extends Controller
 {
     protected $product;
+    protected $productwithoutfilters;
 
-    public function __construct(Product $product)
+    public function __construct(Product $product, Product $productwithoutfilters)
     {
         $this->product = $product;
+        $this->productwithoutfilters = $productwithoutfilters;
     }
 
     public function index()
     {
         $view = View::make('front.pages.merchandising.index')
-        ->with('products', $this->product->where('active', 1)->get());
+        ->with('products', $this->product->where('active', 1)->get())
+        ->with('productswithoutfilters', $this->productwithoutfilters->where('active', 1)->get());
 
         return $view;
     }
@@ -27,7 +30,8 @@ class ProductController extends Controller
     {
 
         $view = View::make('front.pages.merchan.index')
-        ->with('product', $product);
+        ->with('product', $product)
+        ->with('productswithoutfilters', $this->productwithoutfilters->where('active', 1)->get());
 
         if(request()->ajax()) {
 

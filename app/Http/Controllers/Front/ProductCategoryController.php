@@ -31,7 +31,7 @@ class ProductCategoryController extends Controller
     public function show($product)
     {
         $view = View::make('front.pages.merchandising.index')
-        ->with('products', $this->product->where('category_name', $product)->get())
+        ->with('products', $this->product->where('category_name', $product)->get())      
         ->with('productswithoutfilters', $this->productwithoutfilters->where('active', 1)->get());
         
         

@@ -126,4 +126,4 @@ Route::get('/faqs', 'App\Http\Controllers\Front\FaqController@index');
 
 Route::get('/merchandising', 'App\Http\Controllers\Front\ProductController@index');
 Route::get('/merchandising/{product}', 'App\Http\Controllers\Front\ProductController@show')->name('front_product');
-Route::get('/merchandisingcategory/{product}', 'App\Http\Controllers\Front\ProductCategoryController@show');
+Route::get('/merchandisingcategory/{product}', 'App\Http\Controllers\Front\ProductCategoryController@show')->name('front_categoryproduct');
