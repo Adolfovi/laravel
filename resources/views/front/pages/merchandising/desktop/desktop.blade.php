@@ -8,8 +8,8 @@
                 <form action="/merchan.php">
                     <select name="type-products" id="type-products" data-url="front-categoryproduct">
                         <option value="todos"><span>Todos</span></option>
-                        @if(isset($products))
-                        @foreach($products as $product)
+                        @if(isset($productswithoutfilters))
+                        @foreach($productswithoutfilters as $product)
                         <option value="{{$product->category_name}}">
                             <span>{{$product->category_name}}</span>
                         </option>
@@ -23,7 +23,7 @@
             <div class="results-products-container">
                 <div class="results-products-info">
                     <div class="results-products-total">
-                        <span>Se están enseñando {{$product->count()}} de {{$product->count()}} productos</span>
+                        <span>Se están enseñando {{$products->count()}} de {{$products->count()}} productos</span>
                     </div>
                     <div class="results-products-selector">
                     </div>
