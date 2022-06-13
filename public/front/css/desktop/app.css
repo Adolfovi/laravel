@@ -817,6 +817,10 @@ header .nav-menu li {
   cursor: pointer;
 }
 
+.category-merchans-content span {
+  font-weight: bolder;
+}
+
 .images-merchan-product {
   display: flex;
   justify-content: space-between;

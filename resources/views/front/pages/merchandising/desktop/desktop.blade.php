@@ -30,7 +30,7 @@
             <div class="results-products-container">
                 <div class="results-products-info">
                     <div class="results-products-total">
-                        <span>Se están enseñando {{$products->count()}} de {{$products->count()}} productos</span>
+                        <span>Se están enseñando {{$products->count()}} producto/s</span>
                     </div>
                     <div class="results-products-selector">
                     </div>
