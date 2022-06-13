@@ -20,7 +20,6 @@ class ProductFilterbyController extends Controller
     {
 
         $view = View::make('front.pages.merchandising.index')
-        ->with('product', $this->product)
         ->with('products', $this->product->where('visible', 1)->orderby('price', $order)->get());    
         if(request()->ajax()) {
 
