@@ -14,6 +14,14 @@
                             @endforeach
                         @endif
                     </ul>
+                    @if(isset($products))
+                    <span>Ordenar por:</span>
+                    <select name="orderBy" class="orderBy">
+                        <option value=""> </option>
+                        <option value="{{route('front_orderby_product', ['order' => 'ASC'])}}">Precio Ascendente</option>
+                        <option value="{{route('front_orderby_product', ['order' => 'DESC'])}}">Precio Descendente</option>
+                    </select>
+                    @endif
                 </div>        
             </div>
         </div>
