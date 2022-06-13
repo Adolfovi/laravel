@@ -10,12 +10,13 @@
                     <ul>
                         @if(isset($product_categories))
                             @foreach($product_categories as $category_element)
-                                <li class="category-button" data-url="{{route('front_category_product', ['category' => $category_element->id])}}">{{$category_element->title}}</li>
+                                <li class="category-button" data-url="{{route('front_category_product', ['category' => $category_element->id])}}"><b>{{$category_element->title}}</b></li>
                             @endforeach
                         @endif
                     </ul>
                     @if(isset($products))
                     <span>Ordenar por:</span>
+                    <br>
                     <select name="orderBy" class="orderBy">
                         <option value=""> </option>
                         <option value="{{route('front_orderby_product', ['order' => 'ASC'])}}">Precio Ascendente</option>
