@@ -529,10 +529,10 @@ header .nav-menu li {
   width: 100%;
 }
 .desktop-two-columns-aside > .column-aside {
-  width: 30%;
+  width: 40%;
 }
 .desktop-two-columns-aside > .column-main {
-  width: 65%;
+  width: 60%;
 }
 
 .desktop-one-column {
