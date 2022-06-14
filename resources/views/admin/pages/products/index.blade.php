@@ -16,19 +16,7 @@
                             <h4>Título: </h4><span class="title">{{$product_element->title}}</span>
                         </div>
                         <div class="elements-configuration-element-subelement">
-                            <h4>Categoría: </h4><span class="title">{{$product_element->category_name}}</span>
-                        </div>
-                        <div class="elements-configuration-element-subelement">
-                            <h4>Opiniones: </h4><span class="title">{!!$product_element->comments!!}</span>
-                        </div>
-                        <div class="elements-configuration-element-subelement">
-                            <h4>Precio: </h4><span class="title">{{$product_element->price}}</span>
-                        </div>
-                        <div class="elements-configuration-element-subelement">
-                            <h4>Descripción: </h4><span class="title">{!!$product_element->description!!}</span>
-                        </div>
-                        <div class="elements-configuration-element-subelement">
-                            <h4>Características: </h4><span class="title">{!!$product_element->features!!}</span>
+                            <h4>Categoría: </h4><span class="title">{{$product_element->category_id}}</span>
                         </div>
                         <div class="elements-configuration-element-subelement">
                             <h4>Fecha: </h4><span class="title">{{$product_element->created_at}}</span>
@@ -122,49 +110,10 @@
                     </div>
                     <div class="form-content-data-price">
                         <div class="form-content-data-price-title">
-                            <h3>Precio</h3>
+                            <h3>Número de categoría</h3>
                         </div>
                         <div class="form-content-data-price-result">
-                            <input type="text" name="price" value="{{isset($product->price) ? $product->price : ''}}">
-                        </div>
-                    </div>
-                    <div class="form-content-data-price">
-                        <div class="form-content-data-price-title">
-                            <h3>Categoria</h3>
-                        </div>
-                        <div class="form-content-data-price-result">
-                            <select type="text" name="category_name">
-                                <option></option>
-                                    @if(isset($product_categories))
-                                    @foreach($product_categories as $product_category)
-                                        <option value="{{$product_category->name}}">{{$product_category->name}}</option>
-                                    @endforeach
-                                @endif
-                            </select>
-                            </div>
-                    </div>
-                    <div class="form-content-data-description">
-                        <div class="form-content-data-description-title">
-                            <h3>Opiniones</h3>
-                        </div>
-                        <div class="form-content-data-description-result">
-                            <textarea class="ckeditors" name="comments">{{isset($product->comments) ? $product->comments : ''}}</textarea>
-                        </div>
-                    </div>
-                    <div class="form-content-data-description">
-                        <div class="form-content-data-description-title">
-                            <h3>Descripción</h3>
-                        </div>
-                        <div class="form-content-data-description-result">
-                            <textarea class="ckeditors" name="description">{{isset($product->description) ? $product->description : ''}}</textarea>
-                        </div>
-                    </div>
-                    <div class="form-content-data-description">
-                        <div class="form-content-data-description-title">
-                            <h3>Características</h3>
-                        </div>
-                        <div class="form-content-data-description-result">
-                            <textarea class="ckeditors" name="features">{{isset($product->features) ? $product->features : ''}}</textarea>
+                            <input type="number" name="category_id" value="{{isset($product->category_id) ? $product->category_id : ''}}">
                         </div>
                     </div>
                 </div>
