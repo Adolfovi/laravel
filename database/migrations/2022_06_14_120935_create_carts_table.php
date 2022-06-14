@@ -13,7 +13,7 @@ return new class extends Migration
      */
     public function up()
     {
-        Schema::create('carrito', function (Blueprint $table) {
+        Schema::create('carts', function (Blueprint $table) {
             $table->id();
             $table->string('price_id');
             $table->string('fingerprint_id');
@@ -31,6 +31,6 @@ return new class extends Migration
      */
     public function down()
     {
-        Schema::dropIfExists('carrito');
+        Schema::dropIfExists('carts');
     }
 };
