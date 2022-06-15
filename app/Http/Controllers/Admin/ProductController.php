@@ -7,6 +7,7 @@ namespace App\Http\Controllers\Admin;
 use Illuminate\Support\Facades\View;
 use App\Http\Controllers\Controller;
 use App\Models\Product;
+use App\Models\Price;
 use App\Http\Requests\Admin\ProductRequest;
 use Debugbar;
 
@@ -14,10 +15,13 @@ class ProductController extends Controller
 {
 
     protected $product;
+    protected $price;
 
-    public function __construct(Product $product)
+
+    public function __construct(Product $product, Price $price)
     {
         $this->product = $product;
+        $this->price = $price;
     }
     
     public function index()
@@ -86,7 +90,19 @@ class ProductController extends Controller
                 'visible' => 1,
                 'active' => 1,
         ]);
-            
+
+        $this->price->where('product_id', $product->id)->update([
+            'valid'=> 0
+        ]);
+
+        $product = $this->price->create([
+            'product_id' => $product->id,
+            'base_price' => request('base_price'),
+            'tax_id' => request('tax_id'),
+            'valid' => 1,
+            'active' => 1,
+        ]);
+       
         $view = View::make('admin.pages.products.index')
         ->with('products', $this->product->where('active', 1)->get())
         ->with('product', $product)

@@ -15,8 +15,8 @@ return new class extends Migration
     {
         Schema::create('prices', function (Blueprint $table) {
             $table->id();
-            $table->string('base_price');
-            $table->string('tax_id');
+            $table->double('base_price');
+            $table->integer('tax_id');
             $table->string('valid');
             $table->integer('product_id');
             $table->timestamps();

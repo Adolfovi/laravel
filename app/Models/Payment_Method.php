@@ -12,7 +12,7 @@ class Payment_Method extends Model
 
     public function venta()
     {
-        return $this->hasOne(Venta::class, 'payment_method_id');
+        return $this->hasMany(Venta::class, 'payment_method_id')->where('active', 1);
     }
 
 }

@@ -14,6 +14,12 @@ class Cart extends Model
         return $this->belongsTo(Price::class, 'price_id');
     }
 
+    public function fingerprint()
+    {
+        return $this->belongsTo(Fingerprint::class, 'fingerprint_id');
+    }
+
+
     public function venta()
     {
         return $this->belongsTo(Venta::class, 'venta_id');

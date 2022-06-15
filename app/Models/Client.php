@@ -10,7 +10,7 @@ class Client extends Model
 
     public function venta()
     {
-        return $this->hasMany(Venta::class, 'client_id');
+        return $this->hasMany(Venta::class, 'client_id')->where('active', 1);
     }
 
 

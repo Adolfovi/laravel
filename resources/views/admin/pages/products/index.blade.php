@@ -134,11 +134,19 @@
 
                                 @if(isset($taxes))
                                     @foreach($taxes as $tax)
-                                        <option value="{{$tax->id}}" {{ isset($product->prices->first()->tax->id)  && $product->prices->first()->tax->id == $tax->id ? 'selected' : ''}}>{{$tax->type}}</option>
+                                        <option value="{{$tax->id}}" {{ isset($product->prices->first()->tax_id)  && $product->prices->first()->tax_id == $tax->id ? 'selected' : ''}}>{{$tax->type}}</option>
                                     @endforeach
                                 @endif
                                 
                             </select>
+                        </div>
+                    </div>
+                    <div class="form-content-data-price">
+                        <div class="form-content-data-price-title">
+                            <h3>PRECIO</h3>
+                        </div>
+                        <div class="form-content-data-price-result">
+                            <input type="text" name="base_price" value="{{isset($product->prices->base_price) ? $product->prices->base_price : ''}}">
                         </div>
                     </div>
                 </div>
