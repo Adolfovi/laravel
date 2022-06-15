@@ -8,9 +8,9 @@ class Product extends Model
 {
     protected $guarded = [];
     
-    public function price()
+    public function prices()
     {
-        return $this->hasMany(Price::class, 'product_id');
+        return $this->hasMany(Price::class, 'product_id')->where('active', 1)->where('valid', 1);
     }
     
     public function category()

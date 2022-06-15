@@ -113,7 +113,32 @@
                             <h3>Número de categoría</h3>
                         </div>
                         <div class="form-content-data-price-result">
-                            <input type="number" name="category_id" value="{{isset($product->category_id) ? $product->category_id : ''}}">
+                            <select name="category_id">
+                                <option value="" disabled selected>--Selecciona una categoría--</option>
+                                @if(isset($product_categories))
+                                    @foreach($product_categories as $product_category)
+                                        <option value="{{$product_category->id}}" {{ isset($product->category->id)  && $product->category->id == $product_category->id ? 'selected' : ''}}>{{$product_category->name}}</option>
+                                    @endforeach
+                                @endif
+                                
+                            </select>
+                        </div>
+                    </div>
+                    <div class="form-content-data-price">
+                        <div class="form-content-data-price-title">
+                            <h3>IVA</h3>
+                        </div>
+                        <div class="form-content-data-price-result">
+                            <select name="tax_id">
+                                <option value="" disabled selected>--Selecciona un IVA--</option>
+
+                                @if(isset($taxes))
+                                    @foreach($taxes as $tax)
+                                        <option value="{{$tax->id}}" {{ isset($product->prices->first()->tax->id)  && $product->prices->first()->tax->id == $tax->id ? 'selected' : ''}}>{{$tax->type}}</option>
+                                    @endforeach
+                                @endif
+                                
+                            </select>
                         </div>
                     </div>
                 </div>

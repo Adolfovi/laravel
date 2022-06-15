@@ -21,6 +21,6 @@ class Price extends Model
 
     public function Taxes()
     {
-        return $this->belongsTo(Tax::class, 'tax_id');
+        return $this->belongsTo(Tax::class, 'tax_id')->where('valid', 1);
     }
 }
