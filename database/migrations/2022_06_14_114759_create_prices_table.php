@@ -17,7 +17,7 @@ return new class extends Migration
             $table->id();
             $table->double('base_price');
             $table->integer('tax_id');
-            $table->string('valid');
+            $table->integer('valid');
             $table->integer('product_id');
             $table->timestamps();
         });

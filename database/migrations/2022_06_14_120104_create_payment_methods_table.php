@@ -17,7 +17,7 @@ return new class extends Migration
             $table->id();
             $table->string('name');
             $table->string('title');
-            $table->string('active');
+            $table->decimal('active');
             $table->timestamps();
         });
     }

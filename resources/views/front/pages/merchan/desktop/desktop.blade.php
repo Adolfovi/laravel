@@ -37,7 +37,7 @@
                     <h2>{{$product->category->title}}</h2>
                 </div>
                 <div class="info-merchan-product-price">
-                    <span>{{$product->price}}€</span>
+                    <span>{{$product->prices->first()->base_price}}€</span>
                 </div>
                 @include('front.components.tabs')
                 @include('front.components.button')

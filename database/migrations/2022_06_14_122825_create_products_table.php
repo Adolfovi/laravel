@@ -17,7 +17,7 @@ return new class extends Migration
             $table->id();
             $table->string('name');
             $table->string('title');
-            $table->string('category_id');
+            $table->integer('category_id');
             $table->boolean('visible');
             $table->boolean('active');
             $table->timestamps();

@@ -15,9 +15,9 @@ return new class extends Migration
     {
         Schema::create('taxes', function (Blueprint $table) {
             $table->id();
-            $table->string('type');
-            $table->string('multiplicator');
-            $table->string('valid');
+            $table->decimal('type');
+            $table->decimal('multiplicator');
+            $table->decimal('valid');
             $table->integer('active');
             $table->timestamps();
         });
