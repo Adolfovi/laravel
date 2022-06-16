@@ -119,6 +119,8 @@ Route::get('/contacto', 'App\Http\Controllers\Front\ContactController@index')->n
 Route::post('/contacto', 'App\Http\Controllers\Front\ContactController@store')->name('front_contact_form');
 
 Route::get('/carro', 'App\Http\Controllers\Front\CartController@index');
+Route::post('/carro/{product}', 'App\Http\Controllers\Front\CartController@store')->name('front_product_buy');
+
 
 Route::get('/checking', 'App\Http\Controllers\Front\CheckingController@index');
 

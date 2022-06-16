@@ -13,6 +13,8 @@
             <td class="cart-elements">Precio</td>
             <td class="cart-elements">Cantidad</td>
         </tr>
+        @if (isset($carts))
+        @foreach ($carts as $cart)
         <tr>
             <td class="cart-products">
                 <div class="cart-image">
@@ -21,12 +23,12 @@
             </td>
             <td class="cart-products">
                 <div class="cart-name">
-                    <h4>Reloj Espartacoin</h4>
+                    <h4>asdasd</h4>
                 </div>
             </td>
             <td class="cart-products">
                 <div>
-                    <h4>14.99€</h4>
+                    <h4>{{$cart->id}}</h4>
                 </div>
             </td>
             <td class="cart-products">
@@ -35,28 +37,8 @@
                 </div>
             </td>
         </tr>
-        <tr>
-            <td class="cart-products">
-                <div class="cart-image">
-                    <img src="img/reloj.png">
-                </div>
-            </td>
-            <td class="cart-products">
-                <div class="cart-name">
-                    <h4>Reloj Espartacoin</h4>
-                </div>
-            </td>
-            <td class="cart-products">
-                <div>
-                    <h4>14.99€</h4>
-                </div>
-            </td>
-            <td class="cart-products">
-                <div class="cart-quantity">
-                    @include('front.components.button')
-                </div>
-            </td>
-        </tr>
+        @endforeach
+        @endif
     </table>
 
     <div class="mobile-two-columns desktop-two-columns">
