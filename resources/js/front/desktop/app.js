@@ -10,6 +10,7 @@ import { renderForm} from './form.js';
 import {renderCkeditor} from './ckeditor.js';
 import {renderProducts} from './product.js';
 import {renderFilters} from './filter.js';
+import {renderCart} from './cart.js';
 
 renderCkeditor();
 renderTabs();
@@ -23,3 +24,4 @@ renderresponsive();
 renderForm();
 renderProducts();
 renderFilters();
+renderCart();

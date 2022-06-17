@@ -3,7 +3,7 @@ export let renderTabs = () => {
     let relateds = document.querySelectorAll('.type-related');
 
     document.addEventListener("renderProductModules",( event =>{
-        renderProduct();
+        renderTabs();
     }), {once: true});
 
     if (select) {

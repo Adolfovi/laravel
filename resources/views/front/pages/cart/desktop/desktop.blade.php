@@ -28,7 +28,7 @@
             </td>
             <td class="cart-products">
                 <div>
-                    <h4>{{$cart->id}}</h4>
+                    <h4>plpl</h4>
                 </div>
             </td>
             <td class="cart-products">

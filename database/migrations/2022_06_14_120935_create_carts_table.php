@@ -16,7 +16,7 @@ return new class extends Migration
         Schema::create('carts', function (Blueprint $table) {
             $table->id();
             $table->decimal('price_id');
-            $table->decimal('fingerprint_id');
+            $table->decimal('fingerprint');
             $table->decimal('client_id');
             $table->decimal('venta_id');
             $table->decimal('active');

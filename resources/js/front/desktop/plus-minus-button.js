@@ -4,13 +4,13 @@ export let renderPlusMinusButton = () => {
     let pluses = document.querySelectorAll('.quantity-plus');
 
     document.addEventListener("renderProductModules",( event =>{
-        renderProduct();
+        renderPlusMinusButton();
     }), {once: true});
     
     pluses.forEach(plus => {
 
-        plus.addEventListener('click', () => {
-
+        plus.addEventListener('click', (event) => {
+            event.preventDefault();
             let plusMinusInput = plus.parentNode.querySelector('.input-quantity');
            
             parseInt(plusMinusInput.value++);
@@ -18,8 +18,8 @@ export let renderPlusMinusButton = () => {
     });
 
     minuses.forEach(minus => {
-        minus.addEventListener('click', () => {
-
+        minus.addEventListener('click', (event) => {
+            event.preventDefault();
             let plusMinusInput =  minus.parentNode.querySelector('.input-quantity');;
 
             if (plusMinusInput.value > 1) {
