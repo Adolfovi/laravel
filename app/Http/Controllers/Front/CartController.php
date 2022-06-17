@@ -22,11 +22,13 @@ class CartController extends Controller
 
     public function store(Request $request)
     {
-        $cart = $this->cart->create([
-            'price_id' => request('price_id'),
-            'fingerprint' => '1',
-            'active' => 1,
-        ]);
+        for($i = 0; $i < request('amount'); $i++) {
+            $cart = $this->cart->create([
+                'price_id' => request('price_id'),
+                'fingerprint' => '1',
+                'active' => 1,
+            ]);
+        }
 
         $view = View::make('front.pages.cart.index')->renderSections();
         return response()->json(['content' => $view['content'], ]);
