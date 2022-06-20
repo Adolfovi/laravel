@@ -23,12 +23,12 @@
             </td>
             <td class="cart-products">
                 <div class="cart-name">
-                    <h4>asdasd</h4>
+                    <h4>cvnbcvb</h4>
                 </div>
             </td>
             <td class="cart-products">
                 <div>
-                    <h4>plpl</h4>
+                    <h4>{{$cart->price->first()->base_price}}</h4>
                 </div>
             </td>
             <td class="cart-products">
