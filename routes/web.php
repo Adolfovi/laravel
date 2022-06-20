@@ -120,6 +120,9 @@ Route::post('/contacto', 'App\Http\Controllers\Front\ContactController@store')->
 
 Route::get('/carro', 'App\Http\Controllers\Front\CartController@show')->name('front_product_show');
 Route::post('/carro', 'App\Http\Controllers\Front\CartController@store')->name('front_product_buy');
+Route::get('/carro/plus/{fingerprint}/{price_id}', 'App\Http\Controllers\Front\CartController@plus')->name('front_cart_plus');
+Route::get('/carro/minus/{fingerprint}/{price_id}', 'App\Http\Controllers\Front\CartController@minus')->name('front_cart_minus');
+
 
 Route::get('/checking', 'App\Http\Controllers\Front\CheckingController@index');
 

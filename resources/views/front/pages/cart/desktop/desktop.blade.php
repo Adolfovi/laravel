@@ -14,30 +14,36 @@
             <td class="cart-elements">Cantidad</td>
         </tr>
         @if (isset($carts))
-        @foreach ($carts as $cart)
-        <tr>
-            <td class="cart-products">
-                <div class="cart-image">
-                    <img src="img/reloj.png">
-                </div>
-            </td>
-            <td class="cart-products">
-                <div class="cart-name">
-                    <h4>asdasd</h4>
-                </div>
-            </td>
-            <td class="cart-products">
-                <div>
-                    <h4>plpl</h4>
-                </div>
-            </td>
-            <td class="cart-products">
-                <div class="cart-quantity">
-                    @include('front.components.button')
-                </div>
-            </td>
-        </tr>
-        @endforeach
+            @foreach ($carts as $cart)
+                <tr>
+                    <td class="cart-products">
+                        <div class="cart-image">
+
+                        </div>
+                    </td>
+                    <td class="cart-products">
+                        <div class="cart-name">
+                            <h4>{{$cart->price->product->title}}</h4>
+                        </div>
+                    </td>
+                    <td class="cart-products">
+                        <div>
+                            <h4>{{$cart->price->base_price}}</h4>
+                        </div>
+                    </td>
+                    <td class="cart-products">
+                        <div class="cart-quantity">
+                            <div class="info-merchan-product-quantity plus-minus-button">
+                                <button class="cart-plus-minus-button" data-url="{{route('front_cart_plus', ['fingerprint' => $fingerprint, 'price_id' => $cart->price_id])}}">-</button>
+                                <div>
+                                    <input class="input-quantity" value="{{$cart->quantity}}">
+                                </div>
+                                <button class="cart-plus-minus-button"  data-url="{{route('front_cart_minus', ['fingerprint' => $fingerprint, 'price_id' => $cart->price_id])}}">+</button>
+                            </div>
+                        </div>
+                    </td>
+                </tr>
+            @endforeach
         @endif
     </table>
 

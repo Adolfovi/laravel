@@ -3,6 +3,7 @@ namespace App\Http\Controllers\Front;
 use Illuminate\Support\Facades\View;
 use App\Http\Controllers\Controller;
 use App\Models\Cart;
+use Illuminate\Support\Facades\DB;
 use Illuminate\Http\Request;
 
 class CartController extends Controller
@@ -30,25 +31,29 @@ class CartController extends Controller
             ]);
         }
 
-        $view = View::make('front.pages.cart.index')->renderSections();
-        return response()->json(['content' => $view['content'], ]);
+        $carts = $this->cart->select(DB::raw('count(price_id) as quantity'),'price_id')
+        ->groupByRaw('price_id')
+        ->where('active', 1)
+        ->where('fingerprint', $cart->fingerprint)
+        ->get();
         
-    }
-    
-    public function show(Cart $cart)
-    {
         $view = View::make('front.pages.cart.index')
-        ->with('carts', $cart);
-        
-        if(request()->ajax()){
-            $sections = $view->renderSections();
-            return response()->json([
-                'content' => $sections['content'], ]);
-        }
+        ->with('carts', $carts)
+        ->with('fingerprint', $cart->fingerprint)
+        ->renderSections();
 
-        
-        return $view;
+        return response()->json(
+            ['content' => $view['content']]
+        );
     }
 
+    public function plus($fingerprint, $price_id)
+    {
+       
+    }
 
+    public function minus($fingerprint, $price_id)
+    {
+       
+    }
 }

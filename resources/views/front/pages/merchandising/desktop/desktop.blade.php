@@ -43,7 +43,7 @@
                                     <img src="img/reloj.png">
                                 </div>
                                 <div class="element-price">
-                                    <span>{{$product->prices->first()->base_price}}€</span>
+                                    <span>1212€</span>
                                 </div>
                                 <div class="element-name">
                                     <span>{{$product->name}}</span>

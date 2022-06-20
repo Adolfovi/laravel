@@ -37,23 +37,24 @@
                     <h2>{{$product->category->title}}</h2>
                 </div>
                 <div class="info-merchan-product-price">
-                    <span>{{$product->prices->first()->base_price}}€</span>
+                    <span>45€</span>
                 </div>
                 @include('front.components.tabs')
 
                 <form class="form-product-buy" action="{{route('front_product_buy')}}">
-                <div class="info-merchan-product-quantity plus-minus-button">
-                    
+                    <input type="hidden" name="price_id" value="{{$product->prices->first()->id}}">
+                    <div class="info-merchan-product-quantity plus-minus-button">
                     <button class="quantity-minus">-</button>
-                        <div>
-                            <input type="hidden" name="price_id" value="{{$product->prices->first()->id}}">
+                        
+                    <div>
+                            
                             <input class="input-quantity" name="amount" value="1">
                         </div>
-                    </form>
-
-                    <button class="quantity-plus">+</button>
-                </div>
-
+                        
+                        <button class="quantity-plus">+</button>
+                    </div>
+                    
+                </form>
                 <div class="info-merchan-product-buy">
                     <button class="buy-product">Comprar</button>
                 </div>
