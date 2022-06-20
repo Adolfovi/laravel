@@ -3,18 +3,15 @@ namespace App\Http\Controllers\Front;
 use Illuminate\Support\Facades\View;
 use App\Http\Controllers\Controller;
 use App\Models\Cart;
-use App\Models\Product;
 use Illuminate\Http\Request;
 
 class CartController extends Controller
 {
     protected $cart;
-    protected $product;
 
-    public function __construct(Cart $cart, Product $product)
+    public function __construct(Cart $cart)
     {
         $this->cart = $cart;
-        $this->product = $product;
     }
 
     public function index()
@@ -33,7 +30,7 @@ class CartController extends Controller
             ]);
         }
 
-        $view = View::make('front.pages.cart.index')->with('carts', $this->cart->where('active', 1)->get())->renderSections();
+        $view = View::make('front.pages.cart.index')->renderSections();
         return response()->json(['content' => $view['content'], ]);
         
     }
