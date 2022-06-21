@@ -4,7 +4,16 @@
     font-weight: bolder;
 }
 
-.cart-plus-minus-button {
+.quantity-number-cart{
+    padding: 0.4rem 0.8rem 0.5rem 0.8rem;
+    background-color: white;
+    font-weight: bolder;
+    width: 2rem;
+    border: 0;
+    text-align: center;
+}
+
+.quantity-minus {
     padding: 0.4rem 0.8rem 0.4rem 0.8rem;
     font-size: 1rem;
     border: 0;
@@ -15,6 +24,26 @@
 }
 
 .quantity-plus {
+    padding: 0.4rem 0.8rem 0.4rem 0.8rem;
+    font-size: 1rem;
+    border: 0;
+    cursor: pointer;
+    background-image: linear-gradient(to right, #c86040, #ff8f6c);
+    font-weight: bolder;
+    border-radius: 0 5px 5px 0;
+}
+
+.cart-minus-button {
+    padding: 0.4rem 0.8rem 0.4rem 0.8rem;
+    font-size: 1rem;
+    border: 0;
+    cursor: pointer;
+    background-image: linear-gradient(to right, #c86040, #ff8f6c);
+    font-weight: bolder;
+    border-radius: 6px 0 0 6px;
+}
+
+.cart-plus-button {
     padding: 0.4rem 0.8rem 0.4rem 0.8rem;
     font-size: 1rem;
     border: 0;

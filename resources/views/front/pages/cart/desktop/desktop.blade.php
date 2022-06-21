@@ -34,11 +34,11 @@
                     <td class="cart-products">
                         <div class="cart-quantity">
                             <div class="info-merchan-product-quantity plus-minus-button">
-                                <button class="cart-plus-minus-button" data-url="{{route('front_cart_plus', ['fingerprint' => $fingerprint, 'price_id' => $cart->price_id])}}">-</button>
+                                <button class="cart-minus-button" data-url="{{route('front_cart_plus', ['fingerprint' => $fingerprint, 'price_id' => $cart->price_id])}}">-</button>
                                 <div>
-                                    <input class="input-quantity" value="{{$cart->quantity}}">
+                                    <input class="quantity-number-cart" value="{{$cart->quantity}}">
                                 </div>
-                                <button class="cart-plus-minus-button"  data-url="{{route('front_cart_minus', ['fingerprint' => $fingerprint, 'price_id' => $cart->price_id])}}">+</button>
+                                <button class="cart-plus-button"  data-url="{{route('front_cart_minus', ['fingerprint' => $fingerprint, 'price_id' => $cart->price_id])}}">+</button>
                             </div>
                         </div>
                     </td>
