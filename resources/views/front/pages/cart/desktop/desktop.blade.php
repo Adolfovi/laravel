@@ -50,6 +50,8 @@
     <div class="mobile-two-columns desktop-two-columns">
         <div class="column"></div>
         <div class="column">
+            @if (isset($taxes))
+            @foreach ($taxes as $tax)
             <div class="cart-finishing-container">
                 <div class="cart-finishing">
                     <div class="cart-finishing-title">
@@ -61,7 +63,7 @@
                         </div>
                         <div class="column">
                             <div class="cart-finishing-iva-result">
-                                <span>20€</span>
+                                <span>{{$tax->type}}</span>
                             </div>
                         </div>
                     </div>
@@ -73,7 +75,7 @@
                         </div>
                         <div class="column">
                             <div class="cart-finishing-price-title">
-                                <span>29.98€</span>
+                                <span>{{$total->sum('base_price')}}€</span>
                             </div>
                         </div>
                     </div>
@@ -85,12 +87,14 @@
                         </div>
                         <div class="column">
                             <div class="cart-finishing-total-result">
-                                <span>49.98€</span>
+                                <span>{{$total->sum('base_price') - ($total->sum('base_price') * $tax->type)}}€</span>
                             </div>
                         </div>
                     </div>
                 </div>
             </div>
+            @endforeach
+                @endif
         </div>
     </div>
     <div class="cart-buttons">

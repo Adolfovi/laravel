@@ -3,16 +3,19 @@ namespace App\Http\Controllers\Front;
 use Illuminate\Support\Facades\View;
 use App\Http\Controllers\Controller;
 use App\Models\Cart;
+use App\Models\Tax;
 use Illuminate\Support\Facades\DB;
 use Illuminate\Http\Request;
 
 class CartController extends Controller
 {
     protected $cart;
+    protected $tax;
 
-    public function __construct(Cart $cart)
+    public function __construct(Cart $cart, Tax $tax)
     {
         $this->cart = $cart;
+        $this->tax = $tax;
     }
 
     public function index()
@@ -22,7 +25,7 @@ class CartController extends Controller
     }
 
     public function store(Request $request)
-    {
+    { 
         for($i = 0; $i < request('amount'); $i++) {
             $cart = $this->cart->create([
                 'price_id' => request('price_id'),
@@ -39,7 +42,20 @@ class CartController extends Controller
         
         $view = View::make('front.pages.cart.index')
         ->with('carts', $carts)
-        ->with('fingerprint', $cart->fingerprint)
+        ->with('taxes', $this->tax->where('active', 1)->get())
+        ->with('total', DB::table('carts')
+        ->select('base_price')
+        ->join('prices', 'carts.price_id', '=', 'prices.id')
+        ->get())
+        ->with('fingerprint', $cart->fingerprint)        
+        
+        
+        
+        
+        
+        
+        
+        
         ->renderSections();
 
         return response()->json(
