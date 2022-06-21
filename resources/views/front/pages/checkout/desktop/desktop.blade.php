@@ -59,8 +59,9 @@
             </div>
         </div>
         <div class="column">
+            @if(isset($taxes))
+            @foreach($taxes as $tax)
             <div class="buy-finishing">
-
                 <div class="buy-finishing-title">
                     <h4>Resumen de la compra</h4>
                 </div>
@@ -72,7 +73,7 @@
                     </div>
                     <div class="column">
                         <div class="buy-finishing-iva-result">
-                            <span>20€</span>
+                            <span>{{$tax->type}}</span>
                         </div>
                     </div>
                 </div>
@@ -85,7 +86,7 @@
                     </div>
                     <div class="column">
                         <div class="buy-finishing-price-result">
-                            <span>0€</span>
+                            <span>{{$total->sum('base_price')}}€</span>
                         </div>
                     </div>
                 </div>
@@ -98,11 +99,13 @@
                     </div>
                     <div class="column">
                         <div class="buy-finishing-total-result">
-                            <span>20€</span>
+                            <span>{{$total->sum('base_price') + ($total->sum('base_price') * $tax->type)}}€</span>
                         </div>
                     </div>
                 </div>
             </div>
+            @endforeach
+            @endif
             <div class="pay-options">
                 <input type="radio" name="age" value="bank-transfer">
                 <label for="age1">Transferencia Bancaria</label><br>

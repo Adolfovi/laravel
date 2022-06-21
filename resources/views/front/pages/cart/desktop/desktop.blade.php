@@ -87,7 +87,7 @@
                         </div>
                         <div class="column">
                             <div class="cart-finishing-total-result">
-                                <span>{{$total->sum('base_price') - ($total->sum('base_price') * $tax->type)}}€</span>
+                                <span>{{$total->sum('base_price') + ($total->sum('base_price') * $tax->type)}}€</span>
                             </div>
                         </div>
                     </div>
@@ -109,7 +109,7 @@
                     </div>
                     <div class="column">
                         <div class="cart-buy">
-                            <button><a href="checkout.html">Comprar</a></button>
+                            <button><a href="/checking">Comprar</a></button>
                         </div>
                     </div>
                 </div>
