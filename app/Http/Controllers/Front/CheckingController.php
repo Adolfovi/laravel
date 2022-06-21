@@ -19,15 +19,6 @@ class CheckingController extends Controller
         $this->tax = $tax;
     }
 
-
-
-
-
-
-
-
-
-
     public function index()
     {
         return View::make('front.pages.checkout.index')
@@ -37,6 +28,5 @@ class CheckingController extends Controller
         ->select('base_price')
         ->join('prices', 'carts.price_id', '=', 'prices.id')
         ->get());
-        
     }
 }

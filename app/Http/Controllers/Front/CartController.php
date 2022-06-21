@@ -50,12 +50,6 @@ class CartController extends Controller
         ->with('fingerprint', $cart->fingerprint)        
         
         
-        
-        
-        
-        
-        
-        
         ->renderSections();
 
         return response()->json(
