@@ -129,8 +129,12 @@ class ClientController extends Controller
                 'id' => request('id')],[
                 'name' => request('name'),
                 'surname' => request('surname'),
-                'dni' => request('dni'),
-                'birthday' => request('birthday'),
+                'email' => request('email'),
+                'telephone' => request('telephone'),
+                'address' => request('address'),
+                'postal_code' => request('postal_code'),
+                'city' => request('city'),
+                'country' => request('country'),
                 'visible' => 1,
                 'active' => 1,
         ]);

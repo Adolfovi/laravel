@@ -3,19 +3,19 @@ namespace App\Http\Controllers\Front;
 use Illuminate\Support\Facades\View;
 use App\Http\Controllers\Controller;
 use App\Models\Cart;
-use App\Models\Tax;
+use App\Models\Client;
 use Illuminate\Support\Facades\DB;
 use Illuminate\Http\Request;
 
 class CartController extends Controller
 {
     protected $cart;
-    protected $tax;
+    protected $client;
 
-    public function __construct(Cart $cart, Tax $tax)
+    public function __construct(Cart $cart, Client $client)
     {
         $this->cart = $cart;
-        $this->tax = $tax;
+        $this->client = $client;
     }
 
     public function index()
@@ -39,17 +39,22 @@ class CartController extends Controller
         ->where('active', 1)
         ->where('fingerprint', $cart->fingerprint)
         ->get();
+
+        $totals = $this->cart
+        ->where('carts.fingerprint', $cart->fingerprint)
+        ->where('carts.active', 1)
+        ->where('carts.venta_id', null)
+        ->join('prices', 'prices.id', '=', 'carts.price_id')
+        ->join('taxes', 'taxes.id', '=', 'prices.tax_id')
+        ->select(DB::raw('sum(prices.base_price) as base_total'), DB::raw('sum(prices.base_price * taxes.multiplicator) as total') )
+        ->first();
         
         $view = View::make('front.pages.cart.index')
         ->with('carts', $carts)
-        ->with('taxes', $this->tax->where('active', 1)->get())
-        ->with('total', DB::table('carts')
-        ->select('base_price')
-        ->join('prices', 'carts.price_id', '=', 'prices.id')
-        ->get())
+        ->with('base_total', $totals->base_total)
+        ->with('tax_total', ($totals->total - $totals->base_total))
+        ->with('total', $totals->total)
         ->with('fingerprint', $cart->fingerprint)        
-        
-        
         ->renderSections();
 
         return response()->json(

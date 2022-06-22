@@ -1,4 +1,5 @@
 <div class="checkout">
+<form class="checking-admin-form" action="{{route('checking_product_save')}}">
     <div class="mobile-one-column desktop-one-column">
         <div class="column">
             <div class="checkout-title">
@@ -9,12 +10,11 @@
     <div class="mobile-two-columns desktop-two-columns">
         <div class="column">
             <div class="checkout-form">
-                <form>
                     <div class="mobile-two-columns desktop-two-columns">
                         <div class="column">
                             <div class="checkout-form-element">
                                 <label for="firstname">Nombre</label>
-                                <input class="input-form" type="text" name="firstname">
+                                <input class="input-form" type="text" name="name">
                             </div>
                             <div class="checkout-form-element">
                                 <label for="telephone">Teléfono</label>
@@ -33,29 +33,35 @@
                             </div>
                             <div class="checkout-form-element">
                                 <label for="mail">Email</label>
-                                <input class="input-form" type="text" name="mail">
+                                <input class="input-form" type="text" name="email">
                             </div>
                             <div class="checkout-form-element">
                                 <label for="postalcode">Código Postal</label>
-                                <input class="input-form" type="text" name="postalcode">
+                                <input class="input-form" type="text" name="postal_code">
                             </div>
 
                         </div>
 
                     </div>
-
+                    <div class="mobile-one-column desktop-one-column">
+                            <div class="column">
+                                <div class="checkout-form-element">
+                                <label for="city">País</label>
+                                <input class="input-form" type="text" name="country">
+                            </div>
+                            </div>
+                    </div>
                     <div class="mobile-one-column desktop-one-column">
                         <div class="column">
                             <div class="checkout-form-element">
 
                                 <label for="postalcode">Dirección</label>
 
-                                <input class="input-form" type="text" name="direction">
+                                <input class="input-form" type="text" name="address">
 
                             </div>
                         </div>
                     </div>
-
             </div>
         </div>
         <div class="column">
@@ -113,9 +119,9 @@
                 <label for="age2">Paypal</label><br>
                 <input type="radio" id="age3" name="age" value="credit-card">
                 <label for="age3">Tarjeta de Crédito</label><br><br>
-                <button class="pay-continue" type="submit">Pagar</button>
+                <button class="pay-continue" href="{{route('sale_made')}}">Pagar</button>
             </div>
-            </form>
         </div>
     </div>
+</form>
 </div>

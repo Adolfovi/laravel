@@ -11,6 +11,7 @@ import {renderCkeditor} from './ckeditor.js';
 import {renderProducts} from './product.js';
 import {renderFilters} from './filter.js';
 import {renderCart} from './cart.js';
+import {renderCheckingForm} from './checkingform.js';
 
 renderCkeditor();
 renderTabs();
@@ -25,3 +26,4 @@ renderForm();
 renderProducts();
 renderFilters();
 renderCart();
+renderCheckingForm();

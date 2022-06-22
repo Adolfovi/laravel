@@ -50,8 +50,7 @@
     <div class="mobile-two-columns desktop-two-columns">
         <div class="column"></div>
         <div class="column">
-            @if (isset($taxes))
-            @foreach ($taxes as $tax)
+
             <div class="cart-finishing-container">
                 <div class="cart-finishing">
                     <div class="cart-finishing-title">
@@ -59,26 +58,27 @@
                     </div>
                     <div class="mobile-two-columns desktop-two-columns">
                         <div class="column">
-                            <div class="cart-finishing-iva-title"><span>IVA</span></div>
+                            <div class="cart-finishing-price-title">
+                                <span>Precio base</span>
+                            </div>
                         </div>
                         <div class="column">
-                            <div class="cart-finishing-iva-result">
-                                <span>{{$tax->type}}</span>
+                            <div class="cart-finishing-price-title">
+                                <span>{{$base_total}}€</span>
                             </div>
                         </div>
                     </div>
                     <div class="mobile-two-columns desktop-two-columns">
                         <div class="column">
-                            <div class="cart-finishing-price-title">
-                                <span>Precio total</span>
-                            </div>
+                            <div class="cart-finishing-iva-title"><span>IVA</span></div>
                         </div>
                         <div class="column">
-                            <div class="cart-finishing-price-title">
-                                <span>{{$total->sum('base_price')}}€</span>
+                            <div class="cart-finishing-iva-result">
+                                <span>{{$tax_total}}€</span>
                             </div>
                         </div>
                     </div>
+                    
                     <div class="mobile-two-columns desktop-two-columns">
                         <div class="column">
                             <div class="cart-finishing-total-title">
@@ -87,14 +87,12 @@
                         </div>
                         <div class="column">
                             <div class="cart-finishing-total-result">
-                                <span>{{$total->sum('base_price') + ($total->sum('base_price') * $tax->type)}}€</span>
+                                <span>{{$total}}€</span>
                             </div>
                         </div>
                     </div>
                 </div>
             </div>
-            @endforeach
-                @endif
         </div>
     </div>
     <div class="cart-buttons">
@@ -109,7 +107,7 @@
                     </div>
                     <div class="column">
                         <div class="cart-buy">
-                            <button><a href="/checking">Comprar</a></button>
+                            <button class="checkout-button" data-url="{{route('front_checkout', ['fingerprint' => $fingerprint])}}">Comprar</button>
                         </div>
                     </div>
                 </div>

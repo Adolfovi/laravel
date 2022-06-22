@@ -1,12 +1,10 @@
-export let renderCart = () => {
-
+export let renderCheckingForm = () => {
     let mainContainer = document.querySelector("main");
-    let buyButton = document.querySelector('.buy-product');
-    let checkoutButton = document.querySelector('.checkout-button');
-    let forms = document.querySelectorAll('.form-product-buy');
+    let buyButton = document.querySelector('.pay-continue');
+    let forms = document.querySelectorAll('.checking-admin-form');
    
     document.addEventListener("renderProductModules",( event =>{
-        renderCart();
+        renderCheckingForm();
     }), {once: true});
 
     if(buyButton){
@@ -68,46 +66,5 @@ export let renderCart = () => {
             });
         });
     }
-
-    if(checkoutButton){
-
-        checkoutButton.addEventListener('click', () => {
-
-            let url = checkoutButton.dataset.url;
-
-            let sendShowRequest = async () => {
-
-                let response = await fetch(url, {
-                    headers: {
-                        'X-Requested-With': 'XMLHttpRequest',
-                    },
-                    method: 'GET', 
-                })
-                .then(response => {
-                                
-                    if (!response.ok) throw response;
-
-                    return response.json();
-                })
-                .then(json => {
-
-                    mainContainer.innerHTML = json.content;
-
-                    document.dispatchEvent(new CustomEvent('renderProductModules'));
-                })
-                .catch(error =>  {
-    
-                    if(error.status == '500'){
-                        console.log(error);
-                    };
-                });
-            };
-
-            sendShowRequest();
-            
-        });
-    
-    }
-    
-
+ 
 }

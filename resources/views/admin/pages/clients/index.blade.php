@@ -16,13 +16,22 @@
                             <h4>Apellidos: </h4><span class="title">{{$client_element->surname}}</span>
                         </div>
                         <div class="elements-configuration-element-subelement">
-                            <h4>DNI: </h4><span class="title">{{$client_element->dni}}</span>
+                            <h4>Email: </h4><span class="title">{{$client_element->email}}</span>
                         </div>
                         <div class="elements-configuration-element-subelement">
-                            <h4>Fecha de Nacimiento: </h4><span class="title">{{$client_element->birthday}}</span>
+                            <h4>Tel: </h4><span class="title">{{$client_element->telephone}}</span>
                         </div>
                         <div class="elements-configuration-element-subelement">
-                            <h4>Fecha: </h4><span class="title">{{$client_element->created_at}}</span>
+                            <h4>Dirección: </h4><span class="title">{{$client_element->address}}</span>
+                        </div>
+                        <div class="elements-configuration-element-subelement">
+                            <h4>Código Postal: </h4><span class="title">{{$client_element->postal_code}}</span>
+                        </div>
+                        <div class="elements-configuration-element-subelement">
+                            <h4>Ciudad: </h4><span class="title">{{$client_element->city}}</span>
+                        </div>
+                        <div class="elements-configuration-element-subelement">
+                            <h4>País: </h4><span class="title">{{$client_element->country}}</span>
                         </div>
                     </div>
                     <div class="column" style="display: flex;align-items: center;justify-content: flex-end;">
@@ -113,18 +122,50 @@
                     </div>
                     <div class="form-content-data-description">
                         <div class="form-content-data-description-title">
-                            <h3>DNI</h3>
+                            <h3>Email</h3>
                         </div>
                         <div class="form-content-data-name-result">
-                            <input type="text" name="dni" value="{{isset($client->dni) ? $client->dni : ''}}">
+                            <input type="text" name="email" value="{{isset($client->email) ? $client->email : ''}}">
                         </div>
                     </div>
                     <div class="form-content-data-description">
                         <div class="form-content-data-description-title">
-                            <h3>Fecha de nacimiento</h3>
+                            <h3>Teléfono</h3>
                         </div>
                         <div class="form-content-data-name-result">
-                            <input type="date" name="birthday" value="{{isset($client->birthday) ? $client->birthday : ''}}">
+                            <input type="text" name="telephone" value="{{isset($client->telephone) ? $client->telephone : ''}}">
+                        </div>
+                    </div>
+                    <div class="form-content-data-description">
+                        <div class="form-content-data-description-title">
+                            <h3>Dirección</h3>
+                        </div>
+                        <div class="form-content-data-name-result">
+                            <input type="text" name="address" value="{{isset($client->address) ? $client->address : ''}}">
+                        </div>
+                    </div>
+                    <div class="form-content-data-description">
+                        <div class="form-content-data-description-title">
+                            <h3>Código Postal</h3>
+                        </div>
+                        <div class="form-content-data-name-result">
+                            <input type="text" name="postal_code" value="{{isset($client->postal_code) ? $client->postal_code : ''}}">
+                        </div>
+                    </div>
+                    <div class="form-content-data-description">
+                        <div class="form-content-data-description-title">
+                            <h3>Ciudad</h3>
+                        </div>
+                        <div class="form-content-data-name-result">
+                            <input type="text" name="city" value="{{isset($client->city) ? $client->city : ''}}">
+                        </div>
+                    </div>
+                    <div class="form-content-data-description">
+                        <div class="form-content-data-description-title">
+                            <h3>País</h3>
+                        </div>
+                        <div class="form-content-data-name-result">
+                            <input type="text" name="country" value="{{isset($client->country) ? $client->country : ''}}">
                         </div>
                     </div>
                 </div>
