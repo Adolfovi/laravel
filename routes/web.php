@@ -111,6 +111,20 @@ Route::group(['prefix' => 'administrator'], function () {
         ]
     ]);
 
+    Route::resource('carritos', 'App\Http\Controllers\Admin\CartController', [
+        'parameters' => [
+            'carritos' => 'cart', 
+        ],
+        'names' => [
+            'index' => 'carts',
+            'create' => 'carts_create',
+            'edit' => 'carts_edit',
+            'store' => 'carts_store',
+            'destroy' => 'carts_destroy',
+            'show' => 'carts_show',
+        ]
+    ]);
+
 });
 
 Route::get('/', 'App\Http\Controllers\Front\HomeController@index');

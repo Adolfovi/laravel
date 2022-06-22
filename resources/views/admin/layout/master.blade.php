@@ -48,8 +48,11 @@
                     <a href="/administrator/clientes">
                         Clientes
                     </a>
-                    <a href="administrator/usuarios">
+                    <a href="/administrator/usuarios">
                         Usuarios
+                    </a>
+                    <a href="/administrator/carritos">
+                        Carritos
                     </a>
                     </div>
                 </div>
