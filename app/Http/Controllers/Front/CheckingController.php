@@ -63,12 +63,6 @@ class CheckingController extends Controller
             'visible' => 1,
             'active' => 1,
             ]);
-        $this->cart->updateOrInsert([
-            'client_id' => 1],[
-        ]);
-
-        $view = View::make('front.pages.salemade.index');
-        return $view;
+        return View::make('front.pages.salemade.index');
     }
-
 }
