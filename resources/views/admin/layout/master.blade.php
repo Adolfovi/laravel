@@ -33,23 +33,23 @@
                         </div>
                     </div>
                     <div class="admin-panel-nav-menu">
-                    <a href="/administrator">
-                        Inicio
+                    <a href="/">
+                    Inicio
                     </a>
-                    <a href="products">
+                    <a href="/administrator/merchandising">
                     Merchandising 
                     </a>
-                    <a href="faqs">
+                    <a href="/administrator/productos/categorias">
+                    Categorias
+                    </a>    
+                    <a href="/administrator/faqs">
                         FAQ 
                     </a>
-                    <a href="administrator/contacto">    
-                    Contacto 
+                    <a href="/administrator/clientes">
+                        Clientes
                     </a>
-                    <a href="administrator/merchan-product">
-                        Merchan-product 
-                    </a>
-                    <a href="administrator/checking">
-                        Checking
+                    <a href="administrator/usuarios">
+                        Usuarios
                     </a>
                     </div>
                 </div>
