@@ -63,6 +63,7 @@ class CheckingController extends Controller
             'visible' => 1,
             'active' => 1,
             ]);
+            
         return View::make('front.pages.salemade.index');
     }
 }
