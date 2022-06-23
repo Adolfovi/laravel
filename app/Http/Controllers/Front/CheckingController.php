@@ -64,6 +64,5 @@ class CheckingController extends Controller
             'active' => 1,
             ]);
             return View::make('front.pages.salemade.index')->renderSections();
-            
     }
 }

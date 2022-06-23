@@ -18,25 +18,15 @@ class ProductFilterbyController extends Controller
 
     public function show($order)
     {
-
         $view = View::make('front.pages.merchandising.index')
         ->with('products', $this->product->where('visible', 1)->orderby('price', $order)->get());    
         if(request()->ajax()) {
-
             $sections = $view->renderSections(); 
-    
             return response()->json([
                 'content' => $sections['content'],
             ]); 
         }
-
-
         return $view;
     }
-
-
-
-
-
 
 }
