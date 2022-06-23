@@ -12,6 +12,7 @@ import {renderProducts} from './product.js';
 import {renderFilters} from './filter.js';
 import {renderCart} from './cart.js';
 import {renderCheckingForm} from './checkingform.js';
+import {renderproductquantitycart} from './productquantitycart.js';
 
 renderCkeditor();
 renderTabs();
@@ -27,3 +28,4 @@ renderProducts();
 renderFilters();
 renderCart();
 renderCheckingForm();
+renderproductquantitycart();

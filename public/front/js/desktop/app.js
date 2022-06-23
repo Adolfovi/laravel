@@ -51,6 +51,8 @@ __webpack_require__.r(__webpack_exports__);
 /* harmony import */ var _filter_js__WEBPACK_IMPORTED_MODULE_11__ = __webpack_require__(/*! ./filter.js */ "./resources/js/front/desktop/filter.js");
 /* harmony import */ var _cart_js__WEBPACK_IMPORTED_MODULE_12__ = __webpack_require__(/*! ./cart.js */ "./resources/js/front/desktop/cart.js");
 /* harmony import */ var _checkingform_js__WEBPACK_IMPORTED_MODULE_13__ = __webpack_require__(/*! ./checkingform.js */ "./resources/js/front/desktop/checkingform.js");
+/* harmony import */ var _productquantitycart_js__WEBPACK_IMPORTED_MODULE_14__ = __webpack_require__(/*! ./productquantitycart.js */ "./resources/js/front/desktop/productquantitycart.js");
+
 
 
 
@@ -79,6 +81,7 @@ __webpack_require__.r(__webpack_exports__);
 (0,_filter_js__WEBPACK_IMPORTED_MODULE_11__.renderFilters)();
 (0,_cart_js__WEBPACK_IMPORTED_MODULE_12__.renderCart)();
 (0,_checkingform_js__WEBPACK_IMPORTED_MODULE_13__.renderCheckingForm)();
+(0,_productquantitycart_js__WEBPACK_IMPORTED_MODULE_14__.renderproductquantitycart)();
 
 /***/ }),
 
@@ -943,6 +946,21 @@ var renderProducts = function renderProducts() {
     });
   });
 };
+
+/***/ }),
+
+/***/ "./resources/js/front/desktop/productquantitycart.js":
+/*!***********************************************************!*\
+  !*** ./resources/js/front/desktop/productquantitycart.js ***!
+  \***********************************************************/
+/***/ ((__unused_webpack_module, __webpack_exports__, __webpack_require__) => {
+
+"use strict";
+__webpack_require__.r(__webpack_exports__);
+/* harmony export */ __webpack_require__.d(__webpack_exports__, {
+/* harmony export */   "renderproductquantitycart": () => (/* binding */ renderproductquantitycart)
+/* harmony export */ });
+var renderproductquantitycart = function renderproductquantitycart() {};
 
 /***/ }),
 
