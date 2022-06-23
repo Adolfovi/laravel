@@ -127,11 +127,10 @@ class FaqController extends Controller
 
         $faq = $this->faq->updateOrCreate([
                 'id' => request('id')],[
-                'name' => request('name'),
-                'title' => request('title'),
-                'description' => request('description'),
-                'visible' => 1,
+                'question' => request('question'),
+                'answer' => request('answer'),
                 'active' => 1,
+                'visible' => 1,
         ]);
             
         $view = View::make('admin.pages.faqs.index')

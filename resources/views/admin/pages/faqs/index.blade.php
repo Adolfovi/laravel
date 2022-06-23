@@ -10,7 +10,10 @@
                             <h4>Id: </h4><span class="title">{{$faq_element->id}}</span>
                         </div>
                         <div class="elements-configuration-element-subelement">
-                            <h4>Nombre: </h4><span class="title">{{$faq_element->name}}</span>
+                            <h4>Pregunta: </h4><span class="title">{!!$faq_element->question !!}</span>
+                        </div>
+                        <div class="elements-configuration-element-subelement">
+                            <h4>Respuesta: </h4><span class="title">{!! $faq_element->answer !!}</span>
                         </div>
                         <div class="elements-configuration-element-subelement">
                             <h4>Fecha: </h4><span class="title">{{$faq_element->created_at}}</span>
@@ -75,39 +78,27 @@
                     </div>
                 </div>
             </div>
-        
             <div class="form">
                 <div class="desktop-one-column mobile-one-column">
                     <div class="column">
                         <div class="form-name">
                             <div class="form-name-title">
-                                <h3>Nombre</h3>
+                                <h3>Pregunta</h3>
                             </div>
-                            <div class="form-name-result">
-                                <input name="name" value="{{isset($faq->name) ? $faq->name : ''}}">
+                            <br>
+                            <div class="form-content-data-description-result">
+                                <textarea class="ckeditors" name="question">{{isset($faq->question) ? $faq->question : ''}}</textarea>
                             </div>
                         </div>
                     </div>
                 </div>
                 <div class="form-content-data">
-                    <div class="desktop-one-column mobile-one-column">
-                        <div class="column">
-                            <div class="form-content-data-name">
-                                <div class="form-content-data-name-title">
-                                    <h3>Título</h3>
-                                </div>
-                                <div class="form-content-data-name-result">
-                                    <input type="text" name="title" value="{{isset($faq->title) ? $faq->title : ''}}">
-                                </div>
-                            </div>
-                        </div>
-                    </div>
                     <div class="form-content-data-description">
                         <div class="form-content-data-description-title">
-                            <h3>Descripción</h3>
+                            <h3>Respuesta</h3>
                         </div>
                         <div class="form-content-data-description-result">
-                            <textarea class="ckeditors" name="description">{{isset($faq->description) ? $faq->description : ''}}</textarea>
+                            <textarea class="ckeditors" name="answer">{{isset($faq->answer) ? $faq->answer : ''}}</textarea>
                         </div>
                     </div>
                 </div>
