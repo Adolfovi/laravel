@@ -33,8 +33,6 @@ class CartController extends Controller
         $randomstring = substr(str_shuffle($chars), 0, 10);        
         
         
-        session_start();
-        Debugbar::info(session_id());
         
         
         for($i = 0; $i < request('amount'); $i++) {

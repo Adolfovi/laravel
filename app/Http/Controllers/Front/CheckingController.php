@@ -98,7 +98,6 @@ class CheckingController extends Controller
         ->update(['client_id' => $client->id , 'venta_id' => $venta->id]);
 
         
-        session_destroy();
         return View::make('front.pages.salemade.index')->renderSections();
     }
 }
