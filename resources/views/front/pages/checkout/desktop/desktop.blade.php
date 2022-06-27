@@ -113,11 +113,11 @@
             @endforeach
             @endif
             <div class="pay-options">
-                <input type="radio" name="age" value="bank-transfer">
+                <input type="radio" name="age" value="1">
                 <label for="age1">Transferencia Bancaria</label><br>
-                <input type="radio" name="age" value="paypal">
+                <input type="radio" name="age" value="2">
                 <label for="age2">Paypal</label><br>
-                <input type="radio" id="age3" name="age" value="credit-card">
+                <input type="radio" id="age3" name="age" value="3">
                 <label for="age3">Tarjeta de Crédito</label><br><br>
                 <button class="pay-continue" href="{{route('sale_made')}}">Pagar</button>
             </div>

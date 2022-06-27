@@ -79,7 +79,7 @@ class CheckingController extends Controller
             'ticket_number' => 'asas',
             'date_emision' => date('Y-m-d'),
             'time_emision' => date('H:i:s'),
-            'payment_method_id' => '1',
+            'payment_method_id' => request('age'),
             'total_base_price' => $totals->base_total,
             'total_tax_price' => $totals->total - $totals->base_total,
             'total_price' => '1',
@@ -87,13 +87,9 @@ class CheckingController extends Controller
             'active' => 1,
         ]);
 
-        // A CONTINUACIÓN ESCRIBIREMOS EL CÓDIGO QUE SE ENCARGARÁ DE ACTUALIZAR
-        // LOS CAMPOS VACÍOS (CLIENT_ID Y VENTA_ID) DE LA TABLA CART E INSERTAREMOS LA ID DEL CLIENTE 
-        // Y LA ID DE LA VENTA GENERADA CUYA CONDICIÓN DE AMBOS CAMPOS SEA IGUAL A NULL
-        // Y MODIFICAR LA PÁGINA DE CARRITO PARA QUE SOLO MUESTRE LOS PRODUCTOS 
-        // CUYOS CAMPOS CLIENT_ID Y VENTA_ID SEA IGUAL A NULL
-
-
+        $updateOwner = $this->cart->where('client_id', NULL)
+        ->where('venta_id', NULL)
+        ->update(['client_id' => $client->id , 'venta_id' => $venta->id]);
 
 
 

@@ -37,6 +37,7 @@ class CartController extends Controller
         $carts = $this->cart->select(DB::raw('count(price_id) as quantity'),'price_id')
         ->groupByRaw('price_id')
         ->where('active', 1)
+        ->where('client_id', NULL)
         ->where('fingerprint', $cart->fingerprint)
         ->get();
 
