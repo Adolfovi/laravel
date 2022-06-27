@@ -51,7 +51,12 @@ class CheckingController extends Controller
     }
 
     public function store(){
+        // AJUSTA LA ZONA HORARIA DEL PC
         date_default_timezone_set("Europe/Madrid");
+        // GENERA UN STRING ALFANUMERICO TOTALMENTE ALEATORIO
+        $chars = '0123456789';
+        $randomstring = substr(str_shuffle($chars), 0, 10);
+
 
         $totals = $this->cart
         ->where('carts.active', 1)
@@ -76,7 +81,7 @@ class CheckingController extends Controller
         ]);
 
         $venta = $this->venta->create([
-            'ticket_number' => 'asas',
+            'ticket_number' => $randomstring,
             'date_emision' => date('Y-m-d'),
             'time_emision' => date('H:i:s'),
             'payment_method_id' => request('age'),
