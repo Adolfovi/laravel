@@ -6,6 +6,7 @@ use App\Models\Cart;
 use App\Models\Client;
 use Illuminate\Support\Facades\DB;
 use Illuminate\Http\Request;
+use Debugbar;
 
 class CartController extends Controller
 {
@@ -32,10 +33,14 @@ class CartController extends Controller
         $randomstring = substr(str_shuffle($chars), 0, 10);        
         
         
+        session_start();
+        Debugbar::info(session_id());
+        
+        
         for($i = 0; $i < request('amount'); $i++) {
             $cart = $this->cart->create([
                 'price_id' => request('price_id'),
-                'fingerprint' => $randomstring,
+                'fingerprint' => '1',
                 'active' => 1,
             ]);
         }

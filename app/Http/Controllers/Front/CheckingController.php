@@ -94,10 +94,11 @@ class CheckingController extends Controller
 
         $updateOwner = $this->cart->where('client_id', NULL)
         ->where('venta_id', NULL)
+        ->where('active', 1)
         ->update(['client_id' => $client->id , 'venta_id' => $venta->id]);
 
-
-
+        
+        session_destroy();
         return View::make('front.pages.salemade.index')->renderSections();
     }
 }
