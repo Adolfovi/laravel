@@ -125,6 +125,19 @@ Route::group(['prefix' => 'administrator'], function () {
         ]
     ]);
 
+    Route::resource('ventas', 'App\Http\Controllers\Admin\VentaController', [
+        'parameters' => [
+            'ventas' => 'sell', 
+        ],
+        'names' => [
+            'index' => 'sells',
+            'create' => 'sells_create',
+            'edit' => 'sells_edit',
+            'store' => 'sells_store',
+            'destroy' => 'sells_destroy',
+            'show' => 'sells_show',
+        ]
+    ]);
 });
 
 Route::get('/', 'App\Http\Controllers\Front\HomeController@index');
