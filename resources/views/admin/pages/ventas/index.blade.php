@@ -1,8 +1,12 @@
 @extends('admin.layout.table_form')
 @section('content')
 
-
+<!-- ######código prototipo para indicar###### -->
+<!-- ######que estructurá seguirán los######## -->
+<!-- ######elementos y/o etiquetas###########  -->
 <h3>DATOS DE LA VENTA:</h3>
+<br>
+<br>
 <h4>Número de ticket</h4>
 <p>75685721323</p>
 <h4>Fecha de creación</h4>
@@ -10,13 +14,9 @@
 <h4>Método de pago</h4>
 <p>Master Card</p>
 <h4>Total Base</h4>
-<p>1.20</p>
+<p>1.20€</p>
 <h4>Total IVA</h4>
-<p>56.00</p>
+<p>56.00€</p>
 <h4>Total</h4>
-<p>259.00</p>
-
-
-
-
+<p>259.00€</p>
 @endsection
