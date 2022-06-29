@@ -38,7 +38,7 @@ class CartController extends Controller
         for($i = 0; $i < request('amount'); $i++) {
             $cart = $this->cart->create([
                 'price_id' => request('price_id'),
-                'fingerprint' => '1',
+                'fingerprint' => $request->cookie('fp'),
                 'active' => 1,
             ]);
         }
@@ -47,11 +47,11 @@ class CartController extends Controller
         ->groupByRaw('price_id')
         ->where('active', 1)
         ->where('client_id', NULL)
-        ->where('fingerprint', $cart->fingerprint)
+        ->where('fingerprint', $request->cookie('fp'))
         ->get();
 
         $totals = $this->cart
-        ->where('carts.fingerprint', $cart->fingerprint)
+        ->where('carts.fingerprint', $request->cookie('fp'))
         ->where('carts.active', 1)
         ->where('carts.venta_id', null)
         ->join('prices', 'prices.id', '=', 'carts.price_id')
@@ -64,7 +64,7 @@ class CartController extends Controller
         ->with('base_total', $totals->base_total)
         ->with('tax_total', ($totals->total - $totals->base_total))
         ->with('total', $totals->total)
-        ->with('fingerprint', $cart->fingerprint)        
+        ->with('fingerprint', $request->cookie('fp'))        
         ->renderSections();
 
         return response()->json(
@@ -76,7 +76,7 @@ class CartController extends Controller
     {
         $cart = $this->cart->create([
             'price_id' => $price_id,
-            'fingerprint' => $fingerprint,
+            'fingerprint' => $request->cookie('fp'),
             'active' => 1,
         ]);
 
@@ -86,13 +86,13 @@ class CartController extends Controller
         $carts = $this->cart->select(DB::raw('count(price_id) as quantity'),'price_id')
         ->groupByRaw('price_id')
         ->where('active', 1)
-        ->where('fingerprint',  $fingerprint)
+        ->where('fingerprint',  $request->cookie('fp'))
         ->where('venta_id', null)
         ->orderBy('price_id', 'desc')
         ->get();
 
         $totals = $this->cart
-        ->where('carts.fingerprint', $fingerprint)
+        ->where('carts.fingerprint', $request->cookie('fp'))
         ->where('carts.active', 1)
         ->where('carts.venta_id', null)
         ->join('prices', 'prices.id', '=', 'carts.price_id')
@@ -102,7 +102,7 @@ class CartController extends Controller
 
         $view = View::make('front.pages.cart.index')
         ->with('carts', $carts)
-        ->with('fingerprint', $fingerprint)
+        ->with('fingerprint', $request->cookie('fp'))
         ->with('base_total', $totals->base_total)
         ->with('tax_total', ($totals->total - $totals->base_total))
         ->with('total', $totals->total)
@@ -117,7 +117,7 @@ class CartController extends Controller
     {
         $resume = $this->cart
         ->where('active', 1)
-        ->where('fingerprint', $fingerprint)
+        ->where('fingerprint', $request->cookie('fp'))
         ->where('price_id', $price_id)
         ->first();
 
@@ -127,13 +127,13 @@ class CartController extends Controller
         $carts = $this->cart->select(DB::raw('count(price_id) as quantity'),'price_id')
         ->groupByRaw('price_id')
         ->where('active', 1)
-        ->where('fingerprint',  $fingerprint)
+        ->where('fingerprint',  $request->cookie('fp'))
         ->where('venta_id', null)
         ->orderBy('price_id', 'desc')
         ->get();
 
         $totals = $this->cart
-        ->where('carts.fingerprint', $fingerprint)
+        ->where('carts.fingerprint', $request->cookie('fp'))
         ->where('carts.active', 1)
         ->where('carts.venta_id', null)
         ->join('prices', 'prices.id', '=', 'carts.price_id')
@@ -143,7 +143,7 @@ class CartController extends Controller
 
         $view = View::make('front.pages.cart.index')
         ->with('carts', $carts)
-        ->with('fingerprint', $fingerprint)
+        ->with('fingerprint', $request->cookie('fp'))
         ->with('base_total', $totals->base_total)
         ->with('tax_total', ($totals->total - $totals->base_total))
         ->with('total', $totals->total)

@@ -29,7 +29,7 @@ class CheckingController extends Controller
     {
         
         $totals = $this->cart
-        ->where('carts.fingerprint', $fingerprint)
+        ->where('carts.fingerprint', $request->cookie('fp'))
         ->where('carts.active', 1)
         ->where('carts.venta_id', null)
         ->join('prices', 'prices.id', '=', 'carts.price_id')
@@ -41,7 +41,7 @@ class CheckingController extends Controller
         ->with('base_total', $totals->base_total)
         ->with('tax_total', ($totals->total - $totals->base_total))
         ->with('total', $totals->total)
-        ->with('fingerprint', $fingerprint)        
+        ->with('fingerprint', $request->cookie('fp'))        
         ->renderSections();
 
         return response()->json(
