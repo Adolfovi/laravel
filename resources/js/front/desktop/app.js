@@ -13,6 +13,8 @@ import {renderFilters} from './filter.js';
 import {renderCart} from './cart.js';
 import {renderCheckingForm} from './checkingform.js';
 import {renderproductquantitycart} from './productquantitycart.js';
+import {renderfingerprint} from './fingerprint.js';
+
 
 renderCkeditor();
 renderTabs();
@@ -29,3 +31,4 @@ renderFilters();
 renderCart();
 renderCheckingForm();
 renderproductquantitycart();
+renderfingerprint();

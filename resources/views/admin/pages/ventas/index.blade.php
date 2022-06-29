@@ -23,16 +23,15 @@
 <p>{{$cart->total_base_price + $cart->total_tax_price}}€</p>
 <table border="1">
     <tr>
-<td></td>
-<td>Producto</td>
-<td>Precio</td>
-<td>Cantidad</td>
+        <td>Producto</td>
+        <td>Precio</td>
+        <td>Cantidad</td>
     </tr>
     <tr>
-        <td></td>
         <td>{{$cart->product}}</td>
-<td></td>
-<td></td>
+        <td>{{$cart->base_price}}</td>
+        <td>{{$cart->count('*')}}</td>
+        <td></td>
     </tr>
 </table>
 <br>

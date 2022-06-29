@@ -20,6 +20,7 @@
         "webpack-cli": "^4.9.2"
     },
     "dependencies": {
-        "@ckeditor/ckeditor5-build-classic": "^34.0.0"
+        "@ckeditor/ckeditor5-build-classic": "^34.0.0",
+        "clientjs": "^0.2.1"
     }
 }

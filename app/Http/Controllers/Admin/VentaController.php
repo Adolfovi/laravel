@@ -36,7 +36,7 @@ public function index(){
     ->join('prices','carts.price_id', '=', 'prices.id')
     ->join('products','prices.product_id', '=', 'products.id')    
     ->get());
-    
+
 }
 
 public function show(){}

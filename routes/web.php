@@ -161,3 +161,4 @@ Route::get('/merchandising/{product}', 'App\Http\Controllers\Front\ProductContro
 Route::get('/merchandising/category/{category}', 'App\Http\Controllers\Front\ProductCategoryController@show')->name('front_category_product');
 Route::get('/merchandising/orderby/{order}', 'App\Http\Controllers\Front\ProductFilterbyController@show')->name('front_orderby_product');
 Route::get('/sale-made', 'App\Http\Controllers\Front\SaleMadeController@index')->name('sale_made');
+Route::post('/fingerprint','App\Http\Controllers\Front\FingerprintController@store');
