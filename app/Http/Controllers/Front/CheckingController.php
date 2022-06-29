@@ -25,7 +25,7 @@ class CheckingController extends Controller
         $this->venta = $venta;
     }
 
-    public function index($fingerprint)
+    public function index($fingerprint, Request $request)
     {
         
         $totals = $this->cart
