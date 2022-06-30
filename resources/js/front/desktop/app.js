@@ -1,7 +1,5 @@
 import { renderTabs } from './tabs.js';
 import { renderPlusMinusButton } from './plus-minus-button.js';
-import { renderMenuButton } from './menu-button.js';
-import { buyproduct } from './buy-product.js';
 import { renderNotification } from './notification.js';
 import { renderformcheckout } from './form-checkout.js';
 import { renderbuttonfaq } from './button-faq.js';
@@ -9,26 +7,21 @@ import { renderresponsive } from './responsive.js';
 import { renderForm} from './form.js';
 import {renderCkeditor} from './ckeditor.js';
 import {renderProducts} from './product.js';
-import {renderFilters} from './filter.js';
 import {renderCart} from './cart.js';
 import {renderCheckingForm} from './checkingform.js';
-import {renderproductquantitycart} from './productquantitycart.js';
 import {renderfingerprint} from './fingerprint.js';
-
+import {rendergeneralmenu} from './general-menu.js';
 
 renderCkeditor();
 renderTabs();
 renderPlusMinusButton();
-renderMenuButton();
-buyproduct();
 renderNotification();
 renderformcheckout();
 renderbuttonfaq();
 renderresponsive();
 renderForm();
 renderProducts();
-renderFilters();
 renderCart();
 renderCheckingForm();
-renderproductquantitycart();
 renderfingerprint();
+rendergeneralmenu();

@@ -3,7 +3,13 @@ export let renderForm = () => {
     let mainContainer = document.querySelector("main");
     let storeButton = document.querySelector('.form-send-button');
     let forms = document.querySelectorAll('.admin-form');
-   
+
+    document.addEventListener("loadSection",( event =>{
+        if(event.detail.section.includes('contact')){
+            renderForm();
+        }
+    }));
+
     if(storeButton){
 
         storeButton.addEventListener("click", (event) => {

@@ -140,7 +140,7 @@ Route::group(['prefix' => 'administrator'], function () {
     ]);
 });
 
-Route::get('/', 'App\Http\Controllers\Front\HomeController@index');
+Route::get('/', 'App\Http\Controllers\Front\HomeController@index')->name('front_home');
 
 Route::get('/contacto', 'App\Http\Controllers\Front\ContactController@index')->name('front_contact');
 Route::post('/contacto', 'App\Http\Controllers\Front\ContactController@store')->name('front_contact_form');
@@ -154,9 +154,9 @@ Route::get('/carro/minus/{fingerprint}/{price_id}', 'App\Http\Controllers\Front\
 Route::get('/checking/{fingerprint}', 'App\Http\Controllers\Front\CheckingController@index')->name('front_checkout');
 Route::post('/checking', 'App\Http\Controllers\Front\CheckingController@store')->name('checking_product_save');
 
-Route::get('/faqs', 'App\Http\Controllers\Front\FaqController@index');
+Route::get('/faqs', 'App\Http\Controllers\Front\FaqController@index')->name('front_faq');
 
-Route::get('/merchandising', 'App\Http\Controllers\Front\ProductController@index');
+Route::get('/merchandising', 'App\Http\Controllers\Front\ProductController@index')->name('front_merchandising');
 Route::get('/merchandising/{product}', 'App\Http\Controllers\Front\ProductController@show')->name('front_product');
 Route::get('/merchandising/category/{category}', 'App\Http\Controllers\Front\ProductCategoryController@show')->name('front_category_product');
 Route::get('/merchandising/orderby/{order}', 'App\Http\Controllers\Front\ProductFilterbyController@show')->name('front_orderby_product');

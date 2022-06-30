@@ -40,10 +40,10 @@
             </div>
             <div class="nav-menu desktop-only">
                 <ul>
-                    <li><a href="/">INICIO</a></li>
-                    <li><a href="/merchandising">MERCHANDISING</a></li>
-                    <li><a href="/faqs">FAQ</a></li>
-                    <li><a href="/contacto">CONTACTO</a></li>
+                    <li class="menu-button" data-section="home" data-url="{{route('front_home')}}">INICIO</li>
+                    <li class="menu-button" data-section="merchandising" data-url="{{route('front_merchandising')}}">MERCHANDISING</li>
+                    <li class="menu-button" data-section="faqs" data-url="{{route('front_faq')}}">FAQ</li>
+                    <li class="menu-button" data-section="contact" data-url="{{route('front_contact')}}">CONTACTO</li>
                 </ul>
             </div>
         </div>

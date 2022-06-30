@@ -3,7 +3,7 @@ namespace App\Http\Controllers\Front;
 use Illuminate\Support\Facades\View;
 use App\Http\Controllers\Controller;
 use App\Models\Cart;
-use App\Models\Client;
+
 use Illuminate\Support\Facades\DB;
 use Illuminate\Http\Request;
 use Debugbar;
@@ -11,32 +11,35 @@ use Debugbar;
 class CartController extends Controller
 {
     protected $cart;
-    protected $client;
 
-    public function __construct(Cart $cart, Client $client)
+    public function __construct(Cart $cart)
     {
         $this->cart = $cart;
-        $this->client = $client;
+    
     }
 
     public function index()
     {
         $view = View::make('front.pages.cart.index');
+        
+        if(request()->ajax()) {
+            
+            $sections = $view->renderSections(); 
+    
+            return response()->json([
+                'content' => $sections['content']
+            ]); 
+        }
+
         return $view;
     }
 
     public function store(Request $request)
     { 
 
-        // GENERA UN STRING ALFANUMERICO TOTALMENTE ALEATORIO
-        $chars = '0123456789qwertyuiopasdfghjklzxcvbnm';
-        $randomstring = substr(str_shuffle($chars), 0, 10);        
-        
-        
-        
-        
         for($i = 0; $i < request('amount'); $i++) {
             $cart = $this->cart->create([
+                'id' => request('id'),
                 'price_id' => request('price_id'),
                 'fingerprint' => $request->cookie('fp'),
                 'active' => 1,
@@ -48,6 +51,7 @@ class CartController extends Controller
         ->where('active', 1)
         ->where('client_id', NULL)
         ->where('fingerprint', $request->cookie('fp'))
+        ->orderBy('price_id', 'desc')
         ->get();
 
         $totals = $this->cart
@@ -72,7 +76,7 @@ class CartController extends Controller
         );
     }
 
-    public function plus($fingerprint, $price_id)
+    public function plus($price_id, Request $request)
     {
         $cart = $this->cart->create([
             'price_id' => $price_id,
@@ -113,7 +117,7 @@ class CartController extends Controller
         ]);
     }
 
-    public function minus($fingerprint, $price_id)
+    public function minus($price_id, Request $request)
     {
         $resume = $this->cart
         ->where('active', 1)

@@ -23,6 +23,15 @@ class ProductController extends Controller
         ->with('products', $this->product->where('active', 1)->get())
         ->with('productswithoutfilters', $this->productwithoutfilters->where('active', 1)->get());
 
+        if(request()->ajax()) {
+            
+            $sections = $view->renderSections(); 
+    
+            return response()->json([
+                'content' => $sections['content']
+            ]); 
+        }
+
         return $view;
     }
 

@@ -39,20 +39,17 @@ function(t,e){ true?module.exports=e():0}(self,(()=>(()=>{"use strict";var t={30
 __webpack_require__.r(__webpack_exports__);
 /* harmony import */ var _tabs_js__WEBPACK_IMPORTED_MODULE_0__ = __webpack_require__(/*! ./tabs.js */ "./resources/js/front/desktop/tabs.js");
 /* harmony import */ var _plus_minus_button_js__WEBPACK_IMPORTED_MODULE_1__ = __webpack_require__(/*! ./plus-minus-button.js */ "./resources/js/front/desktop/plus-minus-button.js");
-/* harmony import */ var _menu_button_js__WEBPACK_IMPORTED_MODULE_2__ = __webpack_require__(/*! ./menu-button.js */ "./resources/js/front/desktop/menu-button.js");
-/* harmony import */ var _buy_product_js__WEBPACK_IMPORTED_MODULE_3__ = __webpack_require__(/*! ./buy-product.js */ "./resources/js/front/desktop/buy-product.js");
-/* harmony import */ var _notification_js__WEBPACK_IMPORTED_MODULE_4__ = __webpack_require__(/*! ./notification.js */ "./resources/js/front/desktop/notification.js");
-/* harmony import */ var _form_checkout_js__WEBPACK_IMPORTED_MODULE_5__ = __webpack_require__(/*! ./form-checkout.js */ "./resources/js/front/desktop/form-checkout.js");
-/* harmony import */ var _button_faq_js__WEBPACK_IMPORTED_MODULE_6__ = __webpack_require__(/*! ./button-faq.js */ "./resources/js/front/desktop/button-faq.js");
-/* harmony import */ var _responsive_js__WEBPACK_IMPORTED_MODULE_7__ = __webpack_require__(/*! ./responsive.js */ "./resources/js/front/desktop/responsive.js");
-/* harmony import */ var _form_js__WEBPACK_IMPORTED_MODULE_8__ = __webpack_require__(/*! ./form.js */ "./resources/js/front/desktop/form.js");
-/* harmony import */ var _ckeditor_js__WEBPACK_IMPORTED_MODULE_9__ = __webpack_require__(/*! ./ckeditor.js */ "./resources/js/front/desktop/ckeditor.js");
-/* harmony import */ var _product_js__WEBPACK_IMPORTED_MODULE_10__ = __webpack_require__(/*! ./product.js */ "./resources/js/front/desktop/product.js");
-/* harmony import */ var _filter_js__WEBPACK_IMPORTED_MODULE_11__ = __webpack_require__(/*! ./filter.js */ "./resources/js/front/desktop/filter.js");
-/* harmony import */ var _cart_js__WEBPACK_IMPORTED_MODULE_12__ = __webpack_require__(/*! ./cart.js */ "./resources/js/front/desktop/cart.js");
-/* harmony import */ var _checkingform_js__WEBPACK_IMPORTED_MODULE_13__ = __webpack_require__(/*! ./checkingform.js */ "./resources/js/front/desktop/checkingform.js");
-/* harmony import */ var _productquantitycart_js__WEBPACK_IMPORTED_MODULE_14__ = __webpack_require__(/*! ./productquantitycart.js */ "./resources/js/front/desktop/productquantitycart.js");
-/* harmony import */ var _fingerprint_js__WEBPACK_IMPORTED_MODULE_15__ = __webpack_require__(/*! ./fingerprint.js */ "./resources/js/front/desktop/fingerprint.js");
+/* harmony import */ var _notification_js__WEBPACK_IMPORTED_MODULE_2__ = __webpack_require__(/*! ./notification.js */ "./resources/js/front/desktop/notification.js");
+/* harmony import */ var _form_checkout_js__WEBPACK_IMPORTED_MODULE_3__ = __webpack_require__(/*! ./form-checkout.js */ "./resources/js/front/desktop/form-checkout.js");
+/* harmony import */ var _button_faq_js__WEBPACK_IMPORTED_MODULE_4__ = __webpack_require__(/*! ./button-faq.js */ "./resources/js/front/desktop/button-faq.js");
+/* harmony import */ var _responsive_js__WEBPACK_IMPORTED_MODULE_5__ = __webpack_require__(/*! ./responsive.js */ "./resources/js/front/desktop/responsive.js");
+/* harmony import */ var _form_js__WEBPACK_IMPORTED_MODULE_6__ = __webpack_require__(/*! ./form.js */ "./resources/js/front/desktop/form.js");
+/* harmony import */ var _ckeditor_js__WEBPACK_IMPORTED_MODULE_7__ = __webpack_require__(/*! ./ckeditor.js */ "./resources/js/front/desktop/ckeditor.js");
+/* harmony import */ var _product_js__WEBPACK_IMPORTED_MODULE_8__ = __webpack_require__(/*! ./product.js */ "./resources/js/front/desktop/product.js");
+/* harmony import */ var _cart_js__WEBPACK_IMPORTED_MODULE_9__ = __webpack_require__(/*! ./cart.js */ "./resources/js/front/desktop/cart.js");
+/* harmony import */ var _checkingform_js__WEBPACK_IMPORTED_MODULE_10__ = __webpack_require__(/*! ./checkingform.js */ "./resources/js/front/desktop/checkingform.js");
+/* harmony import */ var _fingerprint_js__WEBPACK_IMPORTED_MODULE_11__ = __webpack_require__(/*! ./fingerprint.js */ "./resources/js/front/desktop/fingerprint.js");
+/* harmony import */ var _general_menu_js__WEBPACK_IMPORTED_MODULE_12__ = __webpack_require__(/*! ./general-menu.js */ "./resources/js/front/desktop/general-menu.js");
 
 
 
@@ -66,25 +63,19 @@ __webpack_require__.r(__webpack_exports__);
 
 
 
-
-
-
-(0,_ckeditor_js__WEBPACK_IMPORTED_MODULE_9__.renderCkeditor)();
+(0,_ckeditor_js__WEBPACK_IMPORTED_MODULE_7__.renderCkeditor)();
 (0,_tabs_js__WEBPACK_IMPORTED_MODULE_0__.renderTabs)();
 (0,_plus_minus_button_js__WEBPACK_IMPORTED_MODULE_1__.renderPlusMinusButton)();
-(0,_menu_button_js__WEBPACK_IMPORTED_MODULE_2__.renderMenuButton)();
-(0,_buy_product_js__WEBPACK_IMPORTED_MODULE_3__.buyproduct)();
-(0,_notification_js__WEBPACK_IMPORTED_MODULE_4__.renderNotification)();
-(0,_form_checkout_js__WEBPACK_IMPORTED_MODULE_5__.renderformcheckout)();
-(0,_button_faq_js__WEBPACK_IMPORTED_MODULE_6__.renderbuttonfaq)();
-(0,_responsive_js__WEBPACK_IMPORTED_MODULE_7__.renderresponsive)();
-(0,_form_js__WEBPACK_IMPORTED_MODULE_8__.renderForm)();
-(0,_product_js__WEBPACK_IMPORTED_MODULE_10__.renderProducts)();
-(0,_filter_js__WEBPACK_IMPORTED_MODULE_11__.renderFilters)();
-(0,_cart_js__WEBPACK_IMPORTED_MODULE_12__.renderCart)();
-(0,_checkingform_js__WEBPACK_IMPORTED_MODULE_13__.renderCheckingForm)();
-(0,_productquantitycart_js__WEBPACK_IMPORTED_MODULE_14__.renderproductquantitycart)();
-(0,_fingerprint_js__WEBPACK_IMPORTED_MODULE_15__.renderfingerprint)();
+(0,_notification_js__WEBPACK_IMPORTED_MODULE_2__.renderNotification)();
+(0,_form_checkout_js__WEBPACK_IMPORTED_MODULE_3__.renderformcheckout)();
+(0,_button_faq_js__WEBPACK_IMPORTED_MODULE_4__.renderbuttonfaq)();
+(0,_responsive_js__WEBPACK_IMPORTED_MODULE_5__.renderresponsive)();
+(0,_form_js__WEBPACK_IMPORTED_MODULE_6__.renderForm)();
+(0,_product_js__WEBPACK_IMPORTED_MODULE_8__.renderProducts)();
+(0,_cart_js__WEBPACK_IMPORTED_MODULE_9__.renderCart)();
+(0,_checkingform_js__WEBPACK_IMPORTED_MODULE_10__.renderCheckingForm)();
+(0,_fingerprint_js__WEBPACK_IMPORTED_MODULE_11__.renderfingerprint)();
+(0,_general_menu_js__WEBPACK_IMPORTED_MODULE_12__.rendergeneralmenu)();
 
 /***/ }),
 
@@ -100,6 +91,11 @@ __webpack_require__.r(__webpack_exports__);
 /* harmony export */   "renderbuttonfaq": () => (/* binding */ renderbuttonfaq)
 /* harmony export */ });
 var renderbuttonfaq = function renderbuttonfaq() {
+  document.addEventListener("loadSection", function (event) {
+    if (event.detail.section.includes('faqs')) {
+      renderbuttonfaq();
+    }
+  });
   var buttonsfaq = document.querySelectorAll('.faq-arrow');
   buttonsfaq.forEach(function (buttonfaq) {
     buttonfaq.addEventListener('click', function () {
@@ -107,35 +103,6 @@ var renderbuttonfaq = function renderbuttonfaq() {
       buttonfaq.parentElement.parentElement.querySelector(".faq-submain").classList.toggle('active');
     });
   });
-};
-
-/***/ }),
-
-/***/ "./resources/js/front/desktop/buy-product.js":
-/*!***************************************************!*\
-  !*** ./resources/js/front/desktop/buy-product.js ***!
-  \***************************************************/
-/***/ ((__unused_webpack_module, __webpack_exports__, __webpack_require__) => {
-
-"use strict";
-__webpack_require__.r(__webpack_exports__);
-/* harmony export */ __webpack_require__.d(__webpack_exports__, {
-/* harmony export */   "buyproduct": () => (/* binding */ buyproduct)
-/* harmony export */ });
-var buyproduct = function buyproduct() {
-  var buyproduct = document.querySelector('.buy-product');
-
-  if (buyproduct) {
-    buyproduct.addEventListener('click', function (event) {
-      event.preventDefault();
-      document.dispatchEvent(new CustomEvent('message', {
-        detail: {
-          text: 'Producto añadido a la cesta',
-          type: 'success'
-        }
-      }));
-    });
-  }
 };
 
 /***/ }),
@@ -170,10 +137,12 @@ var renderCart = function renderCart() {
   var buyButton = document.querySelector('.buy-product');
   var checkoutButton = document.querySelector('.checkout-button');
   var forms = document.querySelectorAll('.form-product-buy');
-  document.addEventListener("renderProductModules", function (event) {
-    renderCart();
-  }, {
-    once: true
+  var cartMinus = document.querySelectorAll('.cart-minus-button');
+  var cartPlus = document.querySelectorAll('.cart-plus-button');
+  document.addEventListener("loadSection", function (event) {
+    if (event.detail.section.includes('cart')) {
+      renderCart();
+    }
   });
 
   if (buyButton) {
@@ -302,6 +271,111 @@ var renderCart = function renderCart() {
       sendShowRequest();
     });
   }
+
+  cartMinus.forEach(function (element) {
+    element.addEventListener('click', function () {
+      var url = element.dataset.url;
+
+      var sendMinusShowRequest = /*#__PURE__*/function () {
+        var _ref3 = _asyncToGenerator( /*#__PURE__*/_babel_runtime_regenerator__WEBPACK_IMPORTED_MODULE_0___default().mark(function _callee3() {
+          var response;
+          return _babel_runtime_regenerator__WEBPACK_IMPORTED_MODULE_0___default().wrap(function _callee3$(_context3) {
+            while (1) {
+              switch (_context3.prev = _context3.next) {
+                case 0:
+                  _context3.next = 2;
+                  return fetch(url, {
+                    headers: {
+                      'X-Requested-With': 'XMLHttpRequest'
+                    },
+                    method: 'GET'
+                  }).then(function (response) {
+                    if (!response.ok) throw response;
+                    return response.json();
+                  }).then(function (json) {
+                    mainContainer.innerHTML = json.content;
+                    document.dispatchEvent(new CustomEvent('renderProductModules'));
+                  })["catch"](function (error) {
+                    if (error.status == '500') {
+                      console.log(error);
+                    }
+
+                    ;
+                  });
+
+                case 2:
+                  response = _context3.sent;
+
+                case 3:
+                case "end":
+                  return _context3.stop();
+              }
+            }
+          }, _callee3);
+        }));
+
+        return function sendMinusShowRequest() {
+          return _ref3.apply(this, arguments);
+        };
+      }();
+
+      sendMinusShowRequest();
+    });
+  });
+  cartPlus.forEach(function (element) {
+    element.addEventListener('click', function () {
+      var url = element.dataset.url;
+
+      var sendPlusShowRequest = /*#__PURE__*/function () {
+        var _ref4 = _asyncToGenerator( /*#__PURE__*/_babel_runtime_regenerator__WEBPACK_IMPORTED_MODULE_0___default().mark(function _callee4() {
+          var response;
+          return _babel_runtime_regenerator__WEBPACK_IMPORTED_MODULE_0___default().wrap(function _callee4$(_context4) {
+            while (1) {
+              switch (_context4.prev = _context4.next) {
+                case 0:
+                  _context4.next = 2;
+                  return fetch(url, {
+                    headers: {
+                      'X-Requested-With': 'XMLHttpRequest'
+                    },
+                    method: 'GET'
+                  }).then(function (response) {
+                    if (!response.ok) throw response;
+                    return response.json();
+                  }).then(function (json) {
+                    mainContainer.innerHTML = json.content;
+                    document.dispatchEvent(new CustomEvent('loadSection', {
+                      detail: {
+                        section: 'carts'
+                      }
+                    }));
+                  })["catch"](function (error) {
+                    if (error.status == '500') {
+                      console.log(error);
+                    }
+
+                    ;
+                  });
+
+                case 2:
+                  response = _context4.sent;
+
+                case 3:
+                case "end":
+                  return _context4.stop();
+              }
+            }
+          }, _callee4);
+        }));
+
+        return function sendPlusShowRequest() {
+          return _ref4.apply(this, arguments);
+        };
+      }();
+
+      sendPlusShowRequest();
+    });
+  });
 };
 
 /***/ }),
@@ -450,87 +524,6 @@ var renderCkeditor = function renderCkeditor() {
       ckeditors[ckeditor.name] = classicEditor;
     })["catch"](function (error) {
       console.error(error);
-    });
-  });
-};
-
-/***/ }),
-
-/***/ "./resources/js/front/desktop/filter.js":
-/*!**********************************************!*\
-  !*** ./resources/js/front/desktop/filter.js ***!
-  \**********************************************/
-/***/ ((__unused_webpack_module, __webpack_exports__, __webpack_require__) => {
-
-"use strict";
-__webpack_require__.r(__webpack_exports__);
-/* harmony export */ __webpack_require__.d(__webpack_exports__, {
-/* harmony export */   "renderFilters": () => (/* binding */ renderFilters)
-/* harmony export */ });
-/* harmony import */ var _babel_runtime_regenerator__WEBPACK_IMPORTED_MODULE_0__ = __webpack_require__(/*! @babel/runtime/regenerator */ "./node_modules/@babel/runtime/regenerator/index.js");
-/* harmony import */ var _babel_runtime_regenerator__WEBPACK_IMPORTED_MODULE_0___default = /*#__PURE__*/__webpack_require__.n(_babel_runtime_regenerator__WEBPACK_IMPORTED_MODULE_0__);
-
-
-function asyncGeneratorStep(gen, resolve, reject, _next, _throw, key, arg) { try { var info = gen[key](arg); var value = info.value; } catch (error) { reject(error); return; } if (info.done) { resolve(value); } else { Promise.resolve(value).then(_next, _throw); } }
-
-function _asyncToGenerator(fn) { return function () { var self = this, args = arguments; return new Promise(function (resolve, reject) { var gen = fn.apply(self, args); function _next(value) { asyncGeneratorStep(gen, resolve, reject, _next, _throw, "next", value); } function _throw(err) { asyncGeneratorStep(gen, resolve, reject, _next, _throw, "throw", err); } _next(undefined); }); }; }
-
-var renderFilters = function renderFilters() {
-  var mainContainer = document.querySelector("main");
-  var orderby = document.querySelectorAll('.orderBy');
-  document.addEventListener("renderProductModules", function (event) {
-    renderFilters();
-  }, {
-    once: true
-  });
-  orderby.forEach(function (element) {
-    element.addEventListener('change', function () {
-      var url = element.value;
-
-      var sendShowRequest = /*#__PURE__*/function () {
-        var _ref = _asyncToGenerator( /*#__PURE__*/_babel_runtime_regenerator__WEBPACK_IMPORTED_MODULE_0___default().mark(function _callee() {
-          var response;
-          return _babel_runtime_regenerator__WEBPACK_IMPORTED_MODULE_0___default().wrap(function _callee$(_context) {
-            while (1) {
-              switch (_context.prev = _context.next) {
-                case 0:
-                  _context.next = 2;
-                  return fetch(url, {
-                    headers: {
-                      'X-Requested-With': 'XMLHttpRequest'
-                    },
-                    method: 'GET'
-                  }).then(function (response) {
-                    if (!response.ok) throw response;
-                    return response.json();
-                  }).then(function (json) {
-                    mainContainer.innerHTML = json.content;
-                    document.dispatchEvent(new CustomEvent('renderProductModules'));
-                  })["catch"](function (error) {
-                    if (error.status == '500') {
-                      console.log(error);
-                    }
-
-                    ;
-                  });
-
-                case 2:
-                  response = _context.sent;
-
-                case 3:
-                case "end":
-                  return _context.stop();
-              }
-            }
-          }, _callee);
-        }));
-
-        return function sendShowRequest() {
-          return _ref.apply(this, arguments);
-        };
-      }();
-
-      sendShowRequest();
     });
   });
 };
@@ -686,6 +679,11 @@ var renderForm = function renderForm() {
   var mainContainer = document.querySelector("main");
   var storeButton = document.querySelector('.form-send-button');
   var forms = document.querySelectorAll('.admin-form');
+  document.addEventListener("loadSection", function (event) {
+    if (event.detail.section.includes('contact')) {
+      renderForm();
+    }
+  });
 
   if (storeButton) {
     storeButton.addEventListener("click", function (event) {
@@ -808,29 +806,140 @@ var renderForm = function renderForm() {
 
 /***/ }),
 
-/***/ "./resources/js/front/desktop/menu-button.js":
-/*!***************************************************!*\
-  !*** ./resources/js/front/desktop/menu-button.js ***!
-  \***************************************************/
+/***/ "./resources/js/front/desktop/general-menu.js":
+/*!****************************************************!*\
+  !*** ./resources/js/front/desktop/general-menu.js ***!
+  \****************************************************/
 /***/ ((__unused_webpack_module, __webpack_exports__, __webpack_require__) => {
 
 "use strict";
 __webpack_require__.r(__webpack_exports__);
 /* harmony export */ __webpack_require__.d(__webpack_exports__, {
-/* harmony export */   "renderMenuButton": () => (/* binding */ renderMenuButton)
+/* harmony export */   "rendergeneralmenu": () => (/* binding */ rendergeneralmenu)
 /* harmony export */ });
-var renderMenuButton = function renderMenuButton() {
-  var hamburger = document.getElementById('hamburger-menu-button');
-  var navMenu = document.getElementById('nav-menu-mobile');
-  var hamburgerSvg = document.getElementById('hamburger-menu-button-svg');
+/* harmony import */ var _babel_runtime_regenerator__WEBPACK_IMPORTED_MODULE_0__ = __webpack_require__(/*! @babel/runtime/regenerator */ "./node_modules/@babel/runtime/regenerator/index.js");
+/* harmony import */ var _babel_runtime_regenerator__WEBPACK_IMPORTED_MODULE_0___default = /*#__PURE__*/__webpack_require__.n(_babel_runtime_regenerator__WEBPACK_IMPORTED_MODULE_0__);
 
-  if (hamburger) {
-    hamburger.addEventListener('click', function () {
-      navMenu.classList.toggle('active');
-      hamburger.classList.toggle('active');
-      hamburgerSvg.classList.toggle('active');
+
+function asyncGeneratorStep(gen, resolve, reject, _next, _throw, key, arg) { try { var info = gen[key](arg); var value = info.value; } catch (error) { reject(error); return; } if (info.done) { resolve(value); } else { Promise.resolve(value).then(_next, _throw); } }
+
+function _asyncToGenerator(fn) { return function () { var self = this, args = arguments; return new Promise(function (resolve, reject) { var gen = fn.apply(self, args); function _next(value) { asyncGeneratorStep(gen, resolve, reject, _next, _throw, "next", value); } function _throw(err) { asyncGeneratorStep(gen, resolve, reject, _next, _throw, "throw", err); } _next(undefined); }); }; }
+
+var rendergeneralmenu = function rendergeneralmenu() {
+  var mainContent = document.querySelector('main');
+  var menuButtons = document.querySelectorAll('.menu-button');
+
+  if (menuButtons) {
+    menuButtons.forEach(function (menuButton) {
+      menuButton.addEventListener('click', function () {
+        var url = menuButton.dataset.url;
+        var section = menuButton.dataset.section;
+        var currentSection = document.querySelector('.page-section').id;
+        sessionStorage.setItem('lastSection', currentSection);
+
+        var sendIndexRequest = /*#__PURE__*/function () {
+          var _ref = _asyncToGenerator( /*#__PURE__*/_babel_runtime_regenerator__WEBPACK_IMPORTED_MODULE_0___default().mark(function _callee() {
+            var response;
+            return _babel_runtime_regenerator__WEBPACK_IMPORTED_MODULE_0___default().wrap(function _callee$(_context) {
+              while (1) {
+                switch (_context.prev = _context.next) {
+                  case 0:
+                    _context.next = 2;
+                    return fetch(url, {
+                      headers: {
+                        'X-Requested-With': 'XMLHttpRequest'
+                      },
+                      method: 'GET'
+                    }).then(function (response) {
+                      if (!response.ok) throw response;
+                      return response.json();
+                    }).then(function (json) {
+                      window.history.pushState('', '', url);
+                      mainContent.innerHTML = json.content;
+                      document.dispatchEvent(new CustomEvent('loadSection', {
+                        detail: {
+                          section: section
+                        }
+                      }));
+                    })["catch"](function (error) {
+                      if (error.status == '500') {
+                        console.log(error);
+                      }
+                    });
+
+                  case 2:
+                    response = _context.sent;
+
+                  case 3:
+                  case "end":
+                    return _context.stop();
+                }
+              }
+            }, _callee);
+          }));
+
+          return function sendIndexRequest() {
+            return _ref.apply(this, arguments);
+          };
+        }();
+
+        sendIndexRequest();
+      });
     });
   }
+
+  window.addEventListener('popstate', function (event) {
+    var url = window.location.href;
+
+    var sendIndexRequest = /*#__PURE__*/function () {
+      var _ref2 = _asyncToGenerator( /*#__PURE__*/_babel_runtime_regenerator__WEBPACK_IMPORTED_MODULE_0___default().mark(function _callee2() {
+        var response;
+        return _babel_runtime_regenerator__WEBPACK_IMPORTED_MODULE_0___default().wrap(function _callee2$(_context2) {
+          while (1) {
+            switch (_context2.prev = _context2.next) {
+              case 0:
+                _context2.next = 2;
+                return fetch(url, {
+                  headers: {
+                    'X-Requested-With': 'XMLHttpRequest'
+                  },
+                  method: 'GET'
+                }).then(function (response) {
+                  if (!response.ok) throw response;
+                  return response.json();
+                }).then(function (json) {
+                  mainContent.innerHTML = json.content;
+                  document.dispatchEvent(new CustomEvent('loadSection', {
+                    detail: {
+                      section: sessionStorage.getItem('lastSection')
+                    }
+                  }));
+                  var currentSection = document.querySelector('.page-section').id;
+                  sessionStorage.setItem('lastSection', currentSection);
+                })["catch"](function (error) {
+                  if (error.status == '500') {
+                    console.log(error);
+                  }
+                });
+
+              case 2:
+                response = _context2.sent;
+
+              case 3:
+              case "end":
+                return _context2.stop();
+            }
+          }
+        }, _callee2);
+      }));
+
+      return function sendIndexRequest() {
+        return _ref2.apply(this, arguments);
+      };
+    }();
+
+    sendIndexRequest();
+  });
 };
 
 /***/ }),
@@ -925,11 +1034,13 @@ function _asyncToGenerator(fn) { return function () { var self = this, args = ar
 var renderProducts = function renderProducts() {
   var mainContainer = document.querySelector("main");
   var viewButtons = document.querySelectorAll('.view-product');
+  var buyproduct = document.querySelector('.buy-product');
   var categoryButtons = document.querySelectorAll('.category-button');
-  document.addEventListener("renderProductModules", function (event) {
-    renderProducts();
-  }, {
-    once: true
+  var orderby = document.querySelectorAll('.orderBy');
+  document.addEventListener("loadSection", function (event) {
+    if (event.detail.section.includes('merchandising')) {
+      renderProducts();
+    }
   });
   viewButtons.forEach(function (viewButton) {
     viewButton.addEventListener('click', function () {
@@ -981,6 +1092,19 @@ var renderProducts = function renderProducts() {
       sendShowRequest();
     });
   });
+
+  if (buyproduct) {
+    buyproduct.addEventListener('click', function (event) {
+      event.preventDefault();
+      document.dispatchEvent(new CustomEvent('message', {
+        detail: {
+          text: 'Producto añadido a la cesta',
+          type: 'success'
+        }
+      }));
+    });
+  }
+
   categoryButtons.forEach(function (categoryButton) {
     categoryButton.addEventListener('click', function () {
       var url = categoryButton.dataset.url;
@@ -1031,50 +1155,18 @@ var renderProducts = function renderProducts() {
       sendShowRequest();
     });
   });
-};
+  orderby.forEach(function (element) {
+    element.addEventListener('change', function () {
+      var url = element.value;
 
-/***/ }),
-
-/***/ "./resources/js/front/desktop/productquantitycart.js":
-/*!***********************************************************!*\
-  !*** ./resources/js/front/desktop/productquantitycart.js ***!
-  \***********************************************************/
-/***/ ((__unused_webpack_module, __webpack_exports__, __webpack_require__) => {
-
-"use strict";
-__webpack_require__.r(__webpack_exports__);
-/* harmony export */ __webpack_require__.d(__webpack_exports__, {
-/* harmony export */   "renderproductquantitycart": () => (/* binding */ renderproductquantitycart)
-/* harmony export */ });
-/* harmony import */ var _babel_runtime_regenerator__WEBPACK_IMPORTED_MODULE_0__ = __webpack_require__(/*! @babel/runtime/regenerator */ "./node_modules/@babel/runtime/regenerator/index.js");
-/* harmony import */ var _babel_runtime_regenerator__WEBPACK_IMPORTED_MODULE_0___default = /*#__PURE__*/__webpack_require__.n(_babel_runtime_regenerator__WEBPACK_IMPORTED_MODULE_0__);
-
-
-function asyncGeneratorStep(gen, resolve, reject, _next, _throw, key, arg) { try { var info = gen[key](arg); var value = info.value; } catch (error) { reject(error); return; } if (info.done) { resolve(value); } else { Promise.resolve(value).then(_next, _throw); } }
-
-function _asyncToGenerator(fn) { return function () { var self = this, args = arguments; return new Promise(function (resolve, reject) { var gen = fn.apply(self, args); function _next(value) { asyncGeneratorStep(gen, resolve, reject, _next, _throw, "next", value); } function _throw(err) { asyncGeneratorStep(gen, resolve, reject, _next, _throw, "throw", err); } _next(undefined); }); }; }
-
-var renderproductquantitycart = function renderproductquantitycart() {
-  var mainContainer = document.querySelector("main");
-  var cartMinus = document.querySelectorAll('.cart-minus-button');
-  var cartPlus = document.querySelectorAll('.cart-plus-button');
-  document.addEventListener("renderProductModules", function (event) {
-    renderproductquantitycart();
-  }, {
-    once: true
-  });
-  cartMinus.forEach(function (element) {
-    element.addEventListener('click', function () {
-      var url = element.dataset.url;
-
-      var sendMinusShowRequest = /*#__PURE__*/function () {
-        var _ref = _asyncToGenerator( /*#__PURE__*/_babel_runtime_regenerator__WEBPACK_IMPORTED_MODULE_0___default().mark(function _callee() {
+      var sendShowRequest = /*#__PURE__*/function () {
+        var _ref3 = _asyncToGenerator( /*#__PURE__*/_babel_runtime_regenerator__WEBPACK_IMPORTED_MODULE_0___default().mark(function _callee3() {
           var response;
-          return _babel_runtime_regenerator__WEBPACK_IMPORTED_MODULE_0___default().wrap(function _callee$(_context) {
+          return _babel_runtime_regenerator__WEBPACK_IMPORTED_MODULE_0___default().wrap(function _callee3$(_context3) {
             while (1) {
-              switch (_context.prev = _context.next) {
+              switch (_context3.prev = _context3.next) {
                 case 0:
-                  _context.next = 2;
+                  _context3.next = 2;
                   return fetch(url, {
                     headers: {
                       'X-Requested-With': 'XMLHttpRequest'
@@ -1095,72 +1187,22 @@ var renderproductquantitycart = function renderproductquantitycart() {
                   });
 
                 case 2:
-                  response = _context.sent;
+                  response = _context3.sent;
 
                 case 3:
                 case "end":
-                  return _context.stop();
+                  return _context3.stop();
               }
             }
-          }, _callee);
+          }, _callee3);
         }));
 
-        return function sendMinusShowRequest() {
-          return _ref.apply(this, arguments);
+        return function sendShowRequest() {
+          return _ref3.apply(this, arguments);
         };
       }();
 
-      sendMinusShowRequest();
-    });
-  });
-  cartPlus.forEach(function (element) {
-    element.addEventListener('click', function () {
-      var url = element.dataset.url;
-
-      var sendPlusShowRequest = /*#__PURE__*/function () {
-        var _ref2 = _asyncToGenerator( /*#__PURE__*/_babel_runtime_regenerator__WEBPACK_IMPORTED_MODULE_0___default().mark(function _callee2() {
-          var response;
-          return _babel_runtime_regenerator__WEBPACK_IMPORTED_MODULE_0___default().wrap(function _callee2$(_context2) {
-            while (1) {
-              switch (_context2.prev = _context2.next) {
-                case 0:
-                  _context2.next = 2;
-                  return fetch(url, {
-                    headers: {
-                      'X-Requested-With': 'XMLHttpRequest'
-                    },
-                    method: 'GET'
-                  }).then(function (response) {
-                    if (!response.ok) throw response;
-                    return response.json();
-                  }).then(function (json) {
-                    mainContainer.innerHTML = json.content;
-                    document.dispatchEvent(new CustomEvent('renderProductModules'));
-                  })["catch"](function (error) {
-                    if (error.status == '500') {
-                      console.log(error);
-                    }
-
-                    ;
-                  });
-
-                case 2:
-                  response = _context2.sent;
-
-                case 3:
-                case "end":
-                  return _context2.stop();
-              }
-            }
-          }, _callee2);
-        }));
-
-        return function sendPlusShowRequest() {
-          return _ref2.apply(this, arguments);
-        };
-      }();
-
-      sendPlusShowRequest();
+      sendShowRequest();
     });
   });
 };
