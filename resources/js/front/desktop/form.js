@@ -70,14 +70,11 @@ export let renderForm = () => {
 
                         mainContainer.innerHTML = json.content;
 
-                        document.dispatchEvent(new CustomEvent('loadTable', {
+                        document.dispatchEvent(new CustomEvent('loadSection', {
                             detail: {
-                                table: json.table,
+                                section: 'contact'
                             }
                         }));
-
-                        document.dispatchEvent(new CustomEvent('renderFormModules'));
-                        document.dispatchEvent(new CustomEvent('renderTableModules'));
                     })
                     .catch ( error =>  {
     

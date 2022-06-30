@@ -2,8 +2,9 @@ export let renderProducts = () => {
 
     let mainContainer = document.querySelector("main");
     let viewButtons = document.querySelectorAll('.view-product');
-    let buyproduct = document.querySelector('.buy-product');
+    let buyButton = document.querySelector('.buy-product');
     let categoryButtons = document.querySelectorAll('.category-button');
+    let forms = document.querySelectorAll('.form-product-buy');
     let orderby = document.querySelectorAll('.orderBy');
 
     document.addEventListener("loadSection",( event =>{
@@ -35,7 +36,11 @@ export let renderProducts = () => {
 
                     mainContainer.innerHTML = json.content;
 
-                    document.dispatchEvent(new CustomEvent('renderProductModules'));
+                    document.dispatchEvent(new CustomEvent('loadSection', {
+                        detail: {
+                            section: 'merchandising'
+                        }
+                    }));
                 })
                 .catch(error =>  {
     
@@ -50,22 +55,70 @@ export let renderProducts = () => {
         });
     });
 
+    if(buyButton){
 
-    if (buyproduct) {
-
-        buyproduct.addEventListener('click', (event) => {
+        buyButton.addEventListener("click", (event) => {
 
             event.preventDefault();
+    
+            forms.forEach(form => { 
 
-            document.dispatchEvent(new CustomEvent('message', {
-                detail: {
-                    text: 'Producto añadido a la cesta',
-                    type: 'success'
+                let data = new FormData(form);
+                let url = form.action;
+
+
+                for (var pair of data.entries()) {
+                    console.log(pair[0]+ ', ' + pair[1]); 
                 }
-            }));
+
+    
+                let sendPostRequest = async () => {
+    
+                    
+                    let response = await fetch(url, {
+                        headers: {
+                            'Accept': 'application/json',
+                            'X-CSRF-TOKEN': document.head.querySelector('meta[name="csrf-token"]').content
+                        },
+                        method: 'POST',
+                        body: data
+                    })
+                    .then(response => {
+                    
+                        if (!response.ok) throw response;
+
+                        return response.json();
+                    })
+                    .then(json => {
+
+                        mainContainer.innerHTML = json.content;
+
+                        document.dispatchEvent(new CustomEvent('loadSection', {
+                            detail: {
+                                section: 'cart'
+                            }
+                        }));
+
+                        document.dispatchEvent(new CustomEvent('message', {
+                            detail: {
+                                text: 'Producto añadido a la cesta',
+                                type: 'success'
+                            }
+                        }));
+                    })
+                    .catch ( error =>  {
+                        
+    
+                        if(error.status == '500'){
+                            console.log(error);
+                        };
+                    });
+                };
+        
+                sendPostRequest();
+            });
         });
     }
-
 
     categoryButtons.forEach(categoryButton => {
 
@@ -87,7 +140,12 @@ export let renderProducts = () => {
 
                     mainContainer.innerHTML = json.content;
 
-                    document.dispatchEvent(new CustomEvent('renderProductModules'));
+                    document.dispatchEvent(new CustomEvent('loadSection', {
+                        detail: {
+                            section: 'merchandising'
+                        }
+                    }));
+
                 })
                 .catch(error =>  {
     
@@ -125,7 +183,11 @@ export let renderProducts = () => {
 
                     mainContainer.innerHTML = json.content;
 
-                    document.dispatchEvent(new CustomEvent('renderProductModules'));
+                    document.dispatchEvent(new CustomEvent('loadSection', {
+                        detail: {
+                            section: 'merchandising'
+                        }
+                    }));
                 })
                 .catch(error =>  {
     

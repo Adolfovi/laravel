@@ -3,9 +3,11 @@ export let renderCheckingForm = () => {
     let buyButton = document.querySelector('.pay-continue');
     let forms = document.querySelectorAll('.checking-admin-form');
    
-    document.addEventListener("renderProductModules",( event =>{
-        renderCheckingForm();
-    }), {once: true});
+    document.addEventListener("loadSection",( event =>{
+        if(event.detail.section.includes('checkout')){
+            renderForm();
+        }
+    }));
 
     if(buyButton){
 
@@ -44,14 +46,6 @@ export let renderCheckingForm = () => {
                     .then(json => {
 
                         mainContainer.innerHTML = json.content;
-
-                        document.dispatchEvent(new CustomEvent('loadTable', {
-                            detail: {
-                                table: json.table,
-                            }
-                        }));
-
-                        document.dispatchEvent(new CustomEvent('renderProductModules'));
                     })
                     .catch ( error =>  {
                         

@@ -3,9 +3,11 @@ export let renderPlusMinusButton = () => {
     let minuses = document.querySelectorAll('.quantity-minus');
     let pluses = document.querySelectorAll('.quantity-plus');
 
-    document.addEventListener("renderProductModules",( event =>{
-        renderPlusMinusButton();
-    }), {once: true});
+    document.addEventListener("loadSection",( event =>{
+        if(event.detail.section.includes('merchandising')){
+            renderProducts();
+        }
+    }));
     
     pluses.forEach(plus => {
 
